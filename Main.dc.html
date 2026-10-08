@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploria.pk — Homepage concept</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&amp;display=swap">
+<style>
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:#FFFFFF;-webkit-font-smoothing:antialiased}
+a{color:#01539D}
+a:hover{color:#013F78}
+button:focus-visible,a:focus-visible{outline:2px solid #FFA100;outline-offset:3px}
+.nav a{color:#FFFFFF;text-decoration:none;opacity:.92}
+.nav a:hover{opacity:1;color:#FFFFFF;text-decoration:underline;text-underline-offset:6px}
+.hero-btn:hover{background:#FFFFFF !important;color:#0C1820 !important}
+.btn-primary:hover{background:#FFB733 !important;color:#0C1820 !important}
+.btn-ghost:hover{border-color:#0C1820 !important}
+.pick-card{aspect-ratio:4 / 5}
+.zoom{transition:transform .7s ease}
+.pick-card:hover .zoom,.photo-card:hover .zoom{transform:scale(1.05)}
+.pick-card:hover .pick-cta{text-decoration:underline;text-underline-offset:5px}
+.scroller{scrollbar-width:thin}
+@media (max-width: 960px){.nav{display:none !important}.phone{display:none !important}}
+@media (max-width: 700px){.pick-card{aspect-ratio:16 / 11}.tile{aspect-ratio:4 / 3 !important}.hero-cap{display:none}}
+@media (prefers-reduced-motion: reduce){.zoom{transition:none}}
+</style>
+</helmet>
+<div style="font-family: Jost, 'Helvetica Neue', Arial, sans-serif; font-size: 17px; color: #15212B; background: #FFFFFF; min-width: 0">
+
+<!-- ============ HEADER (over hero) ============ -->
+<header style="position: absolute; top: 0; left: 0; right: 0; z-index: 5; color: #FFFFFF">
+<div style="max-width: 1360px; margin: 0 auto; padding: 22px clamp(20px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a href="https://www.exploria.pk/" style="display: block; line-height: 0; flex: none"><img src="media/img/exploria-logo-reversed.png" alt="Exploria.pk — Experience Pakistan" width="160" height="46" style="display: block; width: 160px; height: auto"></a>
+<nav class="nav" aria-label="Main" style="display: flex; align-items: center; gap: 30px; font-size: 14px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase">
+<a href="#">Tours</a>
+<a href="#">Treks</a>
+<a href="#">Destinations</a>
+<a href="#">Cars</a>
+<a href="#">Blog</a>
+<a href="#">About</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 22px; flex: none">
+<a class="phone" href="tel:+923495966540" style="color: #FFFFFF; text-decoration: none; font-size: 15px; font-weight: 500; letter-spacing: 0.04em">+92 349 5966540</a>
+<a class="btn-primary" href="#" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px; background: #FFA100; border-radius: 2px; color: #0C1820; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none">Enquire now</a>
+</div>
+</div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section style="position: relative; overflow: hidden; min-height: max(640px, 100vh); display: flex; align-items: center; justify-content: center; background: #0C1820; color: #FFFFFF; text-align: center">
+<video class="bg-video" autoplay muted loop playsinline preload="auto" poster="media/video/hero-hunza-poster.jpg" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<source src="media/video/hero-hunza.mp4" type="video/mp4">
+</video>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,24,32,0.55) 0%, rgba(12,24,32,0.35) 40%, rgba(12,24,32,0.65) 100%)"></div>
+<div style="position: relative; max-width: 900px; padding: 140px 20px 120px; display: flex; flex-direction: column; align-items: center; gap: 22px">
+<p style="margin: 0; font-size: 14px; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase">Tailor-made tours across Pakistan</p>
+<h1 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(44px, 7vw, 88px); line-height: 1.02; letter-spacing: -0.01em; text-wrap: balance">What brings you to Pakistan?</h1>
+<p style="margin: 0; max-width: 560px; font-size: 19px; line-height: 1.6; color: rgba(255,255,255,0.9); text-wrap: pretty">Pick one and we will point the way, from the foot of K2 to the courtyards of Lahore.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 10px">
+<sc-for list="{{intents}}" as="h" hint-placeholder-count="3">
+<button type="button" class="hero-btn" onClick="{{ h.go }}" style="min-width: 180px; min-height: 54px; padding: 0 28px; background: transparent; border: 1px solid rgba(255,255,255,0.85); border-radius: 2px; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; transition: background .2s, color .2s">{{h.label}}</button>
+</sc-for>
+</div>
+</div>
+<a href="#journey" style="position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; color: #FFFFFF; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none">Scroll to explore
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+</a>
+<p class="hero-cap" style="position: absolute; right: clamp(20px, 4vw, 48px); bottom: 30px; margin: 0; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.75)">Hunza Valley, Gilgit-Baltistan</p>
+</section>
+
+<!-- ============ JOURNEY FINDER ============ -->
+<section id="journey" style="background: #F6F3EE; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 48px); scroll-margin-top: 0">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 40px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #01539D">Find your journey</p>
+<sc-if value="{{showStep1}}" hint-placeholder-val="{{ true }}"><h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.08">Three ways to see Pakistan</h2></sc-if>
+<sc-if value="{{showStep2}}" hint-placeholder-val="{{ false }}"><h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.08">{{current.q}}</h2></sc-if>
+<sc-if value="{{showResult}}" hint-placeholder-val="{{ false }}"><h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.08">Your Pakistan</h2></sc-if>
+</div>
+<ol aria-label="Progress" style="list-style: none; margin: 0; padding: 0; display: flex; gap: 24px; font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase">
+<sc-for list="{{steps}}" as="s" hint-placeholder-count="3">
+<sc-if value="{{s.active}}" hint-placeholder-val="{{ false }}"><li aria-current="step" style="color: #15212B; border-bottom: 2px solid #FFA100; padding-bottom: 6px">{{s.n}} {{s.label}}</li></sc-if>
+<sc-if value="{{s.inactive}}" hint-placeholder-val="{{ true }}"><li style="color: #8A9299; border-bottom: 2px solid transparent; padding-bottom: 6px">{{s.n}} {{s.label}}</li></sc-if>
+</sc-for>
+</ol>
+</div>
+
+<sc-if value="{{showStep2}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; margin-top: -16px; font-size: 16px; color: #5B6670">
+<span>You chose <strong style="color: #15212B; font-weight: 600">{{current.title}}</strong></span>
+<button type="button" onClick="{{ back }}" style="min-height: 40px; padding: 0; background: none; border: 0; color: #01539D; font: inherit; font-size: 16px; text-decoration: underline; text-underline-offset: 4px; cursor: pointer">Change</button>
+</div>
+</sc-if>
+
+<sc-if value="{{showCards}}" hint-placeholder-val="{{ true }}">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 20px">
+<sc-for list="{{cards}}" as="c" hint-placeholder-count="3">
+<button type="button" class="pick-card" onClick="{{ c.pick }}" style="position: relative; display: block; width: 100%; padding: 0; border: 0; border-radius: 3px; overflow: hidden; background: #0C1820; color: #FFFFFF; text-align: left; font: inherit; cursor: pointer">
+<img class="zoom" src="{{c.img}}" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,24,32,0) 30%, rgba(12,24,32,0.88) 100%)"></span>
+<span style="position: absolute; left: 28px; right: 28px; bottom: 28px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; color: #FFA100">{{c.num}}</span>
+<span style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 34px; line-height: 1.05">{{c.label}}</span>
+<span style="font-size: 16px; line-height: 1.5; color: rgba(255,255,255,0.88)">{{c.line}}</span>
+<span class="pick-cta" style="margin-top: 6px; display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase">Choose
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+</span>
+</button>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{showResult}}" hint-placeholder-val="{{ false }}">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(440px, 100%), 1fr)); background: #FFFFFF; border-radius: 3px; overflow: hidden; box-shadow: 0 20px 50px rgba(21,33,43,0.08)">
+<div style="position: relative; min-height: 340px; background: #0C1820"><img src="{{result.img}}" alt="{{result.alt}}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></div>
+<div style="padding: clamp(28px, 4vw, 56px); display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #01539D">{{current.title}} · {{chosenLabel}}</p>
+<h3 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(32px, 3.6vw, 46px); line-height: 1.08">{{result.title}}</h3>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #3E4A54; text-wrap: pretty">{{result.text}}</p>
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; padding: 18px 0; border-top: 1px solid #E4DFD6; border-bottom: 1px solid #E4DFD6">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #5B6670">Best time to go</span>
+<span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 24px">{{result.season}}</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 4px">
+<a class="btn-primary" href="#" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; background: #FFA100; border-radius: 2px; color: #0C1820; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none">{{result.cta}}
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+<button type="button" class="btn-ghost" onClick="{{ restart }}" style="min-height: 52px; padding: 0 22px; background: transparent; border: 1px solid #C9C2B6; border-radius: 2px; color: #15212B; font: inherit; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer">Start over</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+</div>
+</section>
+
+<!-- ============ WHY PAKISTAN (statement) ============ -->
+<section style="background: #FFFFFF; padding: clamp(80px, 10vw, 140px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 980px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #01539D">Why Pakistan</p>
+<p style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 400; font-size: clamp(28px, 3.4vw, 42px); line-height: 1.3; text-wrap: balance">Three of the world's great mountain ranges meet here. The Indus Valley built some of the first planned cities here. And on a Lahore food street, it is still busy at midnight.</p>
+</div>
+</section>
+
+<!-- ============ AT A GLANCE ============ -->
+<section style="background: #FFFFFF; padding: 0 clamp(20px, 4vw, 48px) clamp(80px, 10vw, 130px)">
+<div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 16px">
+<figure class="photo-card tile" style="position: relative; margin: 0; aspect-ratio: 3 / 4; border-radius: 3px; overflow: hidden; background: #0C1820; color: #FFFFFF">
+<img class="zoom" src="media/img/k2-trek.jpg" alt="Trekkers below K2 at Concordia" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,24,32,0) 35%, rgba(12,24,32,0.85) 100%)"></span>
+<figcaption style="position: absolute; left: 24px; right: 24px; bottom: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 64px; line-height: 1">8,611<span style="font-size: 26px"> m</span></span><span style="font-size: 16px; line-height: 1.45; color: rgba(255,255,255,0.9)">K2, the second-highest mountain on Earth</span></figcaption>
+</figure>
+<figure class="photo-card tile" style="position: relative; margin: 0; aspect-ratio: 3 / 4; border-radius: 3px; overflow: hidden; background: #0C1820; color: #FFFFFF">
+<img class="zoom" src="media/img/nanga-rupal.jpg" alt="Expedition tents below Nanga Parbat at night" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,24,32,0) 35%, rgba(12,24,32,0.85) 100%)"></span>
+<figcaption style="position: absolute; left: 24px; right: 24px; bottom: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 64px; line-height: 1">5<span style="font-size: 26px"> of 14</span></span><span style="font-size: 16px; line-height: 1.45; color: rgba(255,255,255,0.9)">of the world's 8,000-metre peaks stand in Pakistan</span></figcaption>
+</figure>
+<figure class="photo-card tile" style="position: relative; margin: 0; aspect-ratio: 3 / 4; border-radius: 3px; overflow: hidden; background: #0C1820; color: #FFFFFF">
+<img class="zoom" src="media/img/rohtas.jpg" alt="Aerial view of Rohtas Fort" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,24,32,0) 35%, rgba(12,24,32,0.85) 100%)"></span>
+<figcaption style="position: absolute; left: 24px; right: 24px; bottom: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 64px; line-height: 1">6</span><span style="font-size: 16px; line-height: 1.45; color: rgba(255,255,255,0.9)">UNESCO World Heritage Sites, from Mohenjo-daro to Rohtas Fort</span></figcaption>
+</figure>
+<figure class="photo-card tile" style="position: relative; margin: 0; aspect-ratio: 3 / 4; border-radius: 3px; overflow: hidden; background: #0C1820; color: #FFFFFF">
+<img class="zoom" src="media/img/khunjerab-ibex.jpg" alt="Himalayan ibex in Khunjerab National Park" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,24,32,0) 35%, rgba(12,24,32,0.85) 100%)"></span>
+<figcaption style="position: absolute; left: 24px; right: 24px; bottom: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 64px; line-height: 1">4,693<span style="font-size: 26px"> m</span></span><span style="font-size: 16px; line-height: 1.45; color: rgba(255,255,255,0.9)">Khunjerab Pass, top of the Karakoram Highway and home to wild ibex</span></figcaption>
+</figure>
+</div>
+</section>
+
+<!-- ============ ELEVATION PROFILE ============ -->
+<section style="background: #F6F3EE; padding: clamp(80px, 10vw, 130px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 720px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #01539D">The vertical country</p>
+<h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.08">From the Arabian Sea to 8,611 metres</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #3E4A54; text-wrap: pretty">Travel north from Karachi and the land keeps climbing: through the plains of Punjab, over the Babusar Pass and into the Karakoram, where the road ends and the glaciers begin.</p>
+</div>
+<div style="overflow-x: auto">
+<svg viewBox="0 0 1200 440" role="img" aria-label="Elevation profile of a journey north through Pakistan, from Karachi at sea level to K2 at 8,611 metres" style="display: block; width: 100%; min-width: 760px; height: auto; font-family: Jost, Arial, sans-serif">
+<line x1="0" y1="390" x2="1200" y2="390" stroke="#D8D1C5" stroke-width="1"></line>
+<line x1="40" y1="83" x2="1160" y2="83" stroke="#15212B" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="6 6"></line>
+<text x="40" y="72" fill="#5B6670" font-size="13">8,000 m</text>
+<path d="M40,390 L180,382 L320,369 L460,230 L600,79 L740,294 L880,232 L1020,305 L1160,60 L1160,390 L40,390 Z" fill="#01539D" fill-opacity="0.1"></path>
+<polyline points="40,390 180,382 320,369 460,230 600,79 740,294 880,232 1020,305 1160,60" fill="none" stroke="#01539D" stroke-width="2.5" stroke-linejoin="round"></polyline>
+<circle cx="40" cy="390" r="5" fill="#F6F3EE" stroke="#01539D" stroke-width="2"></circle>
+<circle cx="180" cy="382" r="5" fill="#F6F3EE" stroke="#01539D" stroke-width="2"></circle>
+<circle cx="320" cy="369" r="5" fill="#F6F3EE" stroke="#01539D" stroke-width="2"></circle>
+<circle cx="460" cy="230" r="5" fill="#F6F3EE" stroke="#01539D" stroke-width="2"></circle>
+<circle cx="600" cy="79" r="7" fill="#FFA100"></circle>
+<circle cx="740" cy="294" r="5" fill="#F6F3EE" stroke="#01539D" stroke-width="2"></circle>
+<circle cx="880" cy="232" r="5" fill="#F6F3EE" stroke="#01539D" stroke-width="2"></circle>
+<circle cx="1020" cy="305" r="5" fill="#F6F3EE" stroke="#01539D" stroke-width="2"></circle>
+<circle cx="1160" cy="60" r="7" fill="#FFA100"></circle>
+<text x="40" y="356" fill="#15212B" font-size="16" font-weight="600">Karachi</text>
+<text x="40" y="374" fill="#5B6670" font-size="13">0 m</text>
+<text x="180" y="348" fill="#15212B" font-size="16" font-weight="600" text-anchor="middle">Lahore</text>
+<text x="180" y="366" fill="#5B6670" font-size="13" text-anchor="middle">217 m</text>
+<text x="310" y="335" fill="#15212B" font-size="16" font-weight="600" text-anchor="end">Islamabad</text>
+<text x="310" y="353" fill="#5B6670" font-size="13" text-anchor="end">540 m</text>
+<text x="448" y="200" fill="#15212B" font-size="16" font-weight="600" text-anchor="end">Babusar Pass</text>
+<text x="448" y="218" fill="#5B6670" font-size="13" text-anchor="end">4,173 m</text>
+<text x="600" y="44" fill="#15212B" font-size="16" font-weight="600" text-anchor="middle">Nanga Parbat</text>
+<text x="600" y="62" fill="#5B6670" font-size="13" text-anchor="middle">8,126 m</text>
+<text x="740" y="320" fill="#15212B" font-size="16" font-weight="600" text-anchor="middle">Hunza</text>
+<text x="740" y="338" fill="#5B6670" font-size="13" text-anchor="middle">2,500 m</text>
+<text x="880" y="198" fill="#15212B" font-size="16" font-weight="600" text-anchor="middle">Deosai Plateau</text>
+<text x="880" y="216" fill="#5B6670" font-size="13" text-anchor="middle">4,114 m</text>
+<text x="1020" y="331" fill="#15212B" font-size="16" font-weight="600" text-anchor="middle">Skardu</text>
+<text x="1020" y="349" fill="#5B6670" font-size="13" text-anchor="middle">2,228 m</text>
+<text x="1148" y="30" fill="#15212B" font-size="16" font-weight="600" text-anchor="end">K2</text>
+<text x="1148" y="48" fill="#5B6670" font-size="13" text-anchor="end">8,611 m</text>
+<text x="40" y="422" fill="#5B6670" font-size="12" letter-spacing="1.5">ARABIAN SEA</text>
+<text x="1160" y="422" fill="#5B6670" font-size="12" letter-spacing="1.5" text-anchor="end">NORTH — NOT TO SCALE</text>
+</svg>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 14px">
+<figure class="photo-card" style="margin: 0; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/karachi-coast.jpg" alt="Rocky coastline near Karachi" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover"></span><figcaption style="display: flex; justify-content: space-between; gap: 10px; font-size: 15px"><strong style="font-weight: 600">Karachi coast</strong><span style="color: #5B6670">0 m</span></figcaption></figure>
+<figure class="photo-card" style="margin: 0; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/wazir-khan.jpg" alt="Wazir Khan Mosque and old Lahore at sunset" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover"></span><figcaption style="display: flex; justify-content: space-between; gap: 10px; font-size: 15px"><strong style="font-weight: 600">Old Lahore</strong><span style="color: #5B6670">217 m</span></figcaption></figure>
+<figure class="photo-card" style="margin: 0; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/attabad.jpg" alt="Attabad Lake in the Hunza valley" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover"></span><figcaption style="display: flex; justify-content: space-between; gap: 10px; font-size: 15px"><strong style="font-weight: 600">Attabad Lake, Hunza</strong><span style="color: #5B6670">2,500 m</span></figcaption></figure>
+<figure class="photo-card" style="margin: 0; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/deosai.jpg" alt="The green Deosai Plateau below snow peaks" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover"></span><figcaption style="display: flex; justify-content: space-between; gap: 10px; font-size: 15px"><strong style="font-weight: 600">Deosai Plateau</strong><span style="color: #5B6670">4,114 m</span></figcaption></figure>
+<figure class="photo-card" style="margin: 0; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/k2-concordia.jpg" alt="K2 seen from a tent on the Baltoro Glacier" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover"></span><figcaption style="display: flex; justify-content: space-between; gap: 10px; font-size: 15px"><strong style="font-weight: 600">K2 from the Baltoro</strong><span style="color: #5B6670">8,611 m</span></figcaption></figure>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 40px; border-top: 1px solid #DDD5C8; padding-top: 24px">
+<p style="margin: 0; max-width: 680px; font-size: 16px; line-height: 1.6; color: #5B6670">Above the dashed line: the 8,000-metre club. K2, Nanga Parbat, Broad Peak, Gasherbrum I and Gasherbrum II are all in Pakistan.</p>
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none">Explore adventure tours
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</section>
+
+<!-- ============ VIDEO INTERLUDE ============ -->
+<section style="position: relative; overflow: hidden; min-height: clamp(460px, 60vw, 720px); display: flex; align-items: flex-end; background: #0C1820; color: #FFFFFF">
+<video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="media/video/indus-winter-poster.jpg" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<source src="media/video/indus-winter.mp4" type="video/mp4">
+</video>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,24,32,0.1) 0%, rgba(12,24,32,0.05) 45%, rgba(12,24,32,0.8) 100%)"></div>
+<div style="position: relative; width: 100%; max-width: 1280px; margin: 0 auto; box-sizing: border-box; padding: 0 clamp(20px, 4vw, 48px) clamp(40px, 6vw, 80px); display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase">Gilgit-Baltistan in winter</p>
+<p style="margin: 0; max-width: 760px; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(32px, 4.4vw, 56px); line-height: 1.08">Turquoise rivers, white valleys and almost no one else.</p>
+</div>
+</section>
+
+<!-- ============ THREE RANGES ============ -->
+<section style="background: #FFFFFF; padding: clamp(80px, 10vw, 130px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #01539D">Where three ranges meet</p>
+<h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.08">The Hindu Kush, Karakoram and Himalaya meet here</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #3E4A54; text-wrap: pretty">Near Gilgit, three of the world's great mountain ranges come together at a single junction. Each one raises a giant inside Pakistan. The bars compare each summit with K2.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 28px">
+<div class="photo-card" style="display: flex; flex-direction: column; gap: 14px">
+<span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/chitral.jpg" alt="Grazing herds in the Chitral valley below Hindu Kush peaks" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover"></span>
+<div role="img" aria-label="Tirich Mir is 89.5% of K2's height" style="height: 4px; background: #ECE7DE"><div style="width: 89.5%; height: 100%; background: #FFA100"></div></div>
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #01539D">Hindu Kush</p>
+<p style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 32px; line-height: 1.1">Tirich Mir <span style="color: #8A9299">7,708 m</span></p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #5B6670">The highest peak of the Hindu Kush, rising above Chitral and the Kalash valleys.</p>
+</div>
+<div class="photo-card" style="display: flex; flex-direction: column; gap: 14px">
+<span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/k2-summit.jpg" alt="A climber on a snow ridge below K2" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover"></span>
+<div role="img" aria-label="K2, the reference height" style="height: 4px; background: #ECE7DE"><div style="width: 100%; height: 100%; background: #FFA100"></div></div>
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #01539D">Karakoram</p>
+<p style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 32px; line-height: 1.1">K2 <span style="color: #8A9299">8,611 m</span></p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #5B6670">The second-highest mountain on Earth, at the head of the Baltoro Glacier.</p>
+</div>
+<div class="photo-card" style="display: flex; flex-direction: column; gap: 14px">
+<span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/fairy-meadows.jpg" alt="A hiker looks at Nanga Parbat from Fairy Meadows" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover"></span>
+<div role="img" aria-label="Nanga Parbat is 94.4% of K2's height" style="height: 4px; background: #ECE7DE"><div style="width: 94.4%; height: 100%; background: #FFA100"></div></div>
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #01539D">Himalaya</p>
+<p style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 32px; line-height: 1.1">Nanga Parbat <span style="color: #8A9299">8,126 m</span></p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #5B6670">The western anchor of the Himalaya, seen from Fairy Meadows.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ FOUR LANDSCAPES ============ -->
+<section style="background: #F6F3EE; padding: clamp(80px, 10vw, 130px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #01539D">More than mountains</p>
+<h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.08">Four landscapes in one country</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 16px">
+<figure class="photo-card" style="position: relative; margin: 0; aspect-ratio: 4 / 5; border-radius: 3px; overflow: hidden; background: #0C1820; color: #FFFFFF">
+<img class="zoom" src="media/img/passu-bridge.jpg" alt="The Passu suspension bridge over the Hunza River" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,24,32,0) 40%, rgba(12,24,32,0.85) 100%)"></span>
+<figcaption style="position: absolute; left: 24px; right: 24px; bottom: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #FFA100">The north</span><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 28px; line-height: 1.1">Valleys &amp; glaciers</span><span style="font-size: 15px; line-height: 1.5; color: rgba(255,255,255,0.88)">Hunza, Skardu, Chitral and the rope bridges of Passu.</span></figcaption>
+</figure>
+<figure class="photo-card" style="position: relative; margin: 0; aspect-ratio: 4 / 5; border-radius: 3px; overflow: hidden; background: #0C1820; color: #FFFFFF">
+<img class="zoom" src="media/img/faisal-mosque.jpg" alt="Faisal Mosque in Islamabad" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,24,32,0) 40%, rgba(12,24,32,0.85) 100%)"></span>
+<figcaption style="position: absolute; left: 24px; right: 24px; bottom: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #FFA100">The plains</span><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 28px; line-height: 1.1">Cities &amp; heritage</span><span style="font-size: 15px; line-height: 1.5; color: rgba(255,255,255,0.88)">Islamabad, Lahore and the Indus valley sites.</span></figcaption>
+</figure>
+<figure class="photo-card" style="position: relative; margin: 0; aspect-ratio: 4 / 5; border-radius: 3px; overflow: hidden; background: #0C1820; color: #FFFFFF">
+<img class="zoom" src="media/img/derawar-fort.jpg" alt="Travellers on the walls of Derawar Fort in the Cholistan desert" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,24,32,0) 40%, rgba(12,24,32,0.85) 100%)"></span>
+<figcaption style="position: absolute; left: 24px; right: 24px; bottom: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #FFA100">The desert</span><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 28px; line-height: 1.1">Forts &amp; dunes</span><span style="font-size: 15px; line-height: 1.5; color: rgba(255,255,255,0.88)">Derawar Fort and the Cholistan desert near Bahawalpur.</span></figcaption>
+</figure>
+<figure class="photo-card" style="position: relative; margin: 0; aspect-ratio: 4 / 5; border-radius: 3px; overflow: hidden; background: #0C1820; color: #FFFFFF">
+<img class="zoom" src="media/img/hingol.jpg" alt="Eroded cliffs of Hingol National Park on the Makran coast" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,24,32,0) 40%, rgba(12,24,32,0.85) 100%)"></span>
+<figcaption style="position: absolute; left: 24px; right: 24px; bottom: 24px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #FFA100">The coast</span><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 28px; line-height: 1.1">Cliffs &amp; beaches</span><span style="font-size: 15px; line-height: 1.5; color: rgba(255,255,255,0.88)">Hingol, Gwadar and over 1,000 km of Arabian Sea shore.</span></figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<!-- ============ HERITAGE TIMELINE ============ -->
+<section style="background: #0C1820; color: #FFFFFF; padding: clamp(80px, 10vw, 130px) 0">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 40px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #FFA100">Culture &amp; heritage</p>
+<h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.08">Nine thousand years in one country</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: rgba(255,255,255,0.8); text-wrap: pretty">From one of South Asia's first farming villages to the Mughal monuments of Lahore. All six UNESCO World Heritage Sites are on this line.</p>
+</div>
+<p style="margin: 0; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.6)">Scroll sideways →</p>
+</div>
+<ol class="scroller" tabindex="0" aria-label="Heritage timeline" style="list-style: none; margin: 44px 0 0; padding: 0 clamp(20px, 4vw, 48px) 16px; padding-left: max(clamp(20px, 4vw, 48px), calc(50vw - 640px)); scroll-padding-left: max(clamp(20px, 4vw, 48px), calc(50vw - 640px)); display: grid; grid-auto-flow: column; grid-auto-columns: minmax(260px, 300px); gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory">
+<li class="photo-card" style="scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/mehrgarh.jpg" alt="Excavated mud-brick walls at Mehrgarh" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover"></span><span style="font-size: 14px; font-weight: 600; letter-spacing: 0.14em; color: #FFA100">c. 7000 BCE</span><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 26px">Mehrgarh</span><span style="font-size: 15px; line-height: 1.55; color: rgba(255,255,255,0.75)">One of South Asia's earliest farming villages, in Balochistan.</span></li>
+<li class="photo-card" style="scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/mohenjo-daro.jpg" alt="The ruins of Mohenjo-daro" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover"></span><span style="font-size: 14px; font-weight: 600; letter-spacing: 0.14em; color: #FFA100">c. 2500 BCE · UNESCO</span><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 26px">Mohenjo-daro</span><span style="font-size: 15px; line-height: 1.55; color: rgba(255,255,255,0.75)">A planned Indus Valley city with grid streets, wells and covered drains.</span></li>
+<li class="photo-card" style="scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/taxila.jpg" alt="Visitors at the Taxila archaeological site" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover"></span><span style="font-size: 14px; font-weight: 600; letter-spacing: 0.14em; color: #FFA100">1st – 5th c. CE · UNESCO</span><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 26px">Taxila &amp; Takht-i-Bahi</span><span style="font-size: 15px; line-height: 1.55; color: rgba(255,255,255,0.75)">Buddhist monasteries and stone sculpture from the age of Gandhara. Two separate UNESCO sites.</span></li>
+<li class="photo-card" style="scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/makli.jpg" alt="Carved stone tombs at Makli necropolis" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover"></span><span style="font-size: 14px; font-weight: 600; letter-spacing: 0.14em; color: #FFA100">14th – 18th c. · UNESCO</span><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 26px">Makli, Thatta</span><span style="font-size: 15px; line-height: 1.55; color: rgba(255,255,255,0.75)">One of the largest necropolises in the world, on a ridge in Sindh.</span></li>
+<li class="photo-card" style="scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/rohtas.jpg" alt="The walls and gates of Rohtas Fort" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover"></span><span style="font-size: 14px; font-weight: 600; letter-spacing: 0.14em; color: #FFA100">1541 · UNESCO</span><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 26px">Rohtas Fort</span><span style="font-size: 15px; line-height: 1.55; color: rgba(255,255,255,0.75)">Sher Shah Suri's fortress on the Grand Trunk Road, its walls running for about 4 km.</span></li>
+<li class="photo-card" style="scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/lahore-fort.jpg" alt="The Alamgiri Gate of Lahore Fort" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover"></span><span style="font-size: 14px; font-weight: 600; letter-spacing: 0.14em; color: #FFA100">16th – 17th c. · UNESCO</span><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 26px">Lahore Fort &amp; Shalimar</span><span style="font-size: 15px; line-height: 1.55; color: rgba(255,255,255,0.75)">The Mughal citadel and Shah Jahan's terraced gardens, listed together.</span></li>
+<li class="photo-card" style="scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/badshahi-dusk.jpg" alt="The Badshahi Mosque reflected at dusk" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover"></span><span style="font-size: 14px; font-weight: 600; letter-spacing: 0.14em; color: #FFA100">1673</span><span style="font-family: 'Source Serif 4', Georgia, serif; font-size: 26px">Badshahi Mosque</span><span style="font-size: 15px; line-height: 1.55; color: rgba(255,255,255,0.75)">Completed under Aurangzeb, facing Lahore Fort across the Hazuri Bagh.</span></li>
+</ol>
+<div style="max-width: 1280px; margin: 28px auto 0; padding: 0 clamp(20px, 4vw, 48px); display: flex; justify-content: flex-end">
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #FFA100; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none">Explore culture tours
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
+</div>
+</section>
+
+<!-- ============ LIVING CULTURE ============ -->
+<section style="background: #FFFFFF; padding: clamp(80px, 10vw, 130px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #01539D">Living culture</p>
+<h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.08">Shrines, bazaars, music and food</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #3E4A54; text-wrap: pretty">Pakistan's history is not only in its ruins. You hear it in the qawwali at a Sufi shrine and taste it on a Lahore food street.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px">
+<figure class="photo-card" style="margin: 0; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/sehwan-shrine.jpg" alt="The tiled entrance of the Lal Shahbaz Qalandar shrine in Sehwan" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover"></span><figcaption style="display: flex; flex-direction: column; gap: 4px"><strong style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 22px">Sufi shrines</strong><span style="font-size: 15px; line-height: 1.5; color: #5B6670">Dhamaal drumming at Lal Shahbaz Qalandar, Sehwan.</span></figcaption></figure>
+<figure class="photo-card" style="margin: 0; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/food-street.webp" alt="The Fort Road food street in Lahore at night" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover"></span><figcaption style="display: flex; flex-direction: column; gap: 4px"><strong style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 22px">Food streets</strong><span style="font-size: 15px; line-height: 1.5; color: #5B6670">Dinner under the walls of the Badshahi Mosque, Lahore.</span></figcaption></figure>
+<figure class="photo-card" style="margin: 0; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/kalash-houses.jpg" alt="Wooden houses stacked on a hillside in the Kalash valleys" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover"></span><figcaption style="display: flex; flex-direction: column; gap: 4px"><strong style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 22px">The Kalash valleys</strong><span style="font-size: 15px; line-height: 1.5; color: #5B6670">A small community with its own faith and festivals, near Chitral.</span></figcaption></figure>
+<figure class="photo-card" style="margin: 0; display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/folk-dance.jpg" alt="Folk dancers in bright costume" loading="lazy" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover"></span><figcaption style="display: flex; flex-direction: column; gap: 4px"><strong style="font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 22px">Music &amp; dance</strong><span style="font-size: 15px; line-height: 1.5; color: #5B6670">Folk festivals in Sindh, Punjab and the mountains.</span></figcaption></figure>
+</div>
+</div>
+</section>
+
+<!-- ============ WHEN TO GO ============ -->
+<section style="background: #F6F3EE; padding: clamp(80px, 10vw, 130px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #01539D">When to go</p>
+<h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.08">Two seasons, two Pakistans</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #3E4A54; text-wrap: pretty">The mountains open up in summer. The plains and cities are at their best in winter. Come in spring or autumn and you can have a taste of both.</p>
+</div>
+
+<div style="overflow-x: auto">
+<div style="min-width: 760px; display: grid; grid-template-columns: 200px repeat(12, minmax(0, 1fr)); gap: 4px; align-items: center">
+<span></span>
+<span style="font-size: 13px; font-weight: 600; text-align: center; color: #5B6670">Jan</span>
+<span style="font-size: 13px; font-weight: 600; text-align: center; color: #5B6670">Feb</span>
+<span style="font-size: 13px; font-weight: 600; text-align: center; color: #5B6670">Mar</span>
+<span style="font-size: 13px; font-weight: 600; text-align: center; color: #5B6670">Apr</span>
+<span style="font-size: 13px; font-weight: 600; text-align: center; color: #5B6670">May</span>
+<span style="font-size: 13px; font-weight: 600; text-align: center; color: #5B6670">Jun</span>
+<span style="font-size: 13px; font-weight: 600; text-align: center; color: #5B6670">Jul</span>
+<span style="font-size: 13px; font-weight: 600; text-align: center; color: #5B6670">Aug</span>
+<span style="font-size: 13px; font-weight: 600; text-align: center; color: #5B6670">Sep</span>
+<span style="font-size: 13px; font-weight: 600; text-align: center; color: #5B6670">Oct</span>
+<span style="font-size: 13px; font-weight: 600; text-align: center; color: #5B6670">Nov</span>
+<span style="font-size: 13px; font-weight: 600; text-align: center; color: #5B6670">Dec</span>
+
+<span style="display: flex; flex-direction: column; gap: 2px; padding-right: 12px"><span style="font-weight: 600; font-size: 16px">Mountains &amp; treks</span><span style="font-size: 13px; color: #5B6670">Best June – September</span></span>
+<span style="height: 44px; border-radius: 2px; background: #E6E0D6"></span>
+<span style="height: 44px; border-radius: 2px; background: #E6E0D6"></span>
+<span style="height: 44px; border-radius: 2px; background: #E6E0D6"></span>
+<span style="height: 44px; border-radius: 2px; background: #FFD98F"></span>
+<span style="height: 44px; border-radius: 2px; background: #FFD98F"></span>
+<span style="height: 44px; border-radius: 2px; background: #FFA100"></span>
+<span style="height: 44px; border-radius: 2px; background: #FFA100"></span>
+<span style="height: 44px; border-radius: 2px; background: #FFA100"></span>
+<span style="height: 44px; border-radius: 2px; background: #FFA100"></span>
+<span style="height: 44px; border-radius: 2px; background: #FFD98F"></span>
+<span style="height: 44px; border-radius: 2px; background: #E6E0D6"></span>
+<span style="height: 44px; border-radius: 2px; background: #E6E0D6"></span>
+
+<span style="display: flex; flex-direction: column; gap: 2px; padding-right: 12px"><span style="font-weight: 600; font-size: 16px">Cities &amp; heritage</span><span style="font-size: 13px; color: #5B6670">Best November – February</span></span>
+<span style="height: 44px; border-radius: 2px; background: #01539D"></span>
+<span style="height: 44px; border-radius: 2px; background: #01539D"></span>
+<span style="height: 44px; border-radius: 2px; background: #A9C4E4"></span>
+<span style="height: 44px; border-radius: 2px; background: #E6E0D6"></span>
+<span style="height: 44px; border-radius: 2px; background: #E6E0D6"></span>
+<span style="height: 44px; border-radius: 2px; background: #E6E0D6"></span>
+<span style="height: 44px; border-radius: 2px; background: #E6E0D6"></span>
+<span style="height: 44px; border-radius: 2px; background: #E6E0D6"></span>
+<span style="height: 44px; border-radius: 2px; background: #E6E0D6"></span>
+<span style="height: 44px; border-radius: 2px; background: #A9C4E4"></span>
+<span style="height: 44px; border-radius: 2px; background: #01539D"></span>
+<span style="height: 44px; border-radius: 2px; background: #01539D"></span>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 14px; color: #5B6670">
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 16px; height: 16px; border-radius: 2px; background: #FFA100"></span><span style="width: 16px; height: 16px; border-radius: 2px; background: #01539D"></span>Best</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 16px; height: 16px; border-radius: 2px; background: #FFD98F"></span><span style="width: 16px; height: 16px; border-radius: 2px; background: #A9C4E4"></span>Good</span>
+<span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 16px; height: 16px; border-radius: 2px; background: #E6E0D6; border: 1px solid #D3CBBE; box-sizing: border-box"></span>Off-season</span>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 20px; border-top: 1px solid #DDD5C8; padding-top: 32px">
+<div class="photo-card" style="display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/hunza-blossom.webp" alt="Apricot blossom in Hunza in front of snow peaks" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover"></span><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #01539D">April</span><span style="font-size: 16px; line-height: 1.55; color: #3E4A54">Apricot and cherry blossom across the Hunza valley.</span></div>
+<div class="photo-card" style="display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/chilam-joshi.jpg" alt="Kalash women dancing at the Chilam Joshi festival" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover"></span><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #01539D">Mid-May</span><span style="font-size: 16px; line-height: 1.55; color: #3E4A54">Chilam Joshi, the Kalash spring festival of song and dance.</span></div>
+<div class="photo-card" style="display: flex; flex-direction: column; gap: 10px"><span style="display: block; overflow: hidden; border-radius: 3px"><img class="zoom" src="media/img/shandur-polo.jpg" alt="Polo players at the Shandur festival" loading="lazy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover"></span><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #01539D">July</span><span style="font-size: 16px; line-height: 1.55; color: #3E4A54">The Shandur Polo Festival, played on a mountain pass at about 3,700 m.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="media/video/autumn-katpana-poster.jpg" aria-label="Golden poplars near Skardu in autumn" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 3px"><source src="media/video/autumn-katpana.mp4" type="video/mp4"></video><span style="font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #01539D">Late October</span><span style="font-size: 16px; line-height: 1.55; color: #3E4A54">Autumn gold in the poplar groves of Hunza and Skardu.</span></div>
+</div>
+</div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section style="background: #FFFFFF; padding: clamp(80px, 10vw, 130px) clamp(20px, 4vw, 48px)">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 40px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #01539D">From our travellers</p>
+<h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.08">In their words</h2>
+</div>
+<p style="margin: 0; font-size: 15px; color: #5B6670"><span aria-hidden="true" style="color: #FFA100; letter-spacing: 0.1em">★★★★★</span> Reviews posted on Google</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 40px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 18px; border-top: 2px solid #15212B; padding-top: 24px">
+<blockquote style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 22px; line-height: 1.45">“I recently went on an unforgettable 10-day tour through Skardu and Hunza with Exploria, and I cannot recommend their services highly enough.”</blockquote>
+<figcaption style="font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5B6670">Ayesha S.</figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 18px; border-top: 2px solid #15212B; padding-top: 24px">
+<blockquote style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 22px; line-height: 1.45">“I feel this tour was a great way to start to get to know the ‘real’ Pakistan.”</blockquote>
+<figcaption style="font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5B6670">Barb D. · Hindu Kush tour</figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 18px; border-top: 2px solid #15212B; padding-top: 24px">
+<blockquote style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 22px; line-height: 1.45">“Don’t be scared to come over, the region is safe and you’re in very good hands with Exploria.”</blockquote>
+<figcaption style="font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #5B6670">Francesca P. · Skardu &amp; Hunza</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<!-- ============ CLOSING CTA ============ -->
+<section style="position: relative; overflow: hidden; background: #0C1820; color: #FFFFFF; padding: clamp(110px, 13vw, 190px) clamp(20px, 4vw, 48px)">
+<img src="media/img/rakaposhi.jpg" alt="" aria-hidden="true" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: rgba(12,24,32,0.6)"></div>
+<div style="position: relative; max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 22px; text-align: center">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase">Rakaposhi Base Camp, Nagar</p>
+<h2 style="margin: 0; font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: clamp(40px, 6vw, 76px); line-height: 1.04">So, ready to start?</h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: rgba(255,255,255,0.9)">One question is all it takes to find your direction. Or talk to a local trip planner on WhatsApp.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin-top: 6px">
+<a class="btn-primary" href="#journey" style="display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 28px; background: #FFA100; border-radius: 2px; color: #0C1820; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none">Find my journey</a>
+<a class="hero-btn" href="https://wa.me/923495966540" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 28px; border: 1px solid rgba(255,255,255,0.85); border-radius: 2px; color: #FFFFFF; font-size: 14px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; transition: background .2s, color .2s">WhatsApp a planner</a>
+</div>
+</div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer style="background: #0C1820; color: rgba(255,255,255,0.78); padding: 64px clamp(20px, 4vw, 48px) 32px; font-size: 15px">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<img src="media/img/exploria-logo-reversed.png" alt="Exploria.pk" width="150" height="43" style="display: block; width: 150px; height: auto">
+<a href="tel:+923495966540" style="color: #FFFFFF; text-decoration: none">+92 349 5966540</a>
+<a href="https://wa.me/923495966540" style="color: #FFA100; text-decoration: none">Chat on WhatsApp</a>
+</div>
+<nav aria-label="Tours" style="display: flex; flex-direction: column; gap: 10px"><p style="margin: 0 0 4px; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #FFFFFF">Tours</p><a href="#" style="color: inherit; text-decoration: none">Guaranteed departures</a><a href="#" style="color: inherit; text-decoration: none">One-day tours</a><a href="#" style="color: inherit; text-decoration: none">Hunza tours</a><a href="#" style="color: inherit; text-decoration: none">Skardu tours</a><a href="#" style="color: inherit; text-decoration: none">Religious tours</a></nav>
+<nav aria-label="Treks" style="display: flex; flex-direction: column; gap: 10px"><p style="margin: 0 0 4px; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #FFFFFF">Treks</p><a href="#" style="color: inherit; text-decoration: none">K2 Base Camp</a><a href="#" style="color: inherit; text-decoration: none">K2 &amp; Gondogoro La</a><a href="#" style="color: inherit; text-decoration: none">Nanga Parbat</a><a href="#" style="color: inherit; text-decoration: none">Snow Lake &amp; Hispar La</a><a href="#" style="color: inherit; text-decoration: none">Rakaposhi Base Camp</a></nav>
+<nav aria-label="Destinations" style="display: flex; flex-direction: column; gap: 10px"><p style="margin: 0 0 4px; font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: #FFFFFF">Destinations</p><a href="#" style="color: inherit; text-decoration: none">Hunza Valley</a><a href="#" style="color: inherit; text-decoration: none">Skardu</a><a href="#" style="color: inherit; text-decoration: none">Fairy Meadows</a><a href="#" style="color: inherit; text-decoration: none">Kalash Valley</a><a href="#" style="color: inherit; text-decoration: none">Lahore</a></nav>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px; border-top: 1px solid rgba(255,255,255,0.14); padding-top: 24px; font-size: 13px; color: rgba(255,255,255,0.6)">
+<span>© 2026 Exploria.pk</span>
+<span>Photos: Exploria.pk · Video: Asif Khan via Pexels</span>
+</div>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":9000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var st = this.state || {};
+    var intent = st.intent || null;
+    var level = st.level || null;
+    var self = this;
+    var M = "media/img/";
+
+    var FLOW = {
+      adventure: {
+        title: "Adventure",
+        q: "How far do you want to push?",
+        options: [
+          { id: "gentle", img: M + "hunza-autumn.jpg", num: "01", label: "Gentle", line: "Valley road trips and jeep safaris, a proper bed every night.",
+            result: { img: M + "fairy-meadows.jpg", alt: "A hiker looks out at Nanga Parbat from Fairy Meadows", title: "Valleys by road", text: "Hunza, Skardu and Fairy Meadows along the Karakoram Highway, with short walks out to glaciers and viewpoints.", season: "April – October", cta: "See valley road trips" } },
+          { id: "trekker", img: M + "patundas.jpg", num: "02", label: "Trekker", line: "Multi-day treks to base camps and high meadows.",
+            result: { img: M + "rakaposhi.jpg", alt: "A trekker at Rakaposhi Base Camp", title: "Base camp treks", text: "Walk to the foot of the giants: Nanga Parbat from Fairy Meadows, Rakaposhi from Minapin, and the glaciers around Passu.", season: "June – September", cta: "See trekking tours" } },
+          { id: "expedition", img: M + "snow-lake.jpg", num: "03", label: "Expedition", line: "Glacier crossings and high passes, for the fit and determined.",
+            result: { img: M + "mitre-peak.jpg", alt: "Mitre Peak above the glacier at Concordia", title: "Glaciers & high passes", text: "Up the Baltoro Glacier to Concordia and K2 Base Camp, and over the Gondogoro La. Plan on two to three weeks.", season: "June – August", cta: "See expedition tours" } }
+        ]
+      },
+      culture: {
+        title: "Culture",
+        q: "Which story draws you in?",
+        options: [
+          { id: "mughal", img: M + "badshahi-day.jpg", num: "01", label: "Mughal & Sikh Punjab", line: "Lahore Fort, the Badshahi Mosque and the gurdwaras.",
+            result: { img: M + "badshahi-dusk.jpg", alt: "The Badshahi Mosque at dusk", title: "Mughal & Sikh Punjab", text: "Lahore Fort, the Badshahi Mosque and the Shalimar Gardens, the food streets of the Walled City, and the gurdwaras of Nankana Sahib and Kartarpur.", season: "October – March", cta: "See Punjab tours" } },
+          { id: "ancient", img: M + "mohenjo-daro.jpg", num: "02", label: "Ancient civilisations", line: "Mohenjo-daro, Taxila and the world of Gandhara.",
+            result: { img: M + "makli.jpg", alt: "Carved stone tombs at Makli", title: "Ancient civilisations", text: "Mohenjo-daro on the Indus, the Buddhist monasteries of Taxila and Takht-i-Bahi, and the carved tombs of Makli.", season: "November – February", cta: "See heritage tours" } },
+          { id: "living", img: M + "sehwan-shrine.jpg", num: "03", label: "Living traditions", line: "Sufi shrines, bazaars, food and festivals.",
+            result: { img: M + "chilam-joshi.jpg", alt: "Kalash women dancing at the Chilam Joshi festival", title: "Shrines, bazaars & festivals", text: "Qawwali at Sufi shrines, the blue-tiled tombs of Multan, the old bazaars and food streets of Lahore and Peshawar, and the spring festival of the Kalash valleys.", season: "October – May", cta: "See culture tours" } }
+        ]
+      },
+      both: {
+        title: "A bit of both",
+        q: "How much time do you have?",
+        options: [
+          { id: "short", img: M + "wazir-khan.jpg", num: "01", label: "7 – 10 days", line: "Lahore's highlights, then a flight north.",
+            result: { img: M + "hunza-blossom.webp", alt: "Apricot blossom in Hunza", title: "Cities & summits, short", text: "Lahore's Mughal monuments, then a flight north to Hunza or Skardu for the mountains.", season: "April – May, September – October", cta: "See combined tours" } },
+          { id: "mid", img: M + "hunza-biking.jpg", num: "02", label: "About two weeks", line: "Punjab, Islamabad and the Karakoram Highway.",
+            result: { img: M + "attabad.jpg", alt: "Attabad Lake in the Hunza valley", title: "The grand road north", text: "Lahore and Islamabad, then the length of the Karakoram Highway to Hunza and the Khunjerab Pass.", season: "May, September – October", cta: "See combined tours" } },
+          { id: "long", img: M + "derawar-fort.jpg", num: "03", label: "Three weeks or more", line: "From the Indus to the high valleys.",
+            result: { img: M + "deosai.jpg", alt: "The Deosai Plateau", title: "Coast to mountains", text: "From the Indus ruins of Sindh, through Punjab, to the high valleys of Gilgit-Baltistan.", season: "Late September – October", cta: "See long journeys" } }
+        ]
+      }
+    };
+
+    var INTENTS = [
+      { id: "adventure", img: M + "k2-concordia.jpg", num: "01", label: "Adventure", line: "Peaks, glaciers and high trails." },
+      { id: "culture", img: M + "badshahi-arch.jpg", num: "02", label: "Culture", line: "Mughal cities, ancient ruins and Sufi shrines." },
+      { id: "both", img: M + "hunza-blossom.webp", num: "03", label: "A bit of both", line: "From Lahore's lanes to Hunza's valleys." }
+    ];
+
+    function toJourney() {
+      var el = document.getElementById("journey");
+      if (!el) return;
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      setTimeout(function () { el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }); }, 30);
+    }
+
+    var intents = INTENTS.map(function (it) {
+      return Object.assign({}, it, {
+        pick: function () { self.setState({ intent: it.id, level: null }); toJourney(); },
+        go: function () { self.setState({ intent: it.id, level: null }); toJourney(); }
+      });
+    });
+
+    var current = intent ? FLOW[intent] : null;
+    var levels = current ? current.options.map(function (o) {
+      return Object.assign({}, o, { pick: function () { self.setState({ level: o.id }); toJourney(); } });
+    }) : [];
+
+    var chosen = null;
+    if (current && level) {
+      for (var i = 0; i < current.options.length; i++) {
+        if (current.options[i].id === level) { chosen = current.options[i]; }
+      }
+    }
+    var result = chosen ? chosen.result : { img: "", alt: "", title: "", text: "", season: "", cta: "" };
+
+    var stepIdx = !intent ? 0 : (!level ? 1 : 2);
+    var steps = [["01", "Your style"], ["02", "Your focus"], ["03", "Your trip"]].map(function (s, i) {
+      return { n: s[0], label: s[1], active: i === stepIdx, inactive: i !== stepIdx };
+    });
+
+    return {
+      intents: intents,
+      cards: !intent ? intents : levels,
+      current: current || { title: "", q: "" },
+      chosenLabel: chosen ? chosen.label : "",
+      result: result,
+      steps: steps,
+      showStep1: !intent,
+      showStep2: !!intent && !level,
+      showCards: !level,
+      showResult: !!intent && !!level,
+      back: function () { self.setState({ intent: null, level: null }); },
+      restart: function () { self.setState({ intent: null, level: null }); toJourney(); }
+    };
+  }
+}
+</script>
+<script>
+// Muted autoplay helper: React sets `muted` as a property, which some browsers ignore for autoplay.
+// Also respects reduced-motion (videos stay on their poster frame).
+(function () {
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function wire(v) {
+    if (v.dataset.wired) return; v.dataset.wired = "1";
+    v.muted = true; v.setAttribute("muted", "");
+    if (reduce) { v.removeAttribute("autoplay"); v.pause(); return; }
+    var p = v.play(); if (p && p.catch) p.catch(function () {});
+  }
+  function scan() { document.querySelectorAll("video.bg-video").forEach(wire); }
+  new MutationObserver(scan).observe(document.documentElement, { childList: true, subtree: true });
+  document.addEventListener("DOMContentLoaded", scan); scan();
+})();
+</script>
+</body>
+</html>
