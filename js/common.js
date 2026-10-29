@@ -26,10 +26,16 @@
 
   /* ---------- header, progress, whatsapp ---------- */
   var head = $(".site-head"), bar = $("#progress"), wa = $("#wa");
-  var alwaysSolid = head && head.classList.contains("solid");
+  var alwaysSolid = head && head.classList.contains("solid"), lastY = window.scrollY;
   function onScroll() {
     var y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
     if (head && !alwaysSolid) head.classList.toggle("solid", y > 60);
+    /* hide the header while scrolling down, bring it back on scroll up */
+    if (head && Math.abs(y - lastY) > 6) {
+      var down = y > lastY && y > 240 && !head.contains(document.activeElement);
+      head.classList.toggle("hide", down);
+      lastY = y;
+    }
     if (bar) bar.style.transform = "scaleX(" + (h > 0 ? y / h : 0) + ")";
     if (wa) wa.classList.toggle("show", y > innerHeight * 0.8);
   }

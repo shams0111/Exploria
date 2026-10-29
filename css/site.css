@@ -598,3 +598,7 @@ html.menu-open{overflow:hidden}
 .hero{min-height:max(760px,100vh)}
 .hero-in{padding-bottom:270px}
 @media (max-width:960px){.hero-in{padding-bottom:170px}}
+/* header hides on scroll down, returns on scroll up */
+.site-head{transition:transform .35s ease}
+.site-head.hide{transform:translateY(-130%)}
+@media (prefers-reduced-motion:reduce){.site-head{transition:none}}
