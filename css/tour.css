@@ -154,3 +154,17 @@ dialog.lightbox::backdrop{background:rgba(8,14,20,.96)}
 .rm-key{display:inline-flex;align-items:center;gap:6px;font-size:13px}
 .rm-key i{display:inline-block;width:22px;height:0;border-top:3px solid var(--faint);margin-left:6px}
 .rm-key .k-fly{border-top-style:dotted}
+
+/* modern refresh */
+.tour-page main{padding-top:100px}
+.g-item{border-radius:var(--r-md)}
+.g-all{border-radius:999px}
+.t-badge{border-radius:999px}
+.route-map,.info div{border-radius:var(--r-lg)}
+.day{border-radius:var(--r-md)}
+.bookcard{border-radius:var(--r-lg);box-shadow:var(--shadow-lg)}
+.bc-count{border-radius:var(--r-sm)}
+.faq-list details{margin-bottom:10px;padding:0 22px;border:0;border-radius:var(--r-md);background:#FFFFFF;box-shadow:var(--shadow)}
+.faq-list details:last-child{border-bottom:0}
+.t-close{margin:0 var(--pad) var(--pad);border-radius:28px}
+@media (max-width:560px){.t-close{margin:0 12px 12px;border-radius:22px}}

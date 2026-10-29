@@ -72,18 +72,20 @@
   <div class="hero-in">
     <h1>Travel <em>Pakistan</em></h1>
     <p class="sub">Extraordinary Pakistan experiences, from <b id="heroWord">mountains</b></p>
-    <div class="hero-btns">
-      <a class="btn btn-primary" href="#journey">Find my journey</a>
-      <a class="btn btn-line" href="#departures">2027 departures</a>
-    </div>
-    <div class="where" aria-label="Jump to a destination">
-      <span>Where to?</span>
-      <button type="button" class="chip-dark" data-place="hunza">Hunza</button>
-      <button type="button" class="chip-dark" data-place="skardu">Skardu</button>
-      <button type="button" class="chip-dark" data-place="k2">K2</button>
-      <button type="button" class="chip-dark" data-place="kalash">Kalash</button>
-      <button type="button" class="chip-dark" data-place="lahore">Lahore</button>
-    </div>
+    <form class="hsearch" id="heroSearch" role="search" aria-label="Find a trip">
+      <label><span>Where</span><select id="hsWhere"></select></label>
+      <label><span>When</span><select id="hsWhen"></select></label>
+      <label><span>Trip type</span><select id="hsType">
+        <option value="all">Any trip</option>
+        <option value="group">Group departures</option>
+        <option value="trek">Treks &amp; adventure</option>
+        <option value="mountain">Mountain tours</option>
+        <option value="culture">Culture &amp; festivals</option>
+        <option value="day">Day tours</option>
+      </select></label>
+      <button class="btn btn-primary" type="submit"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg> Find trips</button>
+    </form>
+    <a class="hero-alt" href="#journey">Not sure yet? Find your journey in three taps →</a>
   </div>
   <a class="next-dep" href="/tours/spring-blossom-tour-2027">
     <img src="media/img/blossom-branch.jpg" alt="">
@@ -122,6 +124,33 @@
 
     <div id="depFeatured"></div>
     <div class="dep-more reveal" id="depMore"></div>
+  </div>
+</section>
+
+<!-- ============ WHERE TO GO (bento) ============ -->
+<section class="sec" id="where">
+  <div class="wrap stack" style="gap:32px">
+    <div class="head-row">
+      <div class="head">
+        <p class="eyebrow">Where to go</p>
+        <h2 class="h2">Six regions, six different trips</h2>
+        <p class="lede">From apricot orchards under 7,000-metre peaks to Mughal mosques and Indus Valley ruins. Tap a region to see the tours that go there.</p>
+      </div>
+    </div>
+    <div class="bento">
+      <button type="button" class="bt bt-xl photo" data-where="hunza"><img class="zoom cover" src="media/img/attabad.jpg" alt="Attabad Lake in the Hunza valley" loading="lazy"><span class="shade"></span>
+        <span class="bt-in"><span class="bt-tag">Most popular</span><b>Hunza &amp; Nagar</b><span class="bt-line">Forts, orchards, Attabad Lake and the Passu Cones. Best April to October.</span><span class="bt-count" data-count-where="hunza"></span></span></button>
+      <button type="button" class="bt bt-tall photo" data-where="skardu"><img class="zoom cover" src="media/img/k2-concordia.jpg" alt="K2 seen from Concordia" loading="lazy"><span class="shade"></span>
+        <span class="bt-in"><b>Skardu, K2 &amp; Baltistan</b><span class="bt-line">Cold desert dunes, Deosai and the road to K2.</span><span class="bt-count" data-count-where="skardu"></span></span></button>
+      <button type="button" class="bt photo" data-where="punjab"><img class="zoom cover" src="media/img/badshahi-dusk.jpg" alt="Badshahi Mosque at dusk" loading="lazy"><span class="shade"></span>
+        <span class="bt-in"><b>Lahore &amp; Punjab</b><span class="bt-line">Mughal Lahore, food streets, Taxila.</span><span class="bt-count" data-count-where="punjab"></span></span></button>
+      <button type="button" class="bt photo" data-where="chitral"><img class="zoom cover" src="media/img/chilam-joshi.jpg" alt="Kalash festival dancers" loading="lazy"><span class="shade"></span>
+        <span class="bt-in"><b>Chitral &amp; Kalash</b><span class="bt-line">Hindu Kush valleys and festivals.</span><span class="bt-count" data-count-where="chitral"></span></span></button>
+      <button type="button" class="bt bt-wide photo" data-where="sindh"><img class="zoom cover" src="media/img/mohenjo-daro.jpg" alt="Ruins of Mohenjo-daro" loading="lazy"><span class="shade"></span>
+        <span class="bt-in"><b>Sindh &amp; the Indus</b><span class="bt-line">Mohenjo-daro, Makli and Sufi shrines. Best November to February.</span><span class="bt-count" data-count-where="sindh"></span></span></button>
+      <a class="bt bt-cta" href="https://www.exploria.pk/customize-your-tour/">
+        <span class="bt-in"><span class="bt-tag">Tailor-made</span><b>Not sure where to start?</b><span class="bt-line">Tell us your dates and interests. A planner from Hunza builds the route with you.</span><span class="bt-go">Plan a private trip →</span></span></a>
+    </div>
   </div>
 </section>
 

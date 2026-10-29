@@ -151,6 +151,15 @@
   });
   savedCount(); renderChips(); renderTours();
 
+  /* ---------- where-to-go bento: tour counts + filter on tap ---------- */
+  $$("[data-count-where]").forEach(function (n) {
+    var w = n.dataset.countWhere, c = TOURS.filter(function (t) { return (" " + t.where + " ").indexOf(" " + w + " ") > -1; }).length;
+    n.textContent = c + (c === 1 ? " tour" : " tours") + " →";
+  });
+  $$("[data-where]").forEach(function (b) {
+    b.addEventListener("click", function () { setFilter("all", b.dataset.where); go("#tours"); });
+  });
+
   /* ---------- hero search ---------- */
   var hs = $("#heroSearch");
   if (hs) {
