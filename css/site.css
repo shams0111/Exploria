@@ -591,3 +591,10 @@ html.menu-open{overflow:hidden}
 .hero .hero-btns .btn{min-width:200px;min-height:54px;padding:0 28px;border-radius:2px;font-size:14px;letter-spacing:.16em;text-transform:uppercase}
 .hero .hero-btns .btn-line{background:transparent;backdrop-filter:none}
 .hero .hero-btns .btn-primary:hover{transform:none;box-shadow:none}
+/* hero headline back to the original look (client preference) */
+@font-face{font-family:'Jost';font-style:normal;font-weight:400 600;font-display:swap;src:url(/media/fonts/jost.woff2) format('woff2')}
+.hero h1{font-family:Jost,'Helvetica Neue',Arial,sans-serif;font-weight:400;font-size:clamp(46px,8vw,104px);line-height:1;letter-spacing:.04em;text-transform:uppercase}
+/* keep the hero text clear of the "next departure" card on short screens */
+.hero{min-height:max(760px,100vh)}
+.hero-in{padding-bottom:270px}
+@media (max-width:960px){.hero-in{padding-bottom:170px}}
