@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Group departure — Exploria.pk</title>
+<meta name="description" content="Small-group tours of Pakistan with Exploria.pk.">
+<link rel="preload" href="/media/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/media/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/tour.css">
+</head>
+<body class="tour-page">
+<script>document.documentElement.classList.add("js")</script>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="site-head solid" id="top">
+  <div class="bar">
+    <a class="logo" href="/"><img src="/media/img/exploria-logo-reversed.png" alt="Exploria.pk — Experience Pakistan" width="160" height="46"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#departures">Departures</a>
+      <a href="/#tours">Tours</a>
+      <a href="/#map">Destinations</a>
+      <a href="/#journal">Journal</a>
+      <a href="/#why">About</a>
+    </nav>
+    <div class="head-cta">
+      <a class="phone" href="tel:+923495966540">+92 349 5966540</a>
+      <a class="btn btn-primary js-book" href="mailto:info@exploria.pk">Request booking</a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-top">
+    <img src="/media/img/exploria-logo-reversed.png" alt="Exploria.pk" width="140" height="40">
+    <button type="button" class="menu-close" id="menuClose" aria-label="Close menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <nav class="menu-links" aria-label="Menu">
+    <a href="/"><small>Start here</small>Home</a>
+    <a href="/#departures"><small>Small groups</small>2027 departures</a>
+    <a href="/#tours"><small>Private &amp; tailor-made</small>Tours &amp; treks</a>
+    <a href="/#map"><small>Hunza to the Arabian Sea</small>Destinations</a>
+    <a href="/#why"><small>Born in Hunza</small>About Exploria</a>
+  </nav>
+  <div class="menu-foot">
+    <a class="btn btn-primary" href="https://wa.me/923495966540">WhatsApp a planner</a>
+    <a href="tel:+923495966540">+92 349 5966540</a>
+    <a href="mailto:info@exploria.pk">info@exploria.pk</a>
+  </div>
+</div>
+
+<main id="tour"></main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="c">
+        <img src="/media/img/exploria-logo-reversed.png" alt="Exploria.pk" width="150" height="43" style="display:block;width:150px;height:auto">
+        <a href="tel:+923495966540" style="color:#FFFFFF">+92 349 5966540</a>
+        <a href="mailto:info@exploria.pk">info@exploria.pk</a>
+        <a href="https://wa.me/923495966540" style="color:var(--orange)">Chat on WhatsApp</a>
+      </div>
+      <nav aria-label="Explore"><h4>Explore</h4><a href="/#departures">Group departures 2027</a><a href="/#tours">Tours &amp; treks</a><a href="/#map">Destinations</a><a href="/#journal">Journal</a></nav>
+      <nav aria-label="Help"><h4>Help</h4><a href="#faq">FAQ</a><a href="#info">Booking &amp; payment</a><a href="https://www.tourradar.com/o/exploria">Reviews on TourRadar</a></nav>
+    </div>
+    <div class="foot-base"><span>© 2026 Exploria.pk</span><span>Photos: Exploria.pk</span></div>
+  </div>
+</footer>
+
+<a class="wa" id="wa" href="https://wa.me/923495966540" aria-label="Chat with a trip planner on WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+  <span class="lbl">Talk to a planner</span>
+</a>
+
+<dialog class="lightbox" id="lightbox" aria-label="Photo gallery"></dialog>
+
+<script src="/js/data.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/tour.js"></script>
+</body>
+</html>

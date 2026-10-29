@@ -33,16 +33,22 @@ some browsers block the scripts over file://.
   `hero-hunza.mp4` (pexels.com/video/19150364), `indus-winter.mp4` (19803831),
   `autumn-katpana.mp4` (19400737). Each has a `-poster.jpg` fallback frame.
 
-## index.html — enhanced homepage (for client review)
+## New homepage and tour pages (for client review)
 
-`index.html` is a standalone, plain HTML/CSS/JS version of the homepage that
-builds on `Main.dc.html` and is served at the site root. The original concept
-is still available at `/Main.dc.html`.
+| File | What it is |
+| --- | --- |
+| `index.html` | New homepage, served at `/` |
+| `tour.html` | Tour page template, served at `/tours/<slug>` (see `vercel.json`) |
+| `js/data.js` | All content: group departures, tours, map places, months |
+| `js/common.js` | Shared header, phone menu, WhatsApp button, forms |
+| `js/home.js`, `js/tour.js` | Page scripts |
+| `css/site.css`, `css/tour.css` | Styles |
 
-Added: Spring Blossom Tour 2027 departure (itinerary pop-up, countdown,
-booking email), clickable destination map, filterable tours with "save",
-month picker for when to go, Why Exploria, travel journal, FAQ and
-WhatsApp button.
+The original concept is still at `/Main.dc.html`.
 
-To add a new group departure, copy the Blossom entry in the `DEPARTURES`
-array near the bottom of `index.html` and edit its details.
+**Adding a new group departure:** copy the Blossom entry in `DEPARTURES`
+in `js/data.js` and change its details (give it a new `slug`). It appears
+on the homepage and gets its own page at `/tours/<slug>`. Add a matching
+card to `TOURS` so it shows in the tours row and the hero search.
+
+To test locally, serve the folder and open `tour.html?t=<slug>`.
