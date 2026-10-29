@@ -32,3 +32,17 @@ some browsers block the scripts over file://.
 - `media/video/` — clips by Asif Khan from Pexels (free licence, compressed to 2–3 MB each):
   `hero-hunza.mp4` (pexels.com/video/19150364), `indus-winter.mp4` (19803831),
   `autumn-katpana.mp4` (19400737). Each has a `-poster.jpg` fallback frame.
+
+## index.html — enhanced homepage (for client review)
+
+`index.html` is a standalone, plain HTML/CSS/JS version of the homepage that
+builds on `Main.dc.html` and is served at the site root. The original concept
+is still available at `/Main.dc.html`.
+
+Added: Spring Blossom Tour 2027 departure (itinerary pop-up, countdown,
+booking email), clickable destination map, filterable tours with "save",
+month picker for when to go, Why Exploria, travel journal, FAQ and
+WhatsApp button.
+
+To add a new group departure, copy the Blossom entry in the `DEPARTURES`
+array near the bottom of `index.html` and edit its details.

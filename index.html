@@ -1,0 +1,1408 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exploria.pk — Travel Pakistan | Tours, Treks &amp; Small-Group Departures</title>
+<meta name="description" content="Small-group tours, treks and tailor-made journeys across Pakistan, from a team born in Hunza. Spring Blossom Tour 2027, K2 Base Camp, Hunza, Skardu, Lahore and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap">
+<style>
+:root{
+  --blue:#01539D; --blue-dk:#013F78; --orange:#FFA100; --orange-lt:#FFB733;
+  --ink:#15212B; --night:#0C1820; --sand:#F6F3EE; --line:#DDD5C8; --line-2:#E4DFD6;
+  --muted:#5B6670; --body:#3E4A54; --faint:#8A9299;
+  --serif:'Source Serif 4', Georgia, serif; --sans:Jost, 'Helvetica Neue', Arial, sans-serif;
+  --pad:clamp(20px, 4vw, 48px); --sec:clamp(80px, 10vw, 130px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF;color:var(--ink);font-family:var(--sans);font-size:17px;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%}
+a{color:var(--blue)}
+a:hover{color:var(--blue-dk)}
+button{font:inherit}
+button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.wrap{max-width:1280px;margin:0 auto}
+.sec{padding:var(--sec) var(--pad)}
+.sand{background:var(--sand)}
+.dark{background:var(--night);color:#FFFFFF}
+.eyebrow{margin:0;font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--blue)}
+.dark .eyebrow{color:var(--orange)}
+.h2{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.4vw,56px);line-height:1.08;text-wrap:balance}
+.lede{margin:0;font-size:18px;line-height:1.65;color:var(--body);text-wrap:pretty}
+.dark .lede{color:rgba(255,255,255,.8)}
+.head{display:flex;flex-direction:column;gap:16px;max-width:760px}
+.head-row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px}
+.stack{display:flex;flex-direction:column;gap:44px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:2px;font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:0;transition:background .2s,color .2s,border-color .2s}
+.btn-primary{background:var(--orange);color:var(--night)}
+.btn-primary:hover{background:var(--orange-lt);color:var(--night)}
+.btn-line{background:transparent;color:#FFFFFF;border:1px solid rgba(255,255,255,.85)}
+.btn-line:hover{background:#FFFFFF;color:var(--night)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid #C9C2B6}
+.btn-ghost:hover{border-color:var(--ink);color:var(--ink)}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+.link-arrow svg{transition:transform .25s}
+.link-arrow:hover svg{transform:translateX(4px)}
+.zoom{transition:transform .7s ease}
+.photo:hover .zoom{transform:scale(1.05)}
+.clip{display:block;overflow:hidden;border-radius:3px}
+.cover{display:block;width:100%;height:100%;object-fit:cover}
+.grid{display:grid;gap:16px}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,24,32,0) 35%,rgba(12,24,32,.86) 100%)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* reveal on scroll (only when JS runs) */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ---------- header ---------- */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--orange);z-index:30}
+.site-head{position:fixed;top:0;left:0;right:0;z-index:20;color:#FFFFFF;transition:background .35s,box-shadow .35s,padding .35s}
+.site-head .bar{max-width:1360px;margin:0 auto;padding:22px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:24px;transition:padding .35s}
+.site-head.solid{background:rgba(12,24,32,.94);backdrop-filter:blur(8px);box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.site-head.solid .bar{padding-top:12px;padding-bottom:12px}
+.logo img{display:block;width:160px;height:auto}
+.nav{display:flex;align-items:center;gap:30px;font-size:14px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.nav a{color:#FFFFFF;text-decoration:none;opacity:.92}
+.nav a:hover{opacity:1;color:#FFFFFF;text-decoration:underline;text-underline-offset:6px}
+.head-cta{display:flex;align-items:center;gap:18px;flex:none}
+.phone{color:#FFFFFF;text-decoration:none;font-size:15px;font-weight:500;letter-spacing:.04em}
+.phone:hover{color:var(--orange)}
+.saved-pill{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 12px;border:1px solid rgba(255,255,255,.35);border-radius:999px;color:#FFFFFF;background:transparent;cursor:pointer;font-size:14px}
+.saved-pill:hover{border-color:#FFFFFF}
+.saved-pill svg{color:var(--orange)}
+.head-cta .btn{min-height:44px;padding:0 20px;font-size:13px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;min-height:max(680px,100vh);display:flex;align-items:center;justify-content:center;background:var(--night);color:#FFFFFF;text-align:center}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,24,32,.55) 0%,rgba(12,24,32,.3) 40%,rgba(12,24,32,.72) 100%)}
+.hero-in{position:relative;max-width:1000px;padding:150px 20px 150px;display:flex;flex-direction:column;align-items:center;gap:24px}
+.hero h1{margin:0;font-weight:400;font-size:clamp(46px,8vw,104px);line-height:1;letter-spacing:.04em;text-transform:uppercase}
+.hero .sub{margin:0;font-size:clamp(17px,1.6vw,21px);letter-spacing:.06em;color:rgba(255,255,255,.92)}
+.hero .sub b{font-weight:500;color:#FFFFFF;border-bottom:2px solid var(--orange);display:inline-block;min-width:8ch;text-align:left;transition:opacity .35s}
+.hero-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:10px}
+.hero-btns .btn{min-width:200px;min-height:54px}
+.where{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin-top:8px;font-size:14px;color:rgba(255,255,255,.8)}
+.chip-dark{min-height:36px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.4);background:rgba(12,24,32,.25);color:#FFFFFF;cursor:pointer;font-size:14px;letter-spacing:.04em;transition:background .2s,border-color .2s}
+.chip-dark:hover{background:rgba(255,255,255,.16);border-color:#FFFFFF}
+.next-dep{position:absolute;left:var(--pad);bottom:30px;display:flex;align-items:center;gap:14px;padding:12px 16px 12px 12px;max-width:min(420px,calc(100% - 40px));background:rgba(12,24,32,.55);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);border-radius:4px;color:#FFFFFF;text-decoration:none;text-align:left;transition:border-color .2s}
+.next-dep:hover{color:#FFFFFF;border-color:var(--orange)}
+.next-dep img{width:64px;height:64px;object-fit:cover;border-radius:2px;flex:none}
+.next-dep small{display:block;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
+.next-dep strong{display:block;font-family:var(--serif);font-weight:500;font-size:19px;line-height:1.2}
+.next-dep span{display:block;font-size:13px;color:rgba(255,255,255,.8)}
+.scroll-cue{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:#FFFFFF;font-size:12px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none}
+.scroll-cue svg{animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(5px)}}
+.hero-cap{position:absolute;right:var(--pad);bottom:30px;margin:0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+
+/* ---------- trust strip ---------- */
+.trust{background:var(--night);color:#FFFFFF;border-top:1px solid rgba(255,255,255,.08)}
+.trust ul{list-style:none;margin:0 auto;max-width:1280px;padding:22px var(--pad);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:14px 28px}
+.trust li{display:flex;align-items:center;gap:12px;font-size:15px;color:rgba(255,255,255,.85)}
+.trust b{font-family:var(--serif);font-weight:500;font-size:26px;color:#FFFFFF}
+.trust svg{color:var(--orange);flex:none}
+
+/* ---------- departures ---------- */
+.dep{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);background:#FFFFFF;border-radius:4px;overflow:hidden;box-shadow:0 24px 60px rgba(21,33,43,.10)}
+.dep-media{position:relative;min-height:520px;background:var(--night)}
+.dep-media .slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease}
+.dep-media .slide.on{opacity:1}
+.dep-badge{position:absolute;top:20px;left:20px;display:inline-flex;align-items:center;gap:8px;padding:8px 12px;background:var(--orange);color:var(--night);border-radius:2px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.dep-dots{position:absolute;left:20px;bottom:20px;display:flex;gap:8px}
+.dep-dots button{width:34px;height:4px;padding:0;border:0;border-radius:2px;background:rgba(255,255,255,.45);cursor:pointer}
+.dep-dots button.on{background:#FFFFFF}
+.dep-body{padding:clamp(28px,4vw,52px);display:flex;flex-direction:column;gap:20px}
+.dep-body h3{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(32px,3.4vw,44px);line-height:1.06}
+.dep-body .tag{margin:0;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue)}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line-2)}
+.facts div{padding:14px 0;border-bottom:1px solid var(--line-2);display:flex;flex-direction:column;gap:2px}
+.facts div:nth-child(odd){padding-right:14px}
+.facts span{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.facts strong{font-family:var(--serif);font-weight:500;font-size:22px}
+.route{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:14px;color:var(--body)}
+.route span{padding:4px 10px;background:var(--sand);border-radius:999px}
+.route i{font-style:normal;color:var(--faint)}
+.countdown{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:14px 18px;background:var(--sand);border-radius:3px}
+.countdown p{margin:0;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.countdown ol{list-style:none;margin:0;padding:0;display:flex;gap:16px}
+.countdown li{display:flex;flex-direction:column;align-items:center;min-width:44px}
+.countdown li b{font-family:var(--serif);font-weight:500;font-size:28px;line-height:1;font-variant-numeric:tabular-nums}
+.countdown li small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.dep-actions{display:flex;flex-wrap:wrap;gap:12px}
+.dep-note{margin:0;font-size:14px;color:var(--muted)}
+.dep-more{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px}
+.soon{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:260px;border-radius:4px;overflow:hidden;color:#FFFFFF;background:var(--night)}
+.soon img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.85)}
+.soon .shade{background:linear-gradient(180deg,rgba(12,24,32,.15) 0%,rgba(12,24,32,.9) 100%)}
+.soon-in{position:relative;padding:24px;display:flex;flex-direction:column;gap:8px}
+.soon-in small{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
+.soon-in strong{font-family:var(--serif);font-weight:500;font-size:26px;line-height:1.1}
+.soon-in span{font-size:15px;color:rgba(255,255,255,.85)}
+.notify{display:flex;flex-direction:column;justify-content:center;gap:14px;min-height:260px;padding:28px;border:1px dashed #C9C2B6;border-radius:4px}
+.notify strong{font-family:var(--serif);font-weight:500;font-size:26px;line-height:1.15}
+.notify p{margin:0;font-size:15px;line-height:1.55;color:var(--muted)}
+.field{display:flex;gap:8px;flex-wrap:wrap}
+.field input{flex:1 1 180px;min-height:48px;padding:0 14px;border:1px solid #C9C2B6;border-radius:2px;font:inherit;font-size:16px;background:#FFFFFF;color:var(--ink)}
+.field .btn{min-height:48px}
+.thanks{margin:0;font-size:15px;font-weight:500;color:var(--blue)}
+
+/* ---------- journey finder ---------- */
+.steps{list-style:none;margin:0;padding:0;display:flex;gap:24px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.steps li{color:var(--faint);border-bottom:2px solid transparent;padding-bottom:6px;transition:color .3s,border-color .3s}
+.steps li[aria-current]{color:var(--ink);border-color:var(--orange)}
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px}
+.pick{position:relative;display:block;width:100%;aspect-ratio:4/5;padding:0;border:0;border-radius:3px;overflow:hidden;background:var(--night);color:#FFFFFF;text-align:left;cursor:pointer;animation:fadeUp .5s ease both}
+.pick:nth-child(2){animation-delay:.08s}.pick:nth-child(3){animation-delay:.16s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.pick:hover .zoom{transform:scale(1.05)}
+.pick .shade{background:linear-gradient(180deg,rgba(12,24,32,0) 30%,rgba(12,24,32,.88) 100%)}
+.pick-in{position:absolute;left:28px;right:28px;bottom:28px;display:flex;flex-direction:column;gap:10px}
+.pick-in .n{font-size:13px;font-weight:600;letter-spacing:.2em;color:var(--orange)}
+.pick-in .t{font-family:var(--serif);font-weight:500;font-size:34px;line-height:1.05}
+.pick-in .l{font-size:16px;line-height:1.5;color:rgba(255,255,255,.88)}
+.pick-in .c{margin-top:6px;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.pick:hover .c{text-decoration:underline;text-underline-offset:5px}
+.chosen{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin-top:-16px;font-size:16px;color:var(--muted)}
+.chosen strong{color:var(--ink);font-weight:600}
+.textbtn{min-height:40px;padding:0;background:none;border:0;color:var(--blue);font-size:16px;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.result{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));background:#FFFFFF;border-radius:3px;overflow:hidden;box-shadow:0 20px 50px rgba(21,33,43,.08);animation:fadeUp .5s ease both}
+.result-img{position:relative;min-height:340px;background:var(--night)}
+.result-img img{position:absolute;inset:0}
+.result-body{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:20px}
+.result-body h3{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(32px,3.6vw,46px);line-height:1.08}
+.season{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;padding:18px 0;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.season span{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.season b{font-family:var(--serif);font-weight:400;font-size:24px}
+
+/* ---------- statement + glance ---------- */
+.statement{max-width:980px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center}
+.statement p.big{margin:0;font-family:var(--serif);font-size:clamp(28px,3.4vw,42px);line-height:1.3;text-wrap:balance}
+.tiles{grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr))}
+.tile{position:relative;margin:0;aspect-ratio:3/4;border-radius:3px;overflow:hidden;background:var(--night);color:#FFFFFF}
+.tile img{position:absolute;inset:0}
+.tile figcaption{position:absolute;left:24px;right:24px;bottom:24px;display:flex;flex-direction:column;gap:6px}
+.tile .num{font-family:var(--serif);font-size:64px;line-height:1;font-variant-numeric:tabular-nums}
+.tile .num small{font-size:26px}
+.tile .cap{font-size:16px;line-height:1.45;color:rgba(255,255,255,.9)}
+
+/* ---------- map explorer ---------- */
+.mapx{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.map-svg{display:block;width:100%;height:auto;overflow:visible}
+.map-svg .land{fill:#FFFFFF;stroke:#C9C2B6;stroke-width:1.5}
+.map-svg .region{font-family:var(--sans);font-size:12px;letter-spacing:2px;fill:#A39B8F;text-transform:uppercase}
+.pin{cursor:pointer}
+.pin .halo{fill:var(--orange);opacity:0;transform-box:fill-box;transform-origin:center}
+.pin .dot{fill:var(--blue);stroke:#FFFFFF;stroke-width:2;transition:fill .2s}
+.pin text{font-family:var(--sans);font-size:13px;font-weight:600;fill:var(--ink);paint-order:stroke;stroke:#F6F3EE;stroke-width:4px;stroke-linejoin:round}
+.pin:hover .dot,.pin:focus .dot{fill:var(--orange)}
+.pin.on .dot{fill:var(--orange)}
+.pin.on .halo{opacity:.35;animation:pulse 1.8s ease-out infinite}
+.pin:focus{outline:none}
+.pin:focus-visible .dot{stroke:var(--ink);stroke-width:3}
+@keyframes pulse{0%{transform:scale(.6);opacity:.5}100%{transform:scale(2.4);opacity:0}}
+.place{background:#FFFFFF;border-radius:4px;overflow:hidden;box-shadow:0 20px 50px rgba(21,33,43,.08)}
+.place-img{position:relative;aspect-ratio:16/10;background:var(--night)}
+.place-img img{position:absolute;inset:0;transition:opacity .4s}
+.place-body{padding:26px 28px 30px;display:flex;flex-direction:column;gap:12px}
+.place-body .reg{margin:0;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue)}
+.place-body h3{margin:0;font-family:var(--serif);font-weight:500;font-size:34px;line-height:1.08}
+.place-body p.txt{margin:0;font-size:16px;line-height:1.6;color:var(--body)}
+.place-meta{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:14px;color:var(--muted)}
+.place-meta b{color:var(--ink);font-weight:600}
+.place-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:4px}
+.iconbtn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:1px solid #C9C2B6;border-radius:50%;background:#FFFFFF;color:var(--ink);cursor:pointer;transition:border-color .2s,background .2s}
+.iconbtn:hover{border-color:var(--ink)}
+.dark .iconbtn{background:transparent;border-color:rgba(255,255,255,.35);color:#FFFFFF}
+.dark .iconbtn:hover{border-color:#FFFFFF}
+.map-note{margin:0;font-size:12px;letter-spacing:.06em;color:var(--faint)}
+
+/* ---------- elevation ---------- */
+.elev-line{stroke-dasharray:2200;stroke-dashoffset:2200;transition:stroke-dashoffset 2.6s ease}
+.elev.in .elev-line{stroke-dashoffset:0}
+.elev-fill{opacity:0;transition:opacity 1.2s ease 1.4s}
+.elev.in .elev-fill{opacity:1}
+.strip{grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:14px}
+.strip figure{margin:0;display:flex;flex-direction:column;gap:10px}
+.strip img{aspect-ratio:4/5}
+.strip figcaption{display:flex;justify-content:space-between;gap:10px;font-size:15px}
+.strip figcaption span{color:var(--muted)}
+.foot-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 40px;border-top:1px solid var(--line);padding-top:24px}
+.foot-row p{margin:0;max-width:680px;font-size:16px;line-height:1.6;color:var(--muted)}
+
+/* ---------- video interlude ---------- */
+.interlude{position:relative;overflow:hidden;min-height:clamp(460px,60vw,720px);display:flex;align-items:flex-end;background:var(--night);color:#FFFFFF}
+.interlude video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.interlude .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,24,32,.1) 0%,rgba(12,24,32,.05) 45%,rgba(12,24,32,.8) 100%)}
+.interlude-in{position:relative;width:100%;max-width:1280px;margin:0 auto;padding:0 var(--pad) clamp(40px,6vw,80px);display:flex;flex-direction:column;gap:14px}
+.interlude-in p{margin:0}
+.interlude-in .big{max-width:760px;font-family:var(--serif);font-weight:500;font-size:clamp(32px,4.4vw,56px);line-height:1.08}
+
+/* ---------- ranges / landscapes / culture ---------- */
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:28px}
+.three .photo{display:flex;flex-direction:column;gap:14px}
+.three img{aspect-ratio:4/3}
+.rbar{height:4px;background:#ECE7DE}
+.rbar i{display:block;height:100%;width:0;background:var(--orange);transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
+.in .rbar i{width:var(--w)}
+.three .peak{margin:0;font-family:var(--serif);font-size:32px;line-height:1.1}
+.three .peak span{color:var(--faint)}
+.three .d{margin:0;font-size:16px;line-height:1.6;color:var(--muted)}
+.lands{grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr))}
+.land-card{position:relative;margin:0;aspect-ratio:4/5;border-radius:3px;overflow:hidden;background:var(--night);color:#FFFFFF}
+.land-card img{position:absolute;inset:0}
+.land-card figcaption{position:absolute;left:24px;right:24px;bottom:24px;display:flex;flex-direction:column;gap:6px}
+.land-card .k{font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
+.land-card .t{font-family:var(--serif);font-size:28px;line-height:1.1}
+.land-card .d{font-size:15px;line-height:1.5;color:rgba(255,255,255,.88);max-height:0;opacity:0;overflow:hidden;transition:max-height .5s ease,opacity .5s ease}
+.land-card:hover .d,.land-card:focus-within .d{max-height:120px;opacity:1}
+@media (hover:none){.land-card .d{max-height:none;opacity:1}}
+.culture{grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr))}
+.culture figure{margin:0;display:flex;flex-direction:column;gap:10px}
+.culture img{aspect-ratio:1/1}
+.culture strong{font-family:var(--serif);font-weight:500;font-size:22px}
+.culture figcaption{display:flex;flex-direction:column;gap:4px}
+.culture figcaption span{font-size:15px;line-height:1.5;color:var(--muted)}
+
+/* ---------- tours rail ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:40px;padding:0 16px;border:1px solid #C9C2B6;border-radius:999px;background:#FFFFFF;color:var(--ink);cursor:pointer;font-size:15px;transition:background .2s,border-color .2s,color .2s}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#FFFFFF}
+.chip .ct{opacity:.6;margin-left:4px}
+.rail-wrap{position:relative}
+.rail{list-style:none;margin:0;padding:4px 0 18px;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(270px,310px);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.tour{scroll-snap-align:start;display:flex;flex-direction:column;background:#FFFFFF;border-radius:4px;overflow:hidden;box-shadow:0 10px 30px rgba(21,33,43,.07);animation:fadeUp .45s ease both}
+.tour-img{position:relative;aspect-ratio:4/3;background:var(--night)}
+.tour-img img{position:absolute;inset:0}
+.tour-kind{position:absolute;left:14px;top:14px;padding:5px 10px;background:rgba(12,24,32,.7);color:#FFFFFF;border-radius:2px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.heart{position:absolute;right:12px;top:12px;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:var(--ink);cursor:pointer;transition:transform .2s}
+.heart:hover{transform:scale(1.08)}
+.heart[aria-pressed="true"] svg{fill:#E0475B;stroke:#E0475B}
+.heart.pop{animation:pop .35s ease}
+@keyframes pop{50%{transform:scale(1.25)}}
+.tour-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tour-body h3{margin:0;font-family:var(--serif);font-weight:500;font-size:22px;line-height:1.2}
+.tour-body p{margin:0;font-size:15px;line-height:1.5;color:var(--muted)}
+.tour-foot{margin-top:auto;padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line-2);font-size:14px}
+.tour-foot b{font-weight:600}
+.tour-foot a{font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;text-decoration:none}
+.rail-ctrl{display:flex;gap:10px}
+.empty{padding:40px 0;color:var(--muted)}
+
+/* ---------- heritage ---------- */
+.timeline{list-style:none;margin:44px 0 0;padding:0 var(--pad) 16px;padding-left:max(var(--pad),calc(50vw - 640px));scroll-padding-left:max(var(--pad),calc(50vw - 640px));display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,300px);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.timeline li{scroll-snap-align:start;display:flex;flex-direction:column;gap:10px}
+.timeline img{aspect-ratio:4/5}
+.timeline .when{font-size:14px;font-weight:600;letter-spacing:.14em;color:var(--orange)}
+.timeline .t{font-family:var(--serif);font-size:26px}
+.timeline .d{font-size:15px;line-height:1.55;color:rgba(255,255,255,.75)}
+
+/* ---------- when to go ---------- */
+.cal{min-width:760px;display:grid;grid-template-columns:200px repeat(12,minmax(0,1fr));gap:4px;align-items:center}
+.mbtn{min-height:36px;padding:0;border:0;border-radius:2px;background:transparent;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;transition:background .2s,color .2s}
+.mbtn:hover{background:#ECE7DE;color:var(--ink)}
+.mbtn[aria-pressed="true"]{background:var(--ink);color:#FFFFFF}
+.cell{height:44px;border-radius:2px;transition:transform .25s,box-shadow .25s,opacity .25s}
+.cal.has-pick .cell{opacity:.45}
+.cal.has-pick .cell.col-on{opacity:1;transform:scaleY(1.12);box-shadow:0 4px 12px rgba(21,33,43,.18)}
+.rowlab{display:flex;flex-direction:column;gap:2px;padding-right:12px}
+.rowlab b{font-weight:600;font-size:16px}
+.rowlab small{font-size:13px;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:12px 28px;font-size:14px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:16px;height:16px;border-radius:2px;display:inline-block}
+.month-card{display:grid;grid-template-columns:auto 1fr;gap:6px 24px;align-items:baseline;padding:22px 26px;background:#FFFFFF;border-left:3px solid var(--orange);border-radius:2px;box-shadow:0 10px 30px rgba(21,33,43,.06)}
+.month-card .m{grid-row:span 2;font-family:var(--serif);font-weight:500;font-size:40px;line-height:1}
+.month-card p{margin:0;font-size:17px;line-height:1.6;color:var(--body)}
+.month-card a{font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.moments{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:20px;border-top:1px solid var(--line);padding-top:32px}
+.moments>div{display:flex;flex-direction:column;gap:10px}
+.moments img,.moments video{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+.moments .k{font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue)}
+.moments .d{font-size:16px;line-height:1.55;color:var(--body)}
+
+/* ---------- why exploria ---------- */
+.why{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(32px,5vw,72px);align-items:center}
+.why-img{position:relative;aspect-ratio:4/5;border-radius:3px;overflow:hidden;background:var(--night)}
+.why-img img{position:absolute;inset:0}
+.why-img .quote{position:absolute;left:20px;right:20px;bottom:20px;padding:20px 22px;background:rgba(12,24,32,.78);backdrop-filter:blur(6px);color:#FFFFFF;border-radius:3px;font-family:var(--serif);font-size:20px;line-height:1.4}
+.why-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px;margin-top:12px}
+.why-list div{display:flex;flex-direction:column;gap:8px;padding-top:18px;border-top:1px solid var(--line)}
+.why-list b{font-family:var(--serif);font-weight:500;font-size:34px;line-height:1;color:var(--blue)}
+.why-list strong{font-size:17px;font-weight:600}
+.why-list span{font-size:15px;line-height:1.55;color:var(--muted)}
+
+/* ---------- reviews ---------- */
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:40px}
+.reviews figure{margin:0;display:flex;flex-direction:column;gap:18px;border-top:2px solid var(--ink);padding-top:24px}
+.reviews blockquote{margin:0;font-family:var(--serif);font-size:22px;line-height:1.45}
+.reviews figcaption{font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.stars{color:var(--orange);letter-spacing:.1em}
+
+/* ---------- journal ---------- */
+.journal{display:grid;grid-template-columns:1.4fr 1fr;gap:24px}
+.journal .side{display:grid;gap:24px}
+.post{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:var(--ink)}
+.post:hover{color:var(--ink)}
+.post:hover h3{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.post .img{aspect-ratio:16/10}
+.post.lead .img{aspect-ratio:4/3}
+.post h3{margin:0;font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.2}
+.post.lead h3{font-size:clamp(28px,2.6vw,36px)}
+.post .k{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue)}
+.post p{margin:0;font-size:16px;line-height:1.55;color:var(--muted)}
+.post-row{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center}
+.post-row .img{aspect-ratio:1/1}
+.post-row h3{font-size:20px}
+
+/* ---------- faq ---------- */
+.faq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:clamp(32px,5vw,72px);align-items:start}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;cursor:pointer;font-family:var(--serif);font-size:21px;line-height:1.3}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid #C9C2B6;display:inline-flex;align-items:center;justify-content:center;transition:transform .3s,background .2s}
+.faq details[open] summary .pm{transform:rotate(45deg);background:var(--orange);border-color:var(--orange)}
+.faq details p{margin:0 0 22px;max-width:680px;font-size:17px;line-height:1.65;color:var(--body)}
+
+/* ---------- closing ---------- */
+.closing{position:relative;overflow:hidden;background:var(--night);color:#FFFFFF;padding:clamp(110px,13vw,190px) var(--pad)}
+.closing>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.closing .veil{position:absolute;inset:0;background:rgba(12,24,32,.6)}
+.closing-in{position:relative;max-width:760px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
+.closing-in p{margin:0}
+.closing h2{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(40px,6vw,76px);line-height:1.04}
+.closing .field{justify-content:center;width:100%;max-width:520px}
+.closing .field input{background:rgba(255,255,255,.95)}
+
+/* ---------- footer ---------- */
+footer{background:var(--night);color:rgba(255,255,255,.78);padding:64px var(--pad) 32px;font-size:15px}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr));gap:36px}
+.foot-grid nav,.foot-grid .c{display:flex;flex-direction:column;gap:10px}
+.foot-grid h4{margin:0 0 4px;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#FFFFFF}
+.foot-grid a{color:inherit;text-decoration:none}
+.foot-grid a:hover{color:#FFFFFF;text-decoration:underline}
+.foot-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;border-top:1px solid rgba(255,255,255,.14);padding-top:24px;margin-top:48px;font-size:13px;color:rgba(255,255,255,.6)}
+
+/* ---------- floating whatsapp ---------- */
+.wa{position:fixed;right:20px;bottom:20px;z-index:25;display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:0 20px 0 16px;border-radius:999px;background:#1F9D55;color:#FFFFFF;text-decoration:none;font-weight:600;font-size:15px;box-shadow:0 12px 30px rgba(0,0,0,.25);transform:translateY(120px);transition:transform .45s ease,background .2s}
+.wa.show{transform:none}
+.wa:hover{background:#178a49;color:#FFFFFF}
+
+/* ---------- itinerary dialog ---------- */
+dialog.itin{width:min(920px,calc(100% - 24px));max-height:calc(100vh - 40px);padding:0;border:0;border-radius:4px;color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35)}
+dialog.itin::backdrop{background:rgba(12,24,32,.7);backdrop-filter:blur(3px)}
+.itin-head{position:relative;min-height:240px;display:flex;align-items:flex-end;color:#FFFFFF;background:var(--night)}
+.itin-head img{position:absolute;inset:0}
+.itin-head .shade{background:linear-gradient(180deg,rgba(12,24,32,.1) 20%,rgba(12,24,32,.9) 100%)}
+.itin-head div.t{position:relative;padding:28px 32px;display:flex;flex-direction:column;gap:6px}
+.itin-head h2{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(30px,4vw,44px);line-height:1.05}
+.itin-head p{margin:0;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
+.itin-close{position:absolute;top:14px;right:14px;z-index:2;width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.itin-tabs{position:sticky;top:0;z-index:1;display:flex;gap:4px;padding:0 24px;background:#FFFFFF;border-bottom:1px solid var(--line-2);overflow-x:auto}
+.itin-tabs button{min-height:52px;padding:0 14px;border:0;border-bottom:2px solid transparent;background:none;color:var(--muted);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+.itin-tabs button[aria-selected="true"]{color:var(--ink);border-color:var(--orange)}
+.itin-pane{padding:28px 32px 36px}
+.days{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.days>li{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line-2)}
+.days>li:last-child{border-bottom:0}
+.days .dn{font-family:var(--serif);font-size:30px;line-height:1;color:var(--blue)}
+.days .dn small{display:block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.days h4{margin:0 0 4px;font-size:18px;font-weight:600}
+.days .date{margin:0 0 8px;font-size:14px;color:var(--muted)}
+.days ul{margin:0;padding-left:18px;font-size:15px;line-height:1.6;color:var(--body)}
+.inc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:28px}
+.inc h4{margin:0 0 10px;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.inc ul{margin:0;padding-left:18px;font-size:15px;line-height:1.65;color:var(--body)}
+.itin-faq details{border-top:1px solid var(--line-2)}
+.itin-faq summary{padding:16px 0;cursor:pointer;font-weight:600}
+.itin-faq p{margin:0 0 16px;font-size:15px;line-height:1.6;color:var(--body)}
+.itin-foot{position:sticky;bottom:0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:16px 32px;background:var(--sand);border-top:1px solid var(--line-2)}
+.itin-foot b{font-family:var(--serif);font-weight:500;font-size:24px}
+.itin-foot span{font-size:14px;color:var(--muted)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){.nav{display:none}}
+@media (max-width:960px){
+  .phone{display:none}
+  .dep{grid-template-columns:1fr}
+  .dep-media{min-height:340px}
+  .mapx,.why,.faq,.journal{grid-template-columns:1fr}
+  .next-dep{display:none}
+}
+@media (max-width:700px){
+  .pick{aspect-ratio:16/11}
+  .tile{aspect-ratio:4/3}
+  .hero-cap{display:none}
+  .saved-pill .lbl{display:none}
+  .head-cta .btn{display:none}
+  .why-list{grid-template-columns:1fr}
+  .post-row{grid-template-columns:110px 1fr}
+  .wa .lbl{display:none}
+  .wa{padding:0 16px}
+  .days>li{grid-template-columns:48px 1fr;gap:12px}
+  .itin-pane{padding:22px 20px 28px}
+  .itin-foot{padding:14px 20px}
+  .month-card{grid-template-columns:1fr}
+  .month-card .m{grid-row:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .js .reveal{opacity:1;transform:none}
+  .elev-line{stroke-dashoffset:0}
+  .elev-fill{opacity:1}
+  .rbar i{width:var(--w)}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add("js")</script>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-head" id="top">
+  <div class="bar">
+    <a class="logo" href="https://www.exploria.pk/"><img src="media/img/exploria-logo-reversed.png" alt="Exploria.pk — Experience Pakistan" width="160" height="46"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#departures">Departures</a>
+      <a href="#tours">Tours</a>
+      <a href="#tours" data-filter="trek">Treks</a>
+      <a href="#map">Destinations</a>
+      <a href="#journal">Journal</a>
+      <a href="#why">About</a>
+    </nav>
+    <div class="head-cta">
+      <a class="phone" href="tel:+923495966540">+92 349 5966540</a>
+      <button type="button" class="saved-pill" id="savedPill" aria-label="Show saved tours">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3.1 4.5 6.8 4.5c2.1 0 3.6 1.1 5.2 3 1.6-1.9 3.1-3 5.2-3 3.7 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>
+        <span class="lbl">Saved</span> <span id="savedCount">0</span>
+      </button>
+      <a class="btn btn-primary" href="#enquire">Enquire now</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" aria-label="Travel Pakistan">
+  <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="media/video/hero-hunza-poster.jpg" aria-hidden="true">
+    <source src="media/video/hero-hunza.mp4" type="video/mp4">
+  </video>
+  <div class="veil" aria-hidden="true"></div>
+  <div class="hero-in">
+    <h1>Travel Pakistan</h1>
+    <p class="sub">Extraordinary Pakistan experiences, from <b id="heroWord">mountains</b></p>
+    <div class="hero-btns">
+      <a class="btn btn-primary" href="#journey">Find my journey</a>
+      <a class="btn btn-line" href="#departures">2027 departures</a>
+    </div>
+    <div class="where" aria-label="Jump to a destination">
+      <span>Where to?</span>
+      <button type="button" class="chip-dark" data-place="hunza">Hunza</button>
+      <button type="button" class="chip-dark" data-place="skardu">Skardu</button>
+      <button type="button" class="chip-dark" data-place="k2">K2</button>
+      <button type="button" class="chip-dark" data-place="kalash">Kalash</button>
+      <button type="button" class="chip-dark" data-place="lahore">Lahore</button>
+    </div>
+  </div>
+  <a class="next-dep" href="#departures">
+    <img src="media/img/blossom-branch.jpg" alt="">
+    <span>
+      <small>Next group departure</small>
+      <strong>Spring Blossom Tour · 2 April 2027</strong>
+      <span id="heroCount">10 days · Hunza &amp; Skardu · 4–8 guests</span>
+    </span>
+  </a>
+  <a class="scroll-cue" href="#departures">Scroll to explore
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+  </a>
+  <p class="hero-cap">Hunza Valley, Gilgit-Baltistan</p>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="trust" aria-label="Why travellers trust Exploria">
+  <ul>
+    <li><b>4.9/5</b> traveller rating</li>
+    <li><b>10+</b> years guiding in Pakistan</li>
+    <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.2 7 22l5-3 5 3-1.5-7.8"/></svg> TourRadar Silver Badge</li>
+    <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 20 6-11 4 6 3-4 5 9z"/></svg> Born in Hunza, rooted in the Karakoram</li>
+  </ul>
+</section>
+
+<!-- ============ SIGNATURE DEPARTURES ============ -->
+<section class="sec sand" id="departures">
+  <div class="wrap stack">
+    <div class="head-row reveal">
+      <div class="head">
+        <p class="eyebrow">Small-group departures · 2027</p>
+        <h2 class="h2">Fixed dates, small groups, local hosts</h2>
+        <p class="lede">Join a planned departure with 4 to 8 travellers. We fix the dates for the best season, handle every flight and transfer, and take you to the villages we grew up in.</p>
+      </div>
+    </div>
+
+    <div id="depFeatured"></div>
+    <div class="dep-more reveal" id="depMore"></div>
+  </div>
+</section>
+
+<!-- ============ JOURNEY FINDER ============ -->
+<section class="sec" id="journey" style="scroll-margin-top:60px">
+  <div class="wrap" style="display:flex;flex-direction:column;gap:40px">
+    <div class="head-row">
+      <div class="head" style="gap:14px;max-width:720px">
+        <p class="eyebrow">Find your journey</p>
+        <h2 class="h2" id="jfTitle">Three ways to see Pakistan</h2>
+      </div>
+      <ol class="steps" id="jfSteps" aria-label="Progress"></ol>
+    </div>
+    <div id="jfChosen"></div>
+    <div id="jfBody" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ============ WHY PAKISTAN ============ -->
+<section class="sec" style="padding-top:0">
+  <div class="statement reveal">
+    <p class="eyebrow">Why Pakistan</p>
+    <p class="big">Three of the world's great mountain ranges meet here. The Indus Valley built some of the first planned cities here. And on a Lahore food street, it is still busy at midnight.</p>
+  </div>
+</section>
+
+<!-- ============ AT A GLANCE ============ -->
+<section style="padding:0 var(--pad) var(--sec)">
+  <div class="wrap grid tiles">
+    <figure class="tile photo reveal"><img class="zoom cover" src="media/img/k2-trek.jpg" alt="Trekkers below K2 at Concordia" loading="lazy"><span class="shade" aria-hidden="true"></span>
+      <figcaption><span class="num"><span data-count="8611" data-sep="1">8,611</span><small> m</small></span><span class="cap">K2, the second-highest mountain on Earth</span></figcaption></figure>
+    <figure class="tile photo reveal"><img class="zoom cover" src="media/img/nanga-rupal.jpg" alt="Expedition tents below Nanga Parbat at night" loading="lazy"><span class="shade" aria-hidden="true"></span>
+      <figcaption><span class="num"><span data-count="5">5</span><small> of 14</small></span><span class="cap">of the world's 8,000-metre peaks stand in Pakistan</span></figcaption></figure>
+    <figure class="tile photo reveal"><img class="zoom cover" src="media/img/rohtas.jpg" alt="Aerial view of Rohtas Fort" loading="lazy"><span class="shade" aria-hidden="true"></span>
+      <figcaption><span class="num"><span data-count="6">6</span></span><span class="cap">UNESCO World Heritage Sites, from Mohenjo-daro to Rohtas Fort</span></figcaption></figure>
+    <figure class="tile photo reveal"><img class="zoom cover" src="media/img/khunjerab-ibex.jpg" alt="Himalayan ibex in Khunjerab National Park" loading="lazy"><span class="shade" aria-hidden="true"></span>
+      <figcaption><span class="num"><span data-count="4693" data-sep="1">4,693</span><small> m</small></span><span class="cap">Khunjerab Pass, top of the Karakoram Highway and home to wild ibex</span></figcaption></figure>
+  </div>
+</section>
+
+<!-- ============ MAP EXPLORER ============ -->
+<section class="sec sand" id="map" style="scroll-margin-top:40px">
+  <div class="wrap stack">
+    <div class="head reveal">
+      <p class="eyebrow">Explore the map</p>
+      <h2 class="h2">Pick a place, any place</h2>
+      <p class="lede">Tap a pin to see where it is, when to go and which of our tours takes you there. Use the arrows to travel from the mountains to the sea.</p>
+    </div>
+    <div class="mapx">
+      <div class="reveal">
+        <svg class="map-svg" id="mapSvg" viewBox="0 0 700 650" role="group" aria-label="Map of Pakistan with destinations"></svg>
+        <p class="map-note">Illustrative map, not to scale.</p>
+      </div>
+      <article class="place reveal" id="place" aria-live="polite">
+        <div class="place-img"><img class="cover" id="placeImg" src="media/img/attabad.jpg" alt=""></div>
+        <div class="place-body">
+          <p class="reg" id="placeReg"></p>
+          <h3 id="placeName"></h3>
+          <p class="txt" id="placeTxt"></p>
+          <div class="place-meta"><span>Best time: <b id="placeSeason"></b></span><span>Height: <b id="placeAlt"></b></span></div>
+          <div class="place-nav">
+            <a class="link-arrow" id="placeLink" href="#">See tours
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+            <span style="display:flex;gap:8px">
+              <button type="button" class="iconbtn" id="placePrev" aria-label="Previous place"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+              <button type="button" class="iconbtn" id="placeNext" aria-label="Next place"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ELEVATION PROFILE ============ -->
+<section class="sec">
+  <div class="wrap stack">
+    <div class="head reveal" style="max-width:720px">
+      <p class="eyebrow">The vertical country</p>
+      <h2 class="h2">From the Arabian Sea to 8,611 metres</h2>
+      <p class="lede">Travel north from Karachi and the land keeps climbing: through the plains of Punjab, over the Babusar Pass and into the Karakoram, where the road ends and the glaciers begin.</p>
+    </div>
+    <div style="overflow-x:auto">
+      <svg class="elev" id="elev" viewBox="0 0 1200 440" role="img" aria-label="Elevation profile of a journey north through Pakistan, from Karachi at sea level to K2 at 8,611 metres" style="display:block;width:100%;min-width:760px;height:auto;font-family:Jost,Arial,sans-serif">
+        <line x1="0" y1="390" x2="1200" y2="390" stroke="#D8D1C5" stroke-width="1"/>
+        <line x1="40" y1="83" x2="1160" y2="83" stroke="#15212B" stroke-opacity=".35" stroke-width="1" stroke-dasharray="6 6"/>
+        <text x="40" y="72" fill="#5B6670" font-size="13">8,000 m</text>
+        <path class="elev-fill" d="M40,390 L180,382 L320,369 L460,230 L600,79 L740,294 L880,232 L1020,305 L1160,60 L1160,390 L40,390 Z" fill="#01539D" fill-opacity=".1"/>
+        <polyline class="elev-line" points="40,390 180,382 320,369 460,230 600,79 740,294 880,232 1020,305 1160,60" fill="none" stroke="#01539D" stroke-width="2.5" stroke-linejoin="round"/>
+        <g fill="#FFFFFF" stroke="#01539D" stroke-width="2">
+          <circle cx="40" cy="390" r="5"/><circle cx="180" cy="382" r="5"/><circle cx="320" cy="369" r="5"/><circle cx="460" cy="230" r="5"/>
+          <circle cx="740" cy="294" r="5"/><circle cx="880" cy="232" r="5"/><circle cx="1020" cy="305" r="5"/>
+        </g>
+        <circle cx="600" cy="79" r="7" fill="#FFA100"/><circle cx="1160" cy="60" r="7" fill="#FFA100"/>
+        <g font-size="16" font-weight="600" fill="#15212B">
+          <text x="40" y="356">Karachi</text><text x="180" y="348" text-anchor="middle">Lahore</text><text x="310" y="335" text-anchor="end">Islamabad</text>
+          <text x="448" y="200" text-anchor="end">Babusar Pass</text><text x="600" y="44" text-anchor="middle">Nanga Parbat</text><text x="740" y="320" text-anchor="middle">Hunza</text>
+          <text x="880" y="198" text-anchor="middle">Deosai Plateau</text><text x="1020" y="331" text-anchor="middle">Skardu</text><text x="1148" y="30" text-anchor="end">K2</text>
+        </g>
+        <g font-size="13" fill="#5B6670">
+          <text x="40" y="374">0 m</text><text x="180" y="366" text-anchor="middle">217 m</text><text x="310" y="353" text-anchor="end">540 m</text>
+          <text x="448" y="218" text-anchor="end">4,173 m</text><text x="600" y="62" text-anchor="middle">8,126 m</text><text x="740" y="338" text-anchor="middle">2,500 m</text>
+          <text x="880" y="216" text-anchor="middle">4,114 m</text><text x="1020" y="349" text-anchor="middle">2,228 m</text><text x="1148" y="48" text-anchor="end">8,611 m</text>
+        </g>
+        <text x="40" y="422" fill="#5B6670" font-size="12" letter-spacing="1.5">ARABIAN SEA</text>
+        <text x="1160" y="422" fill="#5B6670" font-size="12" letter-spacing="1.5" text-anchor="end">NORTH — NOT TO SCALE</text>
+      </svg>
+    </div>
+    <div class="grid strip">
+      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/karachi-coast.jpg" alt="Rocky coastline near Karachi" loading="lazy"></span><figcaption><strong>Karachi coast</strong><span>0 m</span></figcaption></figure>
+      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/wazir-khan.jpg" alt="Wazir Khan Mosque and old Lahore at sunset" loading="lazy"></span><figcaption><strong>Old Lahore</strong><span>217 m</span></figcaption></figure>
+      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/attabad.jpg" alt="Attabad Lake in the Hunza valley" loading="lazy"></span><figcaption><strong>Attabad Lake, Hunza</strong><span>2,500 m</span></figcaption></figure>
+      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/deosai.jpg" alt="The green Deosai Plateau below snow peaks" loading="lazy"></span><figcaption><strong>Deosai Plateau</strong><span>4,114 m</span></figcaption></figure>
+      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/k2-concordia.jpg" alt="K2 seen from a tent on the Baltoro Glacier" loading="lazy"></span><figcaption><strong>K2 from the Baltoro</strong><span>8,611 m</span></figcaption></figure>
+    </div>
+    <div class="foot-row">
+      <p>Above the dashed line: the 8,000-metre club. K2, Nanga Parbat, Broad Peak, Gasherbrum I and Gasherbrum II are all in Pakistan.</p>
+      <a class="link-arrow" href="#tours" data-filter="trek">Explore treks
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEO INTERLUDE ============ -->
+<section class="interlude">
+  <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="media/video/indus-winter-poster.jpg" aria-hidden="true"><source src="media/video/indus-winter.mp4" type="video/mp4"></video>
+  <div class="veil" aria-hidden="true"></div>
+  <div class="interlude-in reveal">
+    <p class="eyebrow" style="color:#FFFFFF">Gilgit-Baltistan in winter</p>
+    <p class="big">Turquoise rivers, white valleys and almost no one else.</p>
+  </div>
+</section>
+
+<!-- ============ THREE RANGES ============ -->
+<section class="sec">
+  <div class="wrap" style="display:flex;flex-direction:column;gap:48px">
+    <div class="head reveal">
+      <p class="eyebrow">Where three ranges meet</p>
+      <h2 class="h2">The Hindu Kush, Karakoram and Himalaya meet here</h2>
+      <p class="lede">Near Gilgit, three of the world's great mountain ranges come together at a single junction. Each one raises a giant inside Pakistan. The bars compare each summit with K2.</p>
+    </div>
+    <div class="three">
+      <div class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/chitral.jpg" alt="Grazing herds in the Chitral valley below Hindu Kush peaks" loading="lazy"></span>
+        <div class="rbar" role="img" aria-label="Tirich Mir is 89.5% of K2's height"><i style="--w:89.5%"></i></div>
+        <p class="eyebrow">Hindu Kush</p><p class="peak">Tirich Mir <span>7,708 m</span></p><p class="d">The highest peak of the Hindu Kush, rising above Chitral and the Kalash valleys.</p></div>
+      <div class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/k2-summit.jpg" alt="A climber on a snow ridge below K2" loading="lazy"></span>
+        <div class="rbar" role="img" aria-label="K2, the reference height"><i style="--w:100%"></i></div>
+        <p class="eyebrow">Karakoram</p><p class="peak">K2 <span>8,611 m</span></p><p class="d">The second-highest mountain on Earth, at the head of the Baltoro Glacier.</p></div>
+      <div class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/fairy-meadows.jpg" alt="A hiker looks at Nanga Parbat from Fairy Meadows" loading="lazy"></span>
+        <div class="rbar" role="img" aria-label="Nanga Parbat is 94.4% of K2's height"><i style="--w:94.4%"></i></div>
+        <p class="eyebrow">Himalaya</p><p class="peak">Nanga Parbat <span>8,126 m</span></p><p class="d">The western anchor of the Himalaya, seen from Fairy Meadows.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUR LANDSCAPES ============ -->
+<section class="sec sand">
+  <div class="wrap stack">
+    <div class="head reveal">
+      <p class="eyebrow">More than mountains</p>
+      <h2 class="h2">Four landscapes in one country</h2>
+    </div>
+    <div class="grid lands">
+      <figure class="land-card photo reveal" tabindex="0"><img class="zoom cover" src="media/img/passu-bridge.jpg" alt="The Passu suspension bridge over the Hunza River" loading="lazy"><span class="shade" aria-hidden="true"></span>
+        <figcaption><span class="k">The north</span><span class="t">Valleys &amp; glaciers</span><span class="d">Hunza, Skardu, Chitral and the rope bridges of Passu.</span></figcaption></figure>
+      <figure class="land-card photo reveal" tabindex="0"><img class="zoom cover" src="media/img/faisal-mosque.jpg" alt="Faisal Mosque in Islamabad" loading="lazy"><span class="shade" aria-hidden="true"></span>
+        <figcaption><span class="k">The plains</span><span class="t">Cities &amp; heritage</span><span class="d">Islamabad, Lahore and the Indus valley sites.</span></figcaption></figure>
+      <figure class="land-card photo reveal" tabindex="0"><img class="zoom cover" src="media/img/derawar-fort.jpg" alt="Travellers on the walls of Derawar Fort in the Cholistan desert" loading="lazy"><span class="shade" aria-hidden="true"></span>
+        <figcaption><span class="k">The desert</span><span class="t">Forts &amp; dunes</span><span class="d">Derawar Fort and the Cholistan desert near Bahawalpur.</span></figcaption></figure>
+      <figure class="land-card photo reveal" tabindex="0"><img class="zoom cover" src="media/img/hingol.jpg" alt="Eroded cliffs of Hingol National Park on the Makran coast" loading="lazy"><span class="shade" aria-hidden="true"></span>
+        <figcaption><span class="k">The coast</span><span class="t">Cliffs &amp; beaches</span><span class="d">Hingol, Gwadar and over 1,000 km of Arabian Sea shore.</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POPULAR TOURS ============ -->
+<section class="sec" id="tours" style="scroll-margin-top:40px">
+  <div class="wrap stack" style="gap:32px">
+    <div class="head-row reveal">
+      <div class="head">
+        <p class="eyebrow">Tours &amp; treks</p>
+        <h2 class="h2">Our most-loved journeys</h2>
+        <p class="lede">Every tour can be run privately on your own dates. Tap the heart to save the ones you like and compare them later.</p>
+      </div>
+      <div class="rail-ctrl">
+        <button type="button" class="iconbtn" data-rail="-1" aria-label="Scroll tours left"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button type="button" class="iconbtn" data-rail="1" aria-label="Scroll tours right"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="chips" id="tourChips" role="group" aria-label="Filter tours"></div>
+    <div class="rail-wrap"><ul class="rail" id="rail" tabindex="0" aria-label="Tours"></ul></div>
+    <div class="foot-row" style="border:0;padding:0">
+      <p>Don't see what you want? We build private, tailor-made trips around your dates, pace and budget.</p>
+      <a class="link-arrow" href="https://www.exploria.pk/customize-your-tour/">Customise your tour
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HERITAGE TIMELINE ============ -->
+<section class="dark" style="padding:var(--sec) 0">
+  <div class="wrap head-row reveal" style="padding:0 var(--pad)">
+    <div class="head">
+      <p class="eyebrow">Culture &amp; heritage</p>
+      <h2 class="h2">Nine thousand years in one country</h2>
+      <p class="lede">From one of South Asia's first farming villages to the Mughal monuments of Lahore. All six UNESCO World Heritage Sites are on this line.</p>
+    </div>
+    <div class="rail-ctrl">
+      <button type="button" class="iconbtn" data-tl="-1" aria-label="Earlier"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <button type="button" class="iconbtn" data-tl="1" aria-label="Later"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+  <ol class="timeline" id="timeline" tabindex="0" aria-label="Heritage timeline">
+    <li class="photo"><span class="clip"><img class="zoom cover" src="media/img/mehrgarh.jpg" alt="Excavated mud-brick walls at Mehrgarh" loading="lazy"></span><span class="when">c. 7000 BCE</span><span class="t">Mehrgarh</span><span class="d">One of South Asia's earliest farming villages, in Balochistan.</span></li>
+    <li class="photo"><span class="clip"><img class="zoom cover" src="media/img/mohenjo-daro.jpg" alt="The ruins of Mohenjo-daro" loading="lazy"></span><span class="when">c. 2500 BCE · UNESCO</span><span class="t">Mohenjo-daro</span><span class="d">A planned Indus Valley city with grid streets, wells and covered drains.</span></li>
+    <li class="photo"><span class="clip"><img class="zoom cover" src="media/img/taxila.jpg" alt="Visitors at the Taxila archaeological site" loading="lazy"></span><span class="when">1st – 5th c. CE · UNESCO</span><span class="t">Taxila &amp; Takht-i-Bahi</span><span class="d">Buddhist monasteries and stone sculpture from the age of Gandhara. Two separate UNESCO sites.</span></li>
+    <li class="photo"><span class="clip"><img class="zoom cover" src="media/img/makli.jpg" alt="Carved stone tombs at Makli necropolis" loading="lazy"></span><span class="when">14th – 18th c. · UNESCO</span><span class="t">Makli, Thatta</span><span class="d">One of the largest necropolises in the world, on a ridge in Sindh.</span></li>
+    <li class="photo"><span class="clip"><img class="zoom cover" src="media/img/rohtas.jpg" alt="The walls and gates of Rohtas Fort" loading="lazy"></span><span class="when">1541 · UNESCO</span><span class="t">Rohtas Fort</span><span class="d">Sher Shah Suri's fortress on the Grand Trunk Road, its walls running for about 4 km.</span></li>
+    <li class="photo"><span class="clip"><img class="zoom cover" src="media/img/lahore-fort.jpg" alt="The Alamgiri Gate of Lahore Fort" loading="lazy"></span><span class="when">16th – 17th c. · UNESCO</span><span class="t">Lahore Fort &amp; Shalimar</span><span class="d">The Mughal citadel and Shah Jahan's terraced gardens, listed together.</span></li>
+    <li class="photo"><span class="clip"><img class="zoom cover" src="media/img/badshahi-dusk.jpg" alt="The Badshahi Mosque reflected at dusk" loading="lazy"></span><span class="when">1673</span><span class="t">Badshahi Mosque</span><span class="d">Completed under Aurangzeb, facing Lahore Fort across the Hazuri Bagh.</span></li>
+  </ol>
+  <div class="wrap" style="margin-top:28px;padding:0 var(--pad);display:flex;justify-content:flex-end">
+    <a class="link-arrow" href="#tours" data-filter="culture" style="color:var(--orange)">Explore culture tours
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<!-- ============ LIVING CULTURE ============ -->
+<section class="sec">
+  <div class="wrap stack">
+    <div class="head reveal">
+      <p class="eyebrow">Living culture</p>
+      <h2 class="h2">Shrines, bazaars, music and food</h2>
+      <p class="lede">Pakistan's history is not only in its ruins. You hear it in the qawwali at a Sufi shrine and taste it on a Lahore food street.</p>
+    </div>
+    <div class="grid culture">
+      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/sehwan-shrine.jpg" alt="The tiled entrance of the Lal Shahbaz Qalandar shrine in Sehwan" loading="lazy"></span><figcaption><strong>Sufi shrines</strong><span>Dhamaal drumming at Lal Shahbaz Qalandar, Sehwan.</span></figcaption></figure>
+      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/food-street.webp" alt="The Fort Road food street in Lahore at night" loading="lazy"></span><figcaption><strong>Food streets</strong><span>Dinner under the walls of the Badshahi Mosque, Lahore.</span></figcaption></figure>
+      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/kalash-houses.jpg" alt="Wooden houses stacked on a hillside in the Kalash valleys" loading="lazy"></span><figcaption><strong>The Kalash valleys</strong><span>A small community with its own faith and festivals, near Chitral.</span></figcaption></figure>
+      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/folk-dance.jpg" alt="Folk dancers in bright costume" loading="lazy"></span><figcaption><strong>Music &amp; dance</strong><span>Folk festivals in Sindh, Punjab and the mountains.</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHEN TO GO ============ -->
+<section class="sec sand" id="when">
+  <div class="wrap" style="display:flex;flex-direction:column;gap:32px">
+    <div class="head reveal">
+      <p class="eyebrow">When to go</p>
+      <h2 class="h2">Two seasons, two Pakistans</h2>
+      <p class="lede">The mountains open up in summer. The plains and cities are at their best in winter. Pick a month to see what it's good for.</p>
+    </div>
+    <div style="overflow-x:auto"><div class="cal" id="cal"></div></div>
+    <div class="legend">
+      <span><i class="sw" style="background:#FFA100"></i><i class="sw" style="background:#01539D"></i>Best</span>
+      <span><i class="sw" style="background:#FFD98F"></i><i class="sw" style="background:#A9C4E4"></i>Good</span>
+      <span><i class="sw" style="background:#E6E0D6;border:1px solid #D3CBBE"></i>Off-season</span>
+    </div>
+    <div class="month-card" id="monthCard" aria-live="polite"></div>
+    <div class="moments">
+      <div class="photo"><span class="clip"><img class="zoom" src="media/img/hunza-blossom.webp" alt="Apricot blossom in Hunza in front of snow peaks" loading="lazy"></span><span class="k">April</span><span class="d">Apricot and cherry blossom across the Hunza valley.</span></div>
+      <div class="photo"><span class="clip"><img class="zoom" src="media/img/chilam-joshi.jpg" alt="Kalash women dancing at the Chilam Joshi festival" loading="lazy"></span><span class="k">Mid-May</span><span class="d">Chilam Joshi, the Kalash spring festival of song and dance.</span></div>
+      <div class="photo"><span class="clip"><img class="zoom" src="media/img/shandur-polo.jpg" alt="Polo players at the Shandur festival" loading="lazy"></span><span class="k">July</span><span class="d">The Shandur Polo Festival, played on a mountain pass at about 3,700 m.</span></div>
+      <div><video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="media/video/autumn-katpana-poster.jpg" aria-label="Golden poplars near Skardu in autumn"><source src="media/video/autumn-katpana.mp4" type="video/mp4"></video><span class="k">Late October</span><span class="d">Autumn gold in the poplar groves of Hunza and Skardu.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY EXPLORIA ============ -->
+<section class="sec" id="why" style="scroll-margin-top:40px">
+  <div class="wrap why">
+    <div class="why-img reveal">
+      <img class="cover" src="media/img/blossom-village.jpg" alt="Apple blossom in a Hunza village below Rakaposhi" loading="lazy">
+      <p class="quote">“Northern Pakistan is our home, and we want to share it through the warmth of our people and the stories of our villages.”</p>
+    </div>
+    <div class="reveal" style="display:flex;flex-direction:column;gap:18px">
+      <p class="eyebrow">Why travel with Exploria</p>
+      <h2 class="h2">Not a booking site. A local team.</h2>
+      <p class="lede">Exploria was born in Hunza. Our guides, drivers and planners live in the valleys you'll travel through, so you meet people, not just places.</p>
+      <div class="why-list">
+        <div><b data-count="10" data-suffix="+">10+</b><strong>Years in Pakistan</strong><span>Tours, treks and expeditions across every province.</span></div>
+        <div><b>4.9/5</b><strong>Traveller rating</strong><span>And a TourRadar Silver Badge for service.</span></div>
+        <div><b>4–8</b><strong>Guests per group</strong><span>Small groups, so village homes and family kitchens still open their doors.</span></div>
+        <div><b>24/7</b><strong>On-ground support</strong><span>If a mountain flight is cancelled, we arrange the road transfer at no extra cost.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="sec sand">
+  <div class="wrap stack">
+    <div class="head-row reveal">
+      <div class="head"><p class="eyebrow">From our travellers</p><h2 class="h2">In their words</h2></div>
+      <p style="margin:0;font-size:15px;color:var(--muted)"><span class="stars" aria-hidden="true">★★★★★</span> Reviews on Google and <a href="https://www.tourradar.com/o/exploria">TourRadar</a></p>
+    </div>
+    <div class="reviews">
+      <figure class="reveal"><blockquote>“I recently went on an unforgettable 10-day tour through Skardu and Hunza with Exploria, and I cannot recommend their services highly enough.”</blockquote><figcaption>Ayesha S.</figcaption></figure>
+      <figure class="reveal"><blockquote>“I feel this tour was a great way to start to get to know the ‘real’ Pakistan.”</blockquote><figcaption>Barb D. · Hindu Kush tour</figcaption></figure>
+      <figure class="reveal"><blockquote>“Don’t be scared to come over, the region is safe and you’re in very good hands with Exploria.”</blockquote><figcaption>Francesca P. · Skardu &amp; Hunza</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNAL ============ -->
+<section class="sec" id="journal" style="scroll-margin-top:40px">
+  <div class="wrap stack">
+    <div class="head-row reveal">
+      <div class="head"><p class="eyebrow">Travel journal</p><h2 class="h2">Plan with people who live here</h2></div>
+      <a class="link-arrow" href="https://www.exploria.pk/blog/">All stories
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="journal">
+      <a class="post lead photo reveal" href="https://www.exploria.pk/cherry-blossoms-in-pakistan/">
+        <span class="clip img"><img class="zoom cover" src="media/img/blog/cherry-blossom.webp" alt="Cherry blossom in a northern valley" loading="lazy"></span>
+        <span class="k">Seasons · 6 min read</span>
+        <h3>Everything about cherry blossom season in Pakistan</h3>
+        <p>When the orchards flower in Hunza, Skardu and Nagar, and how to time your trip for peak bloom.</p>
+      </a>
+      <div class="side">
+        <a class="post post-row photo reveal" href="https://www.exploria.pk/how-to-get-a-tourist-visa-for-pakistan/"><span class="clip img"><img class="zoom cover" src="media/img/blog/visa.webp" alt="" loading="lazy"></span><span style="display:flex;flex-direction:column;gap:6px"><span class="k">Before you go</span><h3>How to get a tourist visa for Pakistan, step by step</h3></span></a>
+        <a class="post post-row photo reveal" href="https://www.exploria.pk/best-time-to-visit-hunza/"><span class="clip img"><img class="zoom cover" src="media/img/blog/best-time-hunza.jpg" alt="" loading="lazy"></span><span style="display:flex;flex-direction:column;gap:6px"><span class="k">Hunza</span><h3>The best time to visit Hunza, month by month</h3></span></a>
+        <a class="post post-row photo reveal" href="https://www.exploria.pk/how-to-plan-your-trek-to-k2-base-camp-tips-and-trick/"><span class="clip img"><img class="zoom cover" src="media/img/blog/k2-plan.jpg" alt="" loading="lazy"></span><span style="display:flex;flex-direction:column;gap:6px"><span class="k">Trekking</span><h3>How to plan your trek to K2 Base Camp</h3></span></a>
+        <a class="post post-row photo reveal" href="https://www.exploria.pk/famous-food-cities-in-pakistan/"><span class="clip img"><img class="zoom cover" src="media/img/blog/food-cities.webp" alt="" loading="lazy"></span><span style="display:flex;flex-direction:column;gap:6px"><span class="k">Food</span><h3>Six famous food cities in Pakistan</h3></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec sand" id="faq">
+  <div class="wrap faq">
+    <div class="head reveal" style="position:sticky;top:100px">
+      <p class="eyebrow">Good to know</p>
+      <h2 class="h2">Questions travellers ask us</h2>
+      <p class="lede">Still wondering? Message a trip planner on WhatsApp. A real person from our team will reply.</p>
+      <a class="link-arrow" href="https://wa.me/923495966540">Ask on WhatsApp
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="reveal">
+      <details open><summary>Is Pakistan safe to travel?<span class="pm" aria-hidden="true">+</span></summary><p>The northern valleys of Gilgit-Baltistan, and cities like Lahore and Islamabad, welcome thousands of international visitors every year. Our local team travels the same routes all season, watches weather and road conditions daily and is with you on the ground from arrival to departure.</p></details>
+      <details><summary>Can solo and solo female travellers join?<span class="pm" aria-hidden="true">+</span></summary><p>Yes. Solo travellers, including solo women, are welcome on our group departures and private tours. A single supplement applies if you want your own room. Talk to us before booking if you'd like to discuss anything.</p></details>
+      <details><summary>How big are your groups?<span class="pm" aria-hidden="true">+</span></summary><p>Our fixed-date departures are planned for 4 to 8 guests. Any tour can also run privately, just for you, on your own dates.</p></details>
+      <details><summary>How do I get a visa?<span class="pm" aria-hidden="true">+</span></summary><p>Most visitors apply online before travelling. Our <a href="https://www.exploria.pk/how-to-get-a-tourist-visa-for-pakistan/">step-by-step visa guide</a> walks through the process, and our team will help with any paperwork your application needs.</p></details>
+      <details><summary>What if a mountain flight is cancelled?<span class="pm" aria-hidden="true">+</span></summary><p>Flights to Skardu and Gilgit depend on the weather. If one is cancelled, we arrange the road journey instead at no extra charge, wherever it's safe and feasible.</p></details>
+      <details><summary>How do I book a group departure?<span class="pm" aria-hidden="true">+</span></summary><p>Send us a booking request with the number of travellers and your room preference. We confirm availability and send payment details. A 20% deposit secures your place and the balance is due 20 days before the tour.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING CTA ============ -->
+<section class="closing" id="enquire">
+  <img src="media/img/rakaposhi.jpg" alt="" loading="lazy">
+  <div class="veil" aria-hidden="true"></div>
+  <div class="closing-in reveal">
+    <p class="eyebrow" style="color:#FFFFFF">Rakaposhi Base Camp, Nagar</p>
+    <h2>So, ready to start?</h2>
+    <p style="font-size:19px;line-height:1.6;color:rgba(255,255,255,.9)">Find your direction in three taps, or talk to a local trip planner on WhatsApp.</p>
+    <div class="hero-btns" style="margin-top:6px">
+      <a class="btn btn-primary" href="#journey">Find my journey</a>
+      <a class="btn btn-line" href="https://wa.me/923495966540">WhatsApp a planner</a>
+    </div>
+    <form class="field js-notify" style="margin-top:22px" novalidate>
+      <label class="sr" for="nl">Email address</label>
+      <input id="nl" type="email" placeholder="Your email for 2027 departure news" required>
+      <button class="btn btn-line" type="submit">Keep me posted</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="c">
+        <img src="media/img/exploria-logo-reversed.png" alt="Exploria.pk" width="150" height="43" style="display:block;width:150px;height:auto">
+        <a href="tel:+923495966540" style="color:#FFFFFF">+92 349 5966540</a>
+        <a href="mailto:info@exploria.pk">info@exploria.pk</a>
+        <a href="https://wa.me/923495966540" style="color:var(--orange)">Chat on WhatsApp</a>
+      </div>
+      <nav aria-label="Tours"><h4>Tours</h4><a href="#departures">Group departures 2027</a><a href="#">One-day tours</a><a href="#">Hunza tours</a><a href="#">Skardu tours</a><a href="#">Religious tours</a></nav>
+      <nav aria-label="Treks"><h4>Treks</h4><a href="#">K2 Base Camp</a><a href="#">K2 &amp; Gondogoro La</a><a href="#">Nanga Parbat</a><a href="#">Snow Lake &amp; Hispar La</a><a href="#">Rakaposhi Base Camp</a></nav>
+      <nav aria-label="Destinations"><h4>Destinations</h4><a href="#map">Hunza Valley</a><a href="#map">Skardu</a><a href="#map">Fairy Meadows</a><a href="#map">Kalash Valley</a><a href="#map">Lahore</a></nav>
+    </div>
+    <div class="foot-base"><span>© 2026 Exploria.pk</span><span>Photos: Exploria.pk · Video: Asif Khan via Pexels</span></div>
+  </div>
+</footer>
+
+<a class="wa" id="wa" href="https://wa.me/923495966540" aria-label="Chat with a trip planner on WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+  <span class="lbl">Talk to a planner</span>
+</a>
+
+<dialog class="itin" id="itin" aria-labelledby="itinTitle"></dialog>
+
+<script>
+/* =====================================================================
+   DATA — edit here. Adding a new group departure = add an object to
+   DEPARTURES (the first one with featured:true is shown large).
+   ===================================================================== */
+var M = "media/img/";
+var BOOK_EMAIL = "info@exploria.pk";
+
+var DEPARTURES = [
+  {
+    id: "blossom-2027",
+    featured: true,
+    status: "Booking open",
+    season: "Spring 2027",
+    title: "Pakistan Spring Blossom Tour",
+    region: "Hunza & Skardu",
+    tagline: "Come for the blossoms. Leave with Pakistan in your heart.",
+    summary: "Ten days through the blossom-filled valleys, fruit orchards and viewpoints of Skardu and Hunza, with a Hunza Bazam night of folk music and a traditional dinner.",
+    start: "2027-04-02", end: "2027-04-11",
+    dates: "2 – 11 April 2027", duration: "10 days / 9 nights",
+    group: "4–8 guests", price: "USD 1,900", priceNote: "per person, twin sharing",
+    deposit: "USD 380", single: "USD 400",
+    route: ["Islamabad", "Skardu", "Shigar", "Hunza", "Attabad", "Naltar", "Gilgit", "Islamabad"],
+    images: [
+      { src: M + "blossom-rakaposhi.jpg", alt: "Apricot blossom in front of Rakaposhi, Hunza" },
+      { src: M + "blossom-passu.jpg", alt: "Orchards in bloom below the Passu Cones" },
+      { src: M + "blossom-village.jpg", alt: "Apple blossom in a Hunza village" },
+      { src: M + "blossom-branch.jpg", alt: "Blossoming branches against snow peaks" }
+    ],
+    days: [
+      { t: "Arrival in Islamabad", d: "Friday, 2 April 2027", p: ["Our guide meets you at Islamabad International Airport.", "Transfer to the hotel, settle in and rest.", "Help with local SIM cards and currency exchange.", "Overnight in Islamabad."] },
+      { t: "Fly to Skardu & explore Shigar Valley", d: "Saturday, 3 April 2027", p: ["Morning flight from Islamabad to Skardu, subject to weather.", "Jeep safari across the dunes of the Cold Desert.", "Explore historic Shigar Fort and the architecture of Baltistan.", "Overnight in Skardu."] },
+      { t: "Skardu & Kachura Valley", d: "Sunday, 4 April 2027", p: ["Manthal Buddha Rock and Sadpara Lake.", "Upper Kachura Lake, Shangrila Lake and Soq Valley.", "Spring scenery and blossoms; optional boating and ziplining at Upper Kachura.", "Overnight in Skardu."] },
+      { t: "Scenic road to Hunza", d: "Monday, 5 April 2027", p: ["Drive the mountain roads of Gilgit-Baltistan along the Indus.", "Evening in Karimabad's lanes, shops and cafés.", "Overnight near Karimabad."] },
+      { t: "Central Hunza & Bazam night", d: "Tuesday, 6 April 2027", p: ["Baltit Fort, Altit Fort and the Altit old settlement.", "Sunset over Hunza from Duikar.", "A Hunza Bazam night: folk music, cultural performances and a traditional Hunzai dinner, with a bonfire where safe.", "Overnight in Hunza."] },
+      { t: "Attabad Lake, Passu Cones & Borith Lake", d: "Wednesday, 7 April 2027", p: ["Group boating on turquoise Attabad Lake.", "Optional hike to Baskochi Meadows.", "Hussaini Suspension Bridge, with optional zipline.", "Borith Lake and the Passu Cones; orchards of Gojal in bloom.", "Overnight near Attabad Lake."] },
+      { t: "Hunza blossom & traditional villages", d: "Thursday, 8 April 2027", p: ["Blossom landscapes of Upper Hunza.", "Khyber and other villages, chosen by where the trees are flowering.", "Village lanes, local families and photography.", "Overnight near Attabad Lake."] },
+      { t: "Naltar Valley & Gilgit", d: "Friday, 9 April 2027", p: ["Forests and mountain scenery of Naltar Valley.", "Evening drive to Gilgit.", "Overnight in Gilgit."] },
+      { t: "Fly to Islamabad & the capital", d: "Saturday, 10 April 2027", p: ["Flight from Gilgit to Islamabad, subject to weather.", "Faisal Mosque, Saidpur Village, Pakistan Monument and Lok Virsa Museum.", "Farewell dinner with views over Islamabad."] },
+      { t: "Departure", d: "Sunday, 11 April 2027", p: ["Transfer to Islamabad International Airport for your flight home."] }
+    ],
+    included: [
+      "Domestic flights Islamabad–Skardu and Gilgit–Islamabad",
+      "9 nights in handpicked 3-star hotels and resorts, twin sharing",
+      "All breakfasts and lunches",
+      "Hunzai dinner at the Bazam night and farewell dinner in Islamabad",
+      "Private transport, English-speaking guide and driver, fuel, parking and tolls",
+      "Cold Desert jeep safari and group boating at Attabad Lake",
+      "Optional boating, kayaking, ziplining and the Baskochi hike, when available",
+      "Road transfer at no extra cost if a domestic flight is cancelled"
+    ],
+    excluded: [
+      "Entry tickets to forts, museums and attractions",
+      "Dinners other than the two listed",
+      "Personal expenses: laundry, drinks, snacks, shopping",
+      "Tips for guide and driver"
+    ],
+    faq: [
+      { q: "Is blossom guaranteed?", a: "We chose these dates from seasonal research to give the best chance of blossom. Flowering depends on temperature and altitude, so timing can't be guaranteed, but our local team will adapt the route to find the best orchards." },
+      { q: "Can solo travellers join?", a: "Yes. A USD 400 single supplement applies for a private room, or ask us about twin-share arrangements." },
+      { q: "Is it suitable for children or older travellers?", a: "We don't recommend this departure for young children. It suits fit, active older travellers comfortable with long drives and uneven ground." },
+      { q: "What is the luggage allowance on domestic flights?", a: "Usually 20 kg checked plus 7 kg cabin baggage. Extra luggage can be stored in Islamabad for a fee." },
+      { q: "What is the cancellation policy?", a: "The 20% deposit is non-refundable in cash but can be kept as travel credit for up to one fiscal year, subject to availability." }
+    ]
+  }
+];
+
+/* Upcoming slots — shown as teasers until the itinerary is ready. */
+var COMING = [
+  { season: "Autumn 2027", title: "Hunza & Skardu in autumn gold", line: "Poplars, apricot orchards and clear October skies.", img: M + "hunza-autumn.jpg" },
+  { season: "Summer 2027", title: "K2 Base Camp group trek", line: "Up the Baltoro Glacier to Concordia and K2.", img: M + "k2-concordia.jpg" }
+];
+
+var TOURS = [
+  { kind: "trek", label: "Trek", title: "K2 Base Camp Trek", line: "Askole, the Baltoro Glacier and Concordia, ringed by four 8,000 m peaks.", days: "21 days", img: M + "tours/k2-base-camp.jpg", url: "https://www.exploria.pk/tour/k2-base-camp-trek-pakistan/" },
+  { kind: "trek", label: "Trek", title: "K2 Base Camp & Gondogoro La", line: "The classic K2 trek, returning over a 5,585 m pass to Hushe.", days: "20 days", img: M + "mitre-peak.jpg", url: "https://www.exploria.pk/tour/k2-base-camp-trek-gondogoro-la-pakistan/" },
+  { kind: "trek", label: "Trek", title: "Snow Lake & Hispar La", line: "One of the longest glacier journeys outside the polar regions.", days: "21 days", img: M + "tours/snow-lake.jpg", url: "https://www.exploria.pk/tour/snow-lake-hiper-la-trek/" },
+  { kind: "trek", label: "Trek", title: "Patundas Trek", line: "High meadows above Passu with views across the Batura glacier.", days: "9 days", img: M + "tours/patundas.jpg", url: "https://www.exploria.pk/tour/patundas-trek-pakistan/" },
+  { kind: "trek", label: "Trek", title: "Rakaposhi Base Camp", line: "A short, steep walk from Minapin to the foot of Rakaposhi.", days: "2 days", img: M + "tours/rakaposhi.jpg", url: "https://www.exploria.pk/tour/rakaposhi-base-camp-trek/" },
+  { kind: "trek", label: "Adventure", title: "Cycling the Karakoram Highway", line: "Ride the KKH through Hunza towards the Khunjerab Pass.", days: "16 days", img: M + "tours/cycling.jpg", url: "https://www.exploria.pk/tour/cycling-adventure-on-the-karakoram-highway/" },
+  { kind: "mountain", label: "Tour", title: "Autumn in Hunza", line: "Golden poplars, forts and orchards at harvest time.", days: "7 days", img: M + "tours/hunza-autumn.jpg", url: "https://www.exploria.pk/tour/hunza-autumn-tour/" },
+  { kind: "mountain", label: "Tour", title: "Hindu Kush Overland", line: "Hunza, Chitral and the Kalash valleys by road.", days: "15 days", img: M + "tours/hindu-kush.jpg", url: "https://www.exploria.pk/tour/hindu-kush-tour-northern-pakistan/" },
+  { kind: "mountain", label: "Tour", title: "Pakistan Odyssey", line: "From Cholistan's forts to the high Karakoram in one journey.", days: "20 days", img: M + "tours/odyssey.jpg", url: "https://www.exploria.pk/tour/pakistan-odyssey-the-complete-20-day-expedition/" },
+  { kind: "culture", label: "Festival", title: "Shandur Polo Festival", line: "Polo on the world's highest polo ground, plus Hunza and Chitral.", days: "10 days", img: M + "tours/shandur.jpg", url: "https://www.exploria.pk/tour/shandur-polo-festival-pakistan/" },
+  { kind: "culture", label: "Festival", title: "Kalash Chilam Joshi Festival", line: "The Kalash spring festival of dance, song and milk-sharing.", days: "9 days", img: M + "chilam-joshi.jpg", url: "https://www.exploria.pk/tour/tour-kalash-valley-pakistan-chilam-joshi-festival-special/" },
+  { kind: "culture", label: "Culture", title: "Indus Valley & Gandhara", line: "Mohenjo-daro, Taxila, Takht-i-Bahi and Makli.", days: "14 days", img: M + "tours/indus.jpg", url: "https://www.exploria.pk/tour/indus-valley-civilization-tour/" },
+  { kind: "culture", label: "Pilgrimage", title: "Sikh Pilgrimage: Kartarpur & Nankana Sahib", line: "The gurdwaras of Punjab with a local guide.", days: "9 days", img: M + "tours/sikh.jpg", url: "https://www.exploria.pk/tour/sikh-pilgrimage-kartarpur-sahib-tour-pakistan/" },
+  { kind: "day", label: "Day tour", title: "Lahore Full-Day Guided Tour", line: "Lahore Fort, Badshahi Mosque and the Walled City.", days: "1 day", img: M + "tours/lahore-day.webp", url: "https://www.exploria.pk/tour/lahore-full-day-sightseeing-guided-tour/" },
+  { kind: "day", label: "Day tour", title: "Lahore Night Food Tour", line: "Food streets, chai and the old city after dark.", days: "Evening", img: M + "food-street.webp", url: "https://www.exploria.pk/tour/lahores-complete-night-food-tour-local-culinary-experience/" },
+  { kind: "day", label: "Day tour", title: "Taxila from Islamabad", line: "Gandhara monasteries and the Taxila Museum.", days: "1 day", img: M + "taxila.jpg", url: "https://www.exploria.pk/tour/1-day-trip-from-islamabad/" }
+];
+var FILTERS = [["all", "All"], ["trek", "Treks & adventure"], ["mountain", "Mountain tours"], ["culture", "Culture & festivals"], ["day", "Day tours"], ["saved", "Saved ♥"]];
+
+var PLACES = [
+  { id: "k2", name: "K2 & Concordia", reg: "Karakoram · Baltistan", lon: 76.51, lat: 35.88, alt: "8,611 m", season: "June – August", img: M + "k2-concordia.jpg", txt: "The second-highest mountain on Earth, reached on foot up the Baltoro Glacier. At Concordia you stand among four 8,000 m peaks.", link: "#tours", filter: "trek" },
+  { id: "hunza", side: "l", name: "Hunza Valley", reg: "Karakoram · Gilgit-Baltistan", lon: 74.66, lat: 36.32, alt: "2,500 m", season: "April – October", img: M + "attabad.jpg", txt: "Old forts above apricot orchards, Attabad Lake and the Passu Cones. The heart of our Spring Blossom Tour.", link: "#departures" },
+  { id: "skardu", name: "Skardu & Shigar", reg: "Baltistan", lon: 75.63, lat: 35.3, alt: "2,228 m", season: "April – October", img: M + "deosai.jpg", txt: "Gateway to K2, with the Cold Desert dunes, Shigar Fort, Kachura lakes and the Deosai Plateau nearby.", link: "#tours", filter: "mountain" },
+  { id: "fairy", side: "l", name: "Fairy Meadows", reg: "Himalaya · Diamer", lon: 74.58, lat: 35.39, alt: "3,300 m", season: "June – September", img: M + "fairy-meadows.jpg", txt: "Pine meadows facing the north face of Nanga Parbat, reached by jeep and a short trek.", link: "#tours", filter: "trek" },
+  { id: "kalash", side: "l", name: "Chitral & Kalash", reg: "Hindu Kush · Khyber Pakhtunkhwa", lon: 71.7, lat: 35.7, alt: "1,500 m", season: "May – October", img: M + "kalash-houses.jpg", txt: "The Kalash valleys keep their own faith and festivals, below the Hindu Kush and Tirich Mir.", link: "#tours", filter: "culture" },
+  { id: "islamabad", name: "Islamabad & Taxila", reg: "Capital Territory · Punjab", lon: 73.05, lat: 33.7, alt: "540 m", season: "October – April", img: M + "faisal-mosque.jpg", txt: "A green capital below the Margalla Hills, an hour from the Gandhara ruins of Taxila.", link: "#tours", filter: "day" },
+  { id: "lahore", name: "Lahore", reg: "Punjab", lon: 74.35, lat: 31.55, alt: "217 m", season: "October – March", img: M + "badshahi-dusk.jpg", txt: "Mughal forts and mosques, the Walled City and the busiest food streets in the country.", link: "#tours", filter: "culture" },
+  { id: "derawar", name: "Derawar & Cholistan", reg: "Desert · Bahawalpur", lon: 71.33, lat: 28.77, alt: "110 m", season: "November – February", img: M + "derawar-fort.jpg", txt: "Forty bastions rise out of the Cholistan desert at Derawar Fort.", link: "#tours", filter: "mountain" },
+  { id: "mohenjo", name: "Mohenjo-daro", reg: "Indus Valley · Sindh", lon: 68.14, lat: 27.33, alt: "50 m", season: "November – February", img: M + "mohenjo-daro.jpg", txt: "One of the world's earliest planned cities, built about 4,500 years ago.", link: "#tours", filter: "culture" },
+  { id: "karachi", name: "Karachi & Makli", reg: "Coast · Sindh", lon: 67.0, lat: 24.86, alt: "0 m", season: "November – February", img: M + "makli.jpg", txt: "Pakistan's biggest city, an hour from the carved tombs of Makli necropolis.", link: "#tours", filter: "day" },
+  { id: "hingol", side: "l", name: "Hingol & the Makran Coast", reg: "Coast · Balochistan", lon: 65.5, lat: 25.5, alt: "0 – 1,500 m", season: "November – March", img: M + "hingol.jpg", txt: "Wind-carved cliffs and empty beaches along the coastal highway to Gwadar.", link: "#enquire" }
+];
+
+var BORDER = [[74.6,37.05],[75.2,36.95],[75.9,36.6],[76.2,36.2],[76.9,35.85],[77.8,35.5],[76.8,35.05],[76.0,34.9],[75.3,34.6],[74.6,34.5],[74.0,34.0],[73.9,33.4],[74.3,33.0],[74.65,32.5],[74.6,31.9],[74.55,31.45],[74.6,31.1],[74.0,30.6],[73.4,29.95],[73.0,29.3],[72.4,28.5],[71.9,27.95],[70.6,27.75],[69.6,27.2],[69.9,26.6],[70.15,26.2],[70.1,25.7],[70.6,25.4],[71.1,24.7],[70.9,24.3],[69.6,24.25],[68.8,24.3],[68.6,23.8],[67.6,23.9],[67.3,24.6],[66.9,24.85],[66.6,25.4],[66.1,25.45],[65.3,25.35],[64.6,25.2],[63.5,25.25],[62.3,25.15],[61.6,25.2],[61.85,26.2],[62.3,26.4],[63.2,26.65],[63.3,27.2],[62.8,27.3],[62.8,28.25],[61.9,28.55],[61.5,29.0],[60.9,29.85],[62.4,29.4],[63.6,29.5],[64.3,29.55],[66.3,29.85],[66.4,30.4],[66.45,30.95],[67.6,31.5],[68.6,31.75],[69.3,31.95],[69.5,32.6],[70.0,33.1],[70.3,33.4],[69.9,33.95],[71.1,34.1],[71.1,34.5],[71.5,34.95],[71.6,35.4],[71.5,35.8],[71.8,36.4],[72.6,36.8],[73.6,36.9],[74.1,36.85]];
+
+var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var MOUNT = [0,0,0,1,1,2,2,2,2,1,0,0];
+var CITY  = [2,2,1,0,0,0,0,0,0,1,2,2];
+var MONTH_NOTES = [
+  ["January", "Cities at their best: cool, sunny days in Lahore and Sindh. Snow closes the high mountain roads.", "#tours", "culture"],
+  ["February", "Clear winter light for Mohenjo-daro, Makli and Lahore's old city. The north is quiet and white.", "#tours", "culture"],
+  ["March", "The plains warm up and the first blossom appears in the lower valleys of Gilgit-Baltistan.", "#departures", null],
+  ["April", "Blossom season in Hunza and Skardu. Our Spring Blossom Tour departs on 2 April 2027.", "#departures", null],
+  ["May", "Chilam Joshi in the Kalash valleys, and the Karakoram Highway fully opens towards Khunjerab.", "#tours", "culture"],
+  ["June", "Trekking season begins: K2 Base Camp, Fairy Meadows and the high meadows above Hunza.", "#tours", "trek"],
+  ["July", "Shandur Polo Festival, Deosai in flower and the best of the high treks.", "#tours", "trek"],
+  ["August", "Peak season for glaciers and base camps. The plains are hot and humid.", "#tours", "trek"],
+  ["September", "Clear skies after the monsoon and the last of the big treks.", "#tours", "trek"],
+  ["October", "Autumn gold in the poplars of Hunza and Skardu, and cities start to cool.", "#tours", "mountain"],
+  ["November", "Back to the plains: heritage tours, food streets and desert forts.", "#tours", "culture"],
+  ["December", "Lahore's winter food season, and snow scenery in Swat and Murree.", "#tours", "day"]
+];
+
+var FLOW = {
+  adventure: { title: "Adventure", q: "How far do you want to push?", options: [
+    { id: "gentle", img: M + "hunza-autumn.jpg", num: "01", label: "Gentle", line: "Valley road trips and jeep safaris, a proper bed every night.",
+      result: { img: M + "fairy-meadows.jpg", alt: "A hiker looks out at Nanga Parbat from Fairy Meadows", title: "Valleys by road", text: "Hunza, Skardu and Fairy Meadows along the Karakoram Highway, with short walks out to glaciers and viewpoints.", season: "April – October", cta: "See mountain tours", filter: "mountain" } },
+    { id: "trekker", img: M + "patundas.jpg", num: "02", label: "Trekker", line: "Multi-day treks to base camps and high meadows.",
+      result: { img: M + "rakaposhi.jpg", alt: "A trekker at Rakaposhi Base Camp", title: "Base camp treks", text: "Walk to the foot of the giants: Nanga Parbat from Fairy Meadows, Rakaposhi from Minapin, and the glaciers around Passu.", season: "June – September", cta: "See treks", filter: "trek" } },
+    { id: "expedition", img: M + "snow-lake.jpg", num: "03", label: "Expedition", line: "Glacier crossings and high passes, for the fit and determined.",
+      result: { img: M + "mitre-peak.jpg", alt: "Mitre Peak above the glacier at Concordia", title: "Glaciers & high passes", text: "Up the Baltoro Glacier to Concordia and K2 Base Camp, and over the Gondogoro La. Plan on two to three weeks.", season: "June – August", cta: "See expeditions", filter: "trek" } }
+  ]},
+  culture: { title: "Culture", q: "Which story draws you in?", options: [
+    { id: "mughal", img: M + "badshahi-day.jpg", num: "01", label: "Mughal & Sikh Punjab", line: "Lahore Fort, the Badshahi Mosque and the gurdwaras.",
+      result: { img: M + "badshahi-dusk.jpg", alt: "The Badshahi Mosque at dusk", title: "Mughal & Sikh Punjab", text: "Lahore Fort, the Badshahi Mosque and the Shalimar Gardens, the food streets of the Walled City, and the gurdwaras of Nankana Sahib and Kartarpur.", season: "October – March", cta: "See culture tours", filter: "culture" } },
+    { id: "ancient", img: M + "mohenjo-daro.jpg", num: "02", label: "Ancient civilisations", line: "Mohenjo-daro, Taxila and the world of Gandhara.",
+      result: { img: M + "makli.jpg", alt: "Carved stone tombs at Makli", title: "Ancient civilisations", text: "Mohenjo-daro on the Indus, the Buddhist monasteries of Taxila and Takht-i-Bahi, and the carved tombs of Makli.", season: "November – February", cta: "See heritage tours", filter: "culture" } },
+    { id: "living", img: M + "sehwan-shrine.jpg", num: "03", label: "Living traditions", line: "Sufi shrines, bazaars, food and festivals.",
+      result: { img: M + "chilam-joshi.jpg", alt: "Kalash women dancing at the Chilam Joshi festival", title: "Shrines, bazaars & festivals", text: "Qawwali at Sufi shrines, the blue-tiled tombs of Multan, the old bazaars and food streets of Lahore and Peshawar, and the spring festival of the Kalash valleys.", season: "October – May", cta: "See festival tours", filter: "culture" } }
+  ]},
+  both: { title: "A bit of both", q: "How much time do you have?", options: [
+    { id: "short", img: M + "wazir-khan.jpg", num: "01", label: "7 – 10 days", line: "Blossom valleys, or Lahore's highlights and a flight north.",
+      result: { img: M + "blossom-rakaposhi.jpg", alt: "Apricot blossom in front of Rakaposhi", title: "Spring Blossom Tour 2027", text: "Our 10-day small-group departure through Skardu and Hunza in blossom season, with a Bazam night of Hunza folk music and a day in Islamabad.", season: "2 – 11 April 2027", cta: "See the departure", href: "#departures" } },
+    { id: "mid", img: M + "hunza-biking.jpg", num: "02", label: "About two weeks", line: "Punjab, Islamabad and the Karakoram Highway.",
+      result: { img: M + "attabad.jpg", alt: "Attabad Lake in the Hunza valley", title: "The grand road north", text: "Lahore and Islamabad, then the length of the Karakoram Highway to Hunza and the Khunjerab Pass.", season: "May, September – October", cta: "See mountain tours", filter: "mountain" } },
+    { id: "long", img: M + "derawar-fort.jpg", num: "03", label: "Three weeks or more", line: "From the Indus to the high valleys.",
+      result: { img: M + "deosai.jpg", alt: "The Deosai Plateau", title: "Coast to mountains", text: "From the Indus ruins of Sindh, through Punjab, to the high valleys of Gilgit-Baltistan.", season: "Late September – October", cta: "See long journeys", filter: "mountain" } }
+  ]}
+};
+var INTENTS = [
+  { id: "adventure", img: M + "k2-concordia.jpg", num: "01", label: "Adventure", line: "Peaks, glaciers and high trails." },
+  { id: "culture", img: M + "badshahi-arch.jpg", num: "02", label: "Culture", line: "Mughal cities, ancient ruins and Sufi shrines." },
+  { id: "both", img: M + "hunza-blossom.webp", num: "03", label: "A bit of both", line: "From Lahore's lanes to Hunza's valleys." }
+];
+
+/* ===================================================================== */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var ARROW = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>';
+  var HEART = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3.1 4.5 6.8 4.5c2.1 0 3.6 1.1 5.2 3 1.6-1.9 3.1-3 5.2-3 3.7 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>';
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function go(sel) { var el = $(sel); if (el) el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }); }
+  function store(k, v) { try { if (v === undefined) return JSON.parse(localStorage.getItem(k)); localStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; } }
+
+  /* ---------- header, progress, whatsapp ---------- */
+  var head = $(".site-head"), bar = $("#progress"), wa = $("#wa");
+  function onScroll() {
+    var y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
+    head.classList.toggle("solid", y > 60);
+    bar.style.transform = "scaleX(" + (h > 0 ? y / h : 0) + ")";
+    wa.classList.toggle("show", y > innerHeight * 0.8);
+  }
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+  /* ---------- hero rotating word ---------- */
+  var words = ["mountains", "glaciers", "Mughal cities", "blossom valleys", "food streets", "desert forts"], wi = 0, hw = $("#heroWord");
+  if (!reduce) setInterval(function () {
+    hw.style.opacity = 0;
+    setTimeout(function () { wi = (wi + 1) % words.length; hw.textContent = words[wi]; hw.style.opacity = 1; }, 350);
+  }, 2600);
+
+  /* ---------- departures ---------- */
+  function mailto(d) {
+    var s = d.title + " " + d.start.slice(0, 4) + " – Booking Request";
+    var b = "Hello Exploria,\n\nI'd like to request a booking for the " + d.title + " (" + d.dates + ").\n\nNumber of travellers: \nRoom preference (twin / single): \nName: \nCountry: \n\nThank you.";
+    return "mailto:" + BOOK_EMAIL + "?subject=" + encodeURIComponent(s) + "&body=" + encodeURIComponent(b);
+  }
+  function countdownParts(iso) {
+    var ms = new Date(iso + "T00:00:00+05:00") - new Date();
+    if (ms <= 0) return null;
+    return { d: Math.floor(ms / 864e5), h: Math.floor(ms / 36e5) % 24, m: Math.floor(ms / 6e4) % 60 };
+  }
+  var featured = DEPARTURES.filter(function (d) { return d.featured; })[0] || DEPARTURES[0];
+  var others = DEPARTURES.filter(function (d) { return d !== featured; });
+  if (featured) {
+    $("#depFeatured").innerHTML =
+      '<article class="dep reveal">' +
+        '<div class="dep-media">' +
+          featured.images.map(function (im, i) { return '<img class="slide cover' + (i ? "" : " on") + '" src="' + im.src + '" alt="' + esc(im.alt) + '"' + (i ? ' loading="lazy"' : "") + '>'; }).join("") +
+          '<span class="dep-badge">' + esc(featured.status) + " · " + esc(featured.season) + "</span>" +
+          '<div class="dep-dots">' + featured.images.map(function (_, i) { return '<button type="button" aria-label="Photo ' + (i + 1) + '"' + (i ? "" : ' class="on"') + "></button>"; }).join("") + "</div>" +
+        "</div>" +
+        '<div class="dep-body">' +
+          '<p class="tag">' + esc(featured.region) + "</p>" +
+          "<h3>" + esc(featured.title) + "</h3>" +
+          '<p class="lede" style="font-size:17px">' + esc(featured.summary) + "</p>" +
+          '<div class="facts">' +
+            "<div><span>Dates</span><strong>" + esc(featured.dates) + "</strong></div>" +
+            "<div><span>Duration</span><strong>" + esc(featured.duration) + "</strong></div>" +
+            "<div><span>Group size</span><strong>" + esc(featured.group) + "</strong></div>" +
+            "<div><span>Price</span><strong>" + esc(featured.price) + "</strong></div>" +
+          "</div>" +
+          '<div class="route" aria-label="Route">' + featured.route.map(function (r) { return "<span>" + esc(r) + "</span>"; }).join("<i>→</i>") + "</div>" +
+          '<div class="countdown" id="cd"><p>Departs in</p><ol><li><b data-k="d">–</b><small>days</small></li><li><b data-k="h">–</b><small>hours</small></li><li><b data-k="m">–</b><small>mins</small></li></ol></div>' +
+          '<div class="dep-actions">' +
+            '<button type="button" class="btn btn-primary" data-itin="' + featured.id + '">View day-by-day ' + ARROW + "</button>" +
+            '<a class="btn btn-ghost" href="' + mailto(featured) + '">Request booking</a>' +
+          "</div>" +
+          '<p class="dep-note">' + esc(featured.priceNote) + " · " + esc(featured.deposit) + " deposit secures your place · single room +" + esc(featured.single) + "</p>" +
+        "</div>" +
+      "</article>";
+
+    var slides = $$(".dep-media .slide"), dots = $$(".dep-dots button"), si = 0, timer;
+    function show(i) { slides[si].classList.remove("on"); dots[si].classList.remove("on"); si = i; slides[si].classList.add("on"); dots[si].classList.add("on"); }
+    function auto() { clearInterval(timer); if (!reduce) timer = setInterval(function () { show((si + 1) % slides.length); }, 4500); }
+    dots.forEach(function (b, i) { b.addEventListener("click", function () { show(i); auto(); }); });
+    auto();
+
+    function tick() {
+      var p = countdownParts(featured.start), el = $("#cd");
+      if (!p) { el.innerHTML = "<p>On tour now — next dates coming soon</p>"; return; }
+      $$("[data-k]", el).forEach(function (b) { b.textContent = p[b.dataset.k]; });
+      $("#heroCount").textContent = p.d + " days to go · Hunza & Skardu · " + featured.group;
+    }
+    tick(); setInterval(tick, 30000);
+  }
+  $("#depMore").innerHTML =
+    others.map(function (d) {
+      return '<article class="soon photo"><img class="zoom" src="' + d.images[0].src + '" alt="" loading="lazy"><span class="shade" aria-hidden="true"></span><div class="soon-in"><small>' + esc(d.status) + " · " + esc(d.dates) + "</small><strong>" + esc(d.title) + "</strong><span>" + esc(d.duration) + " · " + esc(d.price) + '</span><button type="button" class="btn btn-primary" style="align-self:flex-start;margin-top:8px;min-height:44px" data-itin="' + d.id + '">View itinerary</button></div></article>';
+    }).join("") +
+    COMING.map(function (c) {
+      return '<article class="soon photo"><img class="zoom" src="' + c.img + '" alt="" loading="lazy"><span class="shade" aria-hidden="true"></span><div class="soon-in"><small>Coming soon · ' + esc(c.season) + "</small><strong>" + esc(c.title) + "</strong><span>" + esc(c.line) + "</span></div></article>";
+    }).join("") +
+    '<form class="notify js-notify" novalidate><strong>Be first to hear about new dates</strong><p>We release a handful of small-group departures each season. Get them before they fill.</p><div class="field"><label class="sr" for="nf">Email address</label><input id="nf" type="email" placeholder="you@example.com" required><button class="btn btn-primary" type="submit">Notify me</button></div></form>';
+
+  /* ---------- itinerary dialog ---------- */
+  var dlg = $("#itin");
+  function openItin(id) {
+    var d = DEPARTURES.filter(function (x) { return x.id === id; })[0]; if (!d) return;
+    dlg.innerHTML =
+      '<button type="button" class="itin-close" aria-label="Close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>' +
+      '<div class="itin-head"><img class="cover" src="' + d.images[0].src + '" alt=""><span class="shade" aria-hidden="true"></span><div class="t"><p>' + esc(d.dates) + " · " + esc(d.duration) + " · " + esc(d.group) + '</p><h2 id="itinTitle">' + esc(d.title) + "</h2></div></div>" +
+      '<div class="itin-tabs" role="tablist"><button role="tab" aria-selected="true" data-tab="0">Itinerary</button><button role="tab" aria-selected="false" data-tab="1">What’s included</button><button role="tab" aria-selected="false" data-tab="2">FAQ</button></div>' +
+      '<div class="itin-pane" data-pane="0"><ol class="days">' + d.days.map(function (day, i) {
+        return '<li><span class="dn"><small>Day</small>' + String(i + 1).padStart(2, "0") + "</span><div><h4>" + esc(day.t) + '</h4><p class="date">' + esc(day.d) + "</p><ul>" + day.p.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul></div></li>";
+      }).join("") + "</ol></div>" +
+      '<div class="itin-pane" data-pane="1" hidden><div class="inc"><div><h4 style="color:var(--blue)">Included</h4><ul>' + d.included.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + '</ul></div><div><h4 style="color:var(--muted)">Not included</h4><ul>' + d.excluded.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul></div></div></div>" +
+      '<div class="itin-pane itin-faq" data-pane="2" hidden>' + d.faq.map(function (f) { return "<details><summary>" + esc(f.q) + "</summary><p>" + esc(f.a) + "</p></details>"; }).join("") + "</div>" +
+      '<div class="itin-foot"><div><b>' + esc(d.price) + "</b> <span>" + esc(d.priceNote) + " · " + esc(d.deposit) + ' deposit</span></div><a class="btn btn-primary" href="' + mailto(d) + '">Request booking</a></div>';
+    $(".itin-close", dlg).addEventListener("click", function () { dlg.close(); });
+    $$(".itin-tabs button", dlg).forEach(function (b) {
+      b.addEventListener("click", function () {
+        $$(".itin-tabs button", dlg).forEach(function (x) { x.setAttribute("aria-selected", x === b); });
+        $$("[data-pane]", dlg).forEach(function (p) { p.hidden = p.dataset.pane !== b.dataset.tab; });
+      });
+    });
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+    dlg.scrollTop = 0;
+  }
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-itin]"); if (b) openItin(b.dataset.itin);
+  });
+
+  /* ---------- notify forms (mock) ---------- */
+  document.addEventListener("submit", function (e) {
+    var f = e.target.closest(".js-notify"); if (!f) return;
+    e.preventDefault();
+    var inp = $("input", f);
+    if (!inp.value || inp.value.indexOf("@") < 1) { inp.focus(); inp.style.borderColor = "#E0475B"; return; }
+    var p = document.createElement("p"); p.className = "thanks"; p.setAttribute("role", "status");
+    p.textContent = "Thank you. We'll email you when new dates open.";
+    if (f.closest(".closing")) p.style.color = "#FFA100";
+    $(".field", f) ? $(".field", f).replaceWith(p) : f.replaceWith(p);
+  });
+
+  /* ---------- journey finder ---------- */
+  var jf = { intent: null, level: null };
+  function card(c, attr) {
+    return '<button type="button" class="pick" ' + attr + '><img class="zoom cover" src="' + c.img + '" alt="" style="position:absolute;inset:0"><span class="shade" aria-hidden="true"></span><span class="pick-in"><span class="n">' + c.num + '</span><span class="t">' + esc(c.label) + '</span><span class="l">' + esc(c.line) + '</span><span class="c">Choose ' + ARROW + "</span></span></button>";
+  }
+  function renderJF(scroll) {
+    var cur = jf.intent ? FLOW[jf.intent] : null, step = !jf.intent ? 0 : (!jf.level ? 1 : 2);
+    $("#jfSteps").innerHTML = [["01", "Your style"], ["02", "Your focus"], ["03", "Your trip"]].map(function (s, i) {
+      return "<li" + (i === step ? ' aria-current="step"' : "") + ">" + s[0] + " " + s[1] + "</li>";
+    }).join("");
+    $("#jfTitle").textContent = step === 0 ? "Three ways to see Pakistan" : step === 1 ? cur.q : "Your Pakistan";
+    $("#jfChosen").innerHTML = step === 1 ? '<div class="chosen"><span>You chose <strong>' + esc(cur.title) + '</strong></span><button type="button" class="textbtn" data-jf="back">Change</button></div>' : "";
+    if (step < 2) {
+      var list = step === 0 ? INTENTS : cur.options;
+      $("#jfBody").innerHTML = '<div class="picks">' + list.map(function (c) { return card(c, 'data-jf="' + (step === 0 ? "i:" : "l:") + c.id + '"'); }).join("") + "</div>";
+    } else {
+      var opt = cur.options.filter(function (o) { return o.id === jf.level; })[0], r = opt.result;
+      var href = r.href || "#tours";
+      $("#jfBody").innerHTML = '<div class="result"><div class="result-img"><img class="cover" src="' + r.img + '" alt="' + esc(r.alt) + '"></div><div class="result-body"><p class="eyebrow">' + esc(cur.title) + " · " + esc(opt.label) + "</p><h3>" + esc(r.title) + '</h3><p class="lede">' + esc(r.text) + '</p><div class="season"><span>Best time to go</span><b>' + esc(r.season) + '</b></div><div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:4px"><a class="btn btn-primary" href="' + href + '"' + (r.filter ? ' data-filter="' + r.filter + '"' : "") + ">" + esc(r.cta) + " " + ARROW + '</a><button type="button" class="btn btn-ghost" data-jf="restart">Start over</button></div></div></div>';
+    }
+    if (scroll) setTimeout(function () { go("#journey"); }, 30);
+  }
+  $("#journey").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-jf]"); if (!b) return;
+    var v = b.dataset.jf;
+    if (v.indexOf("i:") === 0) { jf.intent = v.slice(2); jf.level = null; }
+    else if (v.indexOf("l:") === 0) { jf.level = v.slice(2); }
+    else { jf.intent = null; jf.level = null; }
+    renderJF(v !== "back");
+  });
+  renderJF(false);
+
+  /* ---------- tours rail with filters + saved ---------- */
+  var saved = store("exploria-saved") || [], filter = "all", rail = $("#rail");
+  function savedCount() { $("#savedCount").textContent = saved.length; }
+  function renderChips() {
+    $("#tourChips").innerHTML = FILTERS.map(function (f) {
+      var n = f[0] === "all" ? TOURS.length : f[0] === "saved" ? saved.length : TOURS.filter(function (t) { return t.kind === f[0]; }).length;
+      return '<button type="button" class="chip" data-f="' + f[0] + '" aria-pressed="' + (f[0] === filter) + '">' + f[1] + '<span class="ct">' + n + "</span></button>";
+    }).join("");
+  }
+  function renderTours() {
+    var list = TOURS.filter(function (t) { return filter === "all" || (filter === "saved" ? saved.indexOf(t.title) > -1 : t.kind === filter); });
+    rail.innerHTML = list.length ? list.map(function (t, i) {
+      var on = saved.indexOf(t.title) > -1;
+      return '<li class="tour photo" style="animation-delay:' + Math.min(i, 6) * 0.05 + 's"><div class="tour-img"><img class="zoom cover" src="' + t.img + '" alt="" loading="lazy"><span class="tour-kind">' + esc(t.label) + '</span><button type="button" class="heart" data-save="' + esc(t.title) + '" aria-pressed="' + on + '" aria-label="Save ' + esc(t.title) + '">' + HEART + '</button></div><div class="tour-body"><h3>' + esc(t.title) + "</h3><p>" + esc(t.line) + '</p><div class="tour-foot"><b>' + esc(t.days) + '</b><a href="' + t.url + '">View tour →</a></div></div></li>';
+    }).join("") : '<li class="empty">Nothing saved yet. Tap the heart on any tour to keep it here.</li>';
+    rail.scrollLeft = 0;
+  }
+  function setFilter(f) { filter = f; renderChips(); renderTours(); }
+  $("#tourChips").addEventListener("click", function (e) { var b = e.target.closest("[data-f]"); if (b) setFilter(b.dataset.f); });
+  rail.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-save]"); if (!b) return;
+    var k = b.dataset.save, i = saved.indexOf(k);
+    if (i > -1) saved.splice(i, 1); else saved.push(k);
+    store("exploria-saved", saved);
+    b.setAttribute("aria-pressed", i < 0); b.classList.remove("pop"); void b.offsetWidth; b.classList.add("pop");
+    savedCount(); renderChips();
+    if (filter === "saved") renderTours();
+  });
+  $$("[data-rail]").forEach(function (b) { b.addEventListener("click", function () { rail.scrollBy({ left: +b.dataset.rail * 330, behavior: reduce ? "auto" : "smooth" }); }); });
+  $("#savedPill").addEventListener("click", function () { setFilter("saved"); go("#tours"); });
+  /* any link with data-filter jumps to the rail pre-filtered */
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("a[data-filter]"); if (!a) return;
+    e.preventDefault(); setFilter(a.dataset.filter); go("#tours");
+  });
+  savedCount(); renderChips(); renderTours();
+
+  /* ---------- heritage arrows ---------- */
+  var tl = $("#timeline");
+  $$("[data-tl]").forEach(function (b) { b.addEventListener("click", function () { tl.scrollBy({ left: +b.dataset.tl * 320, behavior: reduce ? "auto" : "smooth" }); }); });
+
+  /* ---------- map explorer ---------- */
+  var NS = "http://www.w3.org/2000/svg", svg = $("#mapSvg");
+  function px(lon, lat) { return [((lon - 60.5) * 40).toFixed(1), ((37.4 - lat) * 46).toFixed(1)]; }
+  function el(tag, attrs, parent) { var n = document.createElementNS(NS, tag); for (var k in attrs) n.setAttribute(k, attrs[k]); (parent || svg).appendChild(n); return n; }
+  el("path", { class: "land", d: "M" + BORDER.map(function (p) { return px(p[0], p[1]).join(","); }).join(" L") + " Z" });
+  [["Punjab", 72.2, 31.0], ["Sindh", 67.9, 26.4], ["Balochistan", 64.6, 28.0], ["KP", 71.1, 33.4]].forEach(function (r) {
+    var p = px(r[1], r[2]); el("text", { class: "region", x: p[0], y: p[1], "text-anchor": "middle" }).textContent = r[0];
+  });
+  var pi = 1;
+  PLACES.forEach(function (pl, i) {
+    var p = px(pl.lon, pl.lat);
+    var g = el("g", { class: "pin", tabindex: "0", role: "button", "aria-label": pl.name, "data-i": i, transform: "translate(" + p[0] + "," + p[1] + ")" });
+    el("circle", { class: "halo", r: 10 }, g);
+    el("circle", { class: "dot", r: 7 }, g);
+    var left = pl.side === "l";
+    var lab = el("text", { x: left ? -12 : 12, y: 4, "text-anchor": left ? "end" : "start" }, g);
+    lab.textContent = pl.name.split(" & ")[0].replace(" Valley", "");
+  });
+  function showPlace(i, focus) {
+    pi = (i + PLACES.length) % PLACES.length; var pl = PLACES[pi];
+    $$(".pin", svg).forEach(function (g) { g.classList.toggle("on", +g.dataset.i === pi); g.setAttribute("aria-pressed", +g.dataset.i === pi); });
+    var img = $("#placeImg"); img.style.opacity = 0;
+    setTimeout(function () { img.src = pl.img; img.alt = pl.name; img.style.opacity = 1; }, reduce ? 0 : 200);
+    $("#placeReg").textContent = pl.reg; $("#placeName").textContent = pl.name; $("#placeTxt").textContent = pl.txt;
+    $("#placeSeason").textContent = pl.season; $("#placeAlt").textContent = pl.alt;
+    var a = $("#placeLink"); a.href = pl.link;
+    if (pl.filter) a.dataset.filter = pl.filter; else delete a.dataset.filter;
+    a.firstChild.textContent = pl.link === "#departures" ? "See the Blossom Tour " : pl.link === "#enquire" ? "Plan a private trip " : "See tours ";
+    if (focus) $$(".pin", svg)[pi].focus();
+  }
+  svg.addEventListener("click", function (e) { var g = e.target.closest(".pin"); if (g) showPlace(+g.dataset.i); });
+  svg.addEventListener("keydown", function (e) {
+    var g = e.target.closest(".pin"); if (!g) return;
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showPlace(+g.dataset.i); }
+    if (e.key === "ArrowRight" || e.key === "ArrowDown") { e.preventDefault(); showPlace(pi + 1, true); }
+    if (e.key === "ArrowLeft" || e.key === "ArrowUp") { e.preventDefault(); showPlace(pi - 1, true); }
+  });
+  $("#placePrev").addEventListener("click", function () { showPlace(pi - 1); });
+  $("#placeNext").addEventListener("click", function () { showPlace(pi + 1); });
+  $$("[data-place]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var i = PLACES.map(function (p) { return p.id; }).indexOf(b.dataset.place);
+      showPlace(i); go("#map");
+    });
+  });
+  showPlace(1);
+
+  /* ---------- when to go ---------- */
+  var MC = ["#E6E0D6", "#FFD98F", "#FFA100"], CC = ["#E6E0D6", "#A9C4E4", "#01539D"], cal = $("#cal");
+  var html = "<span></span>" + MONTHS.map(function (m, i) { return '<button type="button" class="mbtn" data-m="' + i + '" aria-pressed="false">' + m + "</button>"; }).join("");
+  html += '<span class="rowlab"><b>Mountains &amp; treks</b><small>Best June – September</small></span>' + MOUNT.map(function (v, i) { return '<span class="cell" data-col="' + i + '" style="background:' + MC[v] + '"></span>'; }).join("");
+  html += '<span class="rowlab"><b>Cities &amp; heritage</b><small>Best November – February</small></span>' + CITY.map(function (v, i) { return '<span class="cell" data-col="' + i + '" style="background:' + CC[v] + '"></span>'; }).join("");
+  cal.innerHTML = html;
+  function pickMonth(i) {
+    cal.classList.add("has-pick");
+    $$(".mbtn", cal).forEach(function (b) { b.setAttribute("aria-pressed", +b.dataset.m === i); });
+    $$(".cell", cal).forEach(function (c) { c.classList.toggle("col-on", +c.dataset.col === i); });
+    var n = MONTH_NOTES[i];
+    $("#monthCard").innerHTML = '<span class="m">' + n[0] + "</span><p>" + esc(n[1]) + '</p><a href="' + n[2] + '"' + (n[3] ? ' data-filter="' + n[3] + '"' : "") + ">" + (n[2] === "#departures" ? "See the Blossom Tour →" : "Tours for " + n[0] + " →") + "</a>";
+  }
+  cal.addEventListener("click", function (e) { var b = e.target.closest(".mbtn"); if (b) pickMonth(+b.dataset.m); });
+  pickMonth(new Date().getMonth());
+
+  /* ---------- reveal, counters, elevation, bars ---------- */
+  function countUp(n) {
+    var to = +n.dataset.count, sep = n.dataset.sep, suf = n.dataset.suffix || "", t0 = null, dur = 1400;
+    function fmt(v) { v = Math.round(v); return (sep ? v.toLocaleString("en-US") : String(v)) + suf; }
+    if (reduce) { n.textContent = fmt(to); return; }
+    function step(ts) { if (!t0) t0 = ts; var k = Math.min(1, (ts - t0) / dur); n.textContent = fmt(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (ents) {
+      ents.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        en.target.classList.add("in");
+        $$("[data-count]", en.target).forEach(countUp);
+        io.unobserve(en.target);
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+    $$(".reveal, #elev").forEach(function (n) { io.observe(n); });
+    $$(".three .photo").forEach(function (n) { io.observe(n); });
+  } else {
+    $$(".reveal, #elev, .three .photo").forEach(function (n) { n.classList.add("in"); });
+  }
+
+  /* ---------- muted autoplay helper ---------- */
+  $$("video.bg-video").forEach(function (v) {
+    v.muted = true; v.setAttribute("muted", "");
+    if (reduce) { v.removeAttribute("autoplay"); v.pause(); return; }
+    var p = v.play(); if (p && p.catch) p.catch(function () {});
+  });
+})();
+</script>
+</body>
+</html>
