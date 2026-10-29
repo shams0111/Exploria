@@ -5,17 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Exploria.pk — Travel Pakistan | Tours, Treks &amp; Small-Group Departures</title>
 <meta name="description" content="Small-group tours, treks and tailor-made journeys across Pakistan, from a team born in Hunza. Spring Blossom Tour 2027, K2 Base Camp, Hunza, Skardu, Lahore and more.">
-<link rel="preload" href="media/fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="media/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="media/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="media/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 /* Self-hosted variable fonts (latin subset from Google Fonts) */
-@font-face{font-family:'Jost';font-style:normal;font-weight:400 600;font-display:swap;src:url(media/fonts/jost.woff2) format('woff2')}
-@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400 600;font-display:swap;src:url(media/fonts/source-serif-4.woff2) format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:400 700;font-display:swap;src:url(media/fonts/plus-jakarta-sans.woff2) format('woff2')}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url(media/fonts/fraunces.woff2) format('woff2')}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url(media/fonts/fraunces-italic.woff2) format('woff2')}
 :root{
   --blue:#01539D; --blue-dk:#013F78; --orange:#FFA100; --orange-lt:#FFB733;
   --ink:#15212B; --night:#0C1820; --sand:#F6F3EE; --line:#DDD5C8; --line-2:#E4DFD6;
   --muted:#5B6670; --body:#3E4A54; --faint:#8A9299;
-  --serif:'Source Serif 4', Georgia, serif; --sans:Jost, 'Helvetica Neue', Arial, sans-serif;
+  --serif:Fraunces, Georgia, serif; --sans:'Plus Jakarta Sans', 'Helvetica Neue', Arial, sans-serif;
   --pad:clamp(20px, 4vw, 48px); --sec:clamp(80px, 10vw, 130px);
 }
 *{box-sizing:border-box}
@@ -81,7 +82,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,24,32,.55) 0%,rgba(12,24,32,.3) 40%,rgba(12,24,32,.72) 100%)}
 .hero-in{position:relative;max-width:1000px;padding:150px 20px 150px;display:flex;flex-direction:column;align-items:center;gap:24px}
-.hero h1{margin:0;font-weight:400;font-size:clamp(46px,8vw,104px);line-height:1;letter-spacing:.04em;text-transform:uppercase}
+.hero h1{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(52px,9vw,124px);line-height:.95;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;font-weight:300;color:var(--orange)}
 .hero .sub{margin:0;font-size:clamp(17px,1.6vw,21px);letter-spacing:.06em;color:rgba(255,255,255,.92)}
 .hero .sub b{font-weight:500;color:#FFFFFF;border-bottom:2px solid var(--orange);display:inline-block;min-width:8ch;text-align:left;transition:opacity .35s}
 .hero-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:10px}
@@ -486,7 +488,7 @@ dialog.itin::backdrop{background:rgba(12,24,32,.7);backdrop-filter:blur(3px)}
   </video>
   <div class="veil" aria-hidden="true"></div>
   <div class="hero-in">
-    <h1>Travel Pakistan</h1>
+    <h1>Travel <em>Pakistan</em></h1>
     <p class="sub">Extraordinary Pakistan experiences, from <b id="heroWord">mountains</b></p>
     <div class="hero-btns">
       <a class="btn btn-primary" href="#journey">Find my journey</a>
@@ -621,7 +623,7 @@ dialog.itin::backdrop{background:rgba(12,24,32,.7);backdrop-filter:blur(3px)}
       <p class="lede">Travel north from Karachi and the land keeps climbing: through the plains of Punjab, over the Babusar Pass and into the Karakoram, where the road ends and the glaciers begin.</p>
     </div>
     <div style="overflow-x:auto">
-      <svg class="elev" id="elev" viewBox="0 0 1200 440" role="img" aria-label="Elevation profile of a journey north through Pakistan, from Karachi at sea level to K2 at 8,611 metres" style="display:block;width:100%;min-width:760px;height:auto;font-family:Jost,Arial,sans-serif">
+      <svg class="elev" id="elev" viewBox="0 0 1200 440" role="img" aria-label="Elevation profile of a journey north through Pakistan, from Karachi at sea level to K2 at 8,611 metres" style="display:block;width:100%;min-width:760px;height:auto;font-family:'Plus Jakarta Sans',Arial,sans-serif">
         <line x1="0" y1="390" x2="1200" y2="390" stroke="#D8D1C5" stroke-width="1"/>
         <line x1="40" y1="83" x2="1160" y2="83" stroke="#15212B" stroke-opacity=".35" stroke-width="1" stroke-dasharray="6 6"/>
         <text x="40" y="72" fill="#5B6670" font-size="13">8,000 m</text>
