@@ -587,3 +587,7 @@ html.menu-open{overflow:hidden}
 .tour-foot{gap:12px}
 .tour-foot b{font-size:14px}
 .tour-foot a{flex:none;text-transform:none;letter-spacing:0;font-size:14px}
+/* hero buttons keep the original look (client preference) */
+.hero .hero-btns .btn{min-width:200px;min-height:54px;padding:0 28px;border-radius:2px;font-size:14px;letter-spacing:.16em;text-transform:uppercase}
+.hero .hero-btns .btn-line{background:transparent;backdrop-filter:none}
+.hero .hero-btns .btn-primary:hover{transform:none;box-shadow:none}
