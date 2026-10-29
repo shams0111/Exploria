@@ -57,8 +57,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* reveal on scroll (only when JS runs) */
-.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
-.js .reveal.in{opacity:1;transform:none}
 
 /* ---------- header ---------- */
 .progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--orange);z-index:30}
@@ -158,9 +156,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .steps li{color:var(--faint);border-bottom:2px solid transparent;padding-bottom:6px;transition:color .3s,border-color .3s}
 .steps li[aria-current]{color:var(--ink);border-color:var(--orange)}
 .picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px}
-.pick{position:relative;display:block;width:100%;aspect-ratio:4/5;padding:0;border:0;border-radius:3px;overflow:hidden;background:var(--night);color:#FFFFFF;text-align:left;cursor:pointer;animation:fadeUp .5s ease both}
-.pick:nth-child(2){animation-delay:.08s}.pick:nth-child(3){animation-delay:.16s}
-@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.pick{position:relative;display:block;width:100%;aspect-ratio:4/5;padding:0;border:0;border-radius:3px;overflow:hidden;background:var(--night);color:#FFFFFF;text-align:left;cursor:pointer}
 .pick:hover .zoom{transform:scale(1.05)}
 .pick .shade{background:linear-gradient(180deg,rgba(12,24,32,0) 30%,rgba(12,24,32,.88) 100%)}
 .pick-in{position:absolute;left:28px;right:28px;bottom:28px;display:flex;flex-direction:column;gap:10px}
@@ -172,7 +168,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .chosen{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin-top:-16px;font-size:16px;color:var(--muted)}
 .chosen strong{color:var(--ink);font-weight:600}
 .textbtn{min-height:40px;padding:0;background:none;border:0;color:var(--blue);font-size:16px;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
-.result{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));background:#FFFFFF;border-radius:3px;overflow:hidden;box-shadow:0 20px 50px rgba(21,33,43,.08);animation:fadeUp .5s ease both}
+.result{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));background:#FFFFFF;border-radius:3px;overflow:hidden;box-shadow:0 20px 50px rgba(21,33,43,.08)}
 .result-img{position:relative;min-height:340px;background:var(--night)}
 .result-img img{position:absolute;inset:0}
 .result-body{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:20px}
@@ -224,10 +220,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .map-note{margin:0;font-size:12px;letter-spacing:.06em;color:var(--faint)}
 
 /* ---------- elevation ---------- */
-.elev-line{stroke-dasharray:2200;stroke-dashoffset:2200;transition:stroke-dashoffset 2.6s ease}
-.elev.in .elev-line{stroke-dashoffset:0}
-.elev-fill{opacity:0;transition:opacity 1.2s ease 1.4s}
-.elev.in .elev-fill{opacity:1}
 .strip{grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:14px}
 .strip figure{margin:0;display:flex;flex-direction:column;gap:10px}
 .strip img{aspect-ratio:4/5}
@@ -249,8 +241,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .three .photo{display:flex;flex-direction:column;gap:14px}
 .three img{aspect-ratio:4/3}
 .rbar{height:4px;background:#ECE7DE}
-.rbar i{display:block;height:100%;width:0;background:var(--orange);transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
-.in .rbar i{width:var(--w)}
+.rbar i{display:block;height:100%;width:var(--w);background:var(--orange)}
 .three .peak{margin:0;font-family:var(--serif);font-size:32px;line-height:1.1}
 .three .peak span{color:var(--faint)}
 .three .d{margin:0;font-size:16px;line-height:1.6;color:var(--muted)}
@@ -278,7 +269,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .chip .ct{opacity:.6;margin-left:4px}
 .rail-wrap{position:relative}
 .rail{list-style:none;margin:0;padding:4px 0 18px;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(270px,310px);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin}
-.tour{scroll-snap-align:start;display:flex;flex-direction:column;background:#FFFFFF;border-radius:4px;overflow:hidden;box-shadow:0 10px 30px rgba(21,33,43,.07);animation:fadeUp .45s ease both}
+.tour{scroll-snap-align:start;display:flex;flex-direction:column;background:#FFFFFF;border-radius:4px;overflow:hidden;box-shadow:0 10px 30px rgba(21,33,43,.07)}
 .tour-img{position:relative;aspect-ratio:4/3;background:var(--night)}
 .tour-img img{position:absolute;inset:0}
 .tour-kind{position:absolute;left:14px;top:14px;padding:5px 10px;background:rgba(12,24,32,.7);color:#FFFFFF;border-radius:2px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
@@ -456,10 +447,6 @@ dialog.itin::backdrop{background:rgba(12,24,32,.7);backdrop-filter:blur(3px)}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none !important;transition:none !important}
-  .js .reveal{opacity:1;transform:none}
-  .elev-line{stroke-dashoffset:0}
-  .elev-fill{opacity:1}
-  .rbar i{width:var(--w)}
 }
 </style>
 </head>
@@ -1284,7 +1271,7 @@ var INTENTS = [
     var list = TOURS.filter(function (t) { return filter === "all" || (filter === "saved" ? saved.indexOf(t.title) > -1 : t.kind === filter); });
     rail.innerHTML = list.length ? list.map(function (t, i) {
       var on = saved.indexOf(t.title) > -1;
-      return '<li class="tour photo" style="animation-delay:' + Math.min(i, 6) * 0.05 + 's"><div class="tour-img"><img class="zoom cover" src="' + t.img + '" alt="" loading="lazy"><span class="tour-kind">' + esc(t.label) + '</span><button type="button" class="heart" data-save="' + esc(t.title) + '" aria-pressed="' + on + '" aria-label="Save ' + esc(t.title) + '">' + HEART + '</button></div><div class="tour-body"><h3>' + esc(t.title) + "</h3><p>" + esc(t.line) + '</p><div class="tour-foot"><b>' + esc(t.days) + '</b><a href="' + t.url + '">View tour →</a></div></div></li>';
+      return '<li class="tour photo"><div class="tour-img"><img class="zoom cover" src="' + t.img + '" alt="" loading="lazy"><span class="tour-kind">' + esc(t.label) + '</span><button type="button" class="heart" data-save="' + esc(t.title) + '" aria-pressed="' + on + '" aria-label="Save ' + esc(t.title) + '">' + HEART + '</button></div><div class="tour-body"><h3>' + esc(t.title) + "</h3><p>" + esc(t.line) + '</p><div class="tour-foot"><b>' + esc(t.days) + '</b><a href="' + t.url + '">View tour →</a></div></div></li>';
     }).join("") : '<li class="empty">Nothing saved yet. Tap the heart on any tour to keep it here.</li>';
     rail.scrollLeft = 0;
   }
@@ -1388,7 +1375,7 @@ var INTENTS = [
       ents.forEach(function (en) {
         if (!en.isIntersecting) return;
         en.target.classList.add("in");
-        $$("[data-count]", en.target).forEach(countUp);
+
         io.unobserve(en.target);
       });
     }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
