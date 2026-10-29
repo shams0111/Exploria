@@ -72,20 +72,18 @@
   <div class="hero-in">
     <h1>Travel <em>Pakistan</em></h1>
     <p class="sub">Extraordinary Pakistan experiences, from <b id="heroWord">mountains</b></p>
-    <form class="hsearch" id="heroSearch" role="search" aria-label="Find a trip">
-      <label><span>Where</span><select id="hsWhere"></select></label>
-      <label><span>When</span><select id="hsWhen"></select></label>
-      <label><span>Trip type</span><select id="hsType">
-        <option value="all">Any trip</option>
-        <option value="group">Group departures</option>
-        <option value="trek">Treks &amp; adventure</option>
-        <option value="mountain">Mountain tours</option>
-        <option value="culture">Culture &amp; festivals</option>
-        <option value="day">Day tours</option>
-      </select></label>
-      <button class="btn btn-primary" type="submit"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg> Find trips</button>
-    </form>
-    <a class="hero-alt" href="#journey">Not sure yet? Find your journey in three taps →</a>
+    <div class="hero-btns">
+      <a class="btn btn-primary" href="#journey">Find my journey</a>
+      <a class="btn btn-line" href="#departures">2027 departures</a>
+    </div>
+    <div class="where" aria-label="Jump to a destination">
+      <span>Where to?</span>
+      <button type="button" class="chip-dark" data-place="hunza">Hunza</button>
+      <button type="button" class="chip-dark" data-place="skardu">Skardu</button>
+      <button type="button" class="chip-dark" data-place="k2">K2</button>
+      <button type="button" class="chip-dark" data-place="kalash">Kalash</button>
+      <button type="button" class="chip-dark" data-place="lahore">Lahore</button>
+    </div>
   </div>
   <a class="next-dep" href="/tours/spring-blossom-tour-2027">
     <img src="media/img/blossom-branch.jpg" alt="">
