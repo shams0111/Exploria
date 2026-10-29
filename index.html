@@ -89,7 +89,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .hero-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:10px}
 .hero-btns .btn{min-width:200px;min-height:54px}
 .where{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin-top:8px;font-size:14px;color:rgba(255,255,255,.8)}
-.chip-dark{min-height:36px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.4);background:rgba(12,24,32,.25);color:#FFFFFF;cursor:pointer;font-size:14px;letter-spacing:.04em;transition:background .2s,border-color .2s}
+.chip-dark{min-height:40px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.4);background:rgba(12,24,32,.25);color:#FFFFFF;cursor:pointer;font-size:14px;letter-spacing:.04em;transition:background .2s,border-color .2s}
 .chip-dark:hover{background:rgba(255,255,255,.16);border-color:#FFFFFF}
 .next-dep{position:absolute;left:var(--pad);bottom:30px;display:flex;align-items:center;gap:14px;padding:12px 16px 12px 12px;max-width:min(420px,calc(100% - 40px));background:rgba(12,24,32,.55);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);border-radius:4px;color:#FFFFFF;text-decoration:none;text-align:left;transition:border-color .2s}
 .next-dep:hover{color:#FFFFFF;border-color:var(--orange)}
@@ -116,8 +116,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .dep-media .slide.on{opacity:1}
 .dep-badge{position:absolute;top:20px;left:20px;display:inline-flex;align-items:center;gap:8px;padding:8px 12px;background:var(--orange);color:var(--night);border-radius:2px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
 .dep-dots{position:absolute;left:20px;bottom:20px;display:flex;gap:8px}
-.dep-dots button{width:34px;height:4px;padding:0;border:0;border-radius:2px;background:rgba(255,255,255,.45);cursor:pointer}
-.dep-dots button.on{background:#FFFFFF}
+.dep-dots button{width:34px;height:24px;padding:0;border:0;background:linear-gradient(rgba(255,255,255,.45),rgba(255,255,255,.45)) center/100% 4px no-repeat;cursor:pointer}
+.dep-dots button.on{background-image:linear-gradient(#FFFFFF,#FFFFFF)}
 .dep-body{padding:clamp(28px,4vw,52px);display:flex;flex-direction:column;gap:20px}
 .dep-body h3{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(32px,3.4vw,44px);line-height:1.06}
 .dep-body .tag{margin:0;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--blue)}
@@ -134,7 +134,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .countdown ol{list-style:none;margin:0;padding:0;display:flex;gap:16px}
 .countdown li{display:flex;flex-direction:column;align-items:center;min-width:44px}
 .countdown li b{font-family:var(--serif);font-weight:500;font-size:28px;line-height:1;font-variant-numeric:tabular-nums}
-.countdown li small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.countdown li small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .dep-actions{display:flex;flex-wrap:wrap;gap:12px}
 .dep-note{margin:0;font-size:14px;color:var(--muted)}
 .dep-more{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px}
@@ -196,6 +196,9 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .map-svg .land{fill:#FFFFFF;stroke:#C9C2B6;stroke-width:1.5}
 .map-svg .region{font-family:var(--sans);font-size:12px;letter-spacing:2px;fill:#A39B8F;text-transform:uppercase}
 .pin{cursor:pointer}
+.pin .hit{fill:transparent}
+.map-svg.compact .pin text{display:none}
+.map-svg.compact .pin.on text{display:block}
 .pin .halo{fill:var(--orange);opacity:0;transform-box:fill-box;transform-origin:center}
 .pin .dot{fill:var(--blue);stroke:#FFFFFF;stroke-width:2;transition:fill .2s}
 .pin text{font-family:var(--sans);font-size:13px;font-weight:600;fill:var(--ink);paint-order:stroke;stroke:#F6F3EE;stroke-width:4px;stroke-linejoin:round}
@@ -227,6 +230,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .strip img{aspect-ratio:4/5}
 .strip figcaption{display:flex;justify-content:space-between;gap:10px;font-size:15px}
 .strip figcaption span{color:var(--muted)}
+.elev-svg{min-width:760px}
+.swipe{display:none;margin:0;font-size:13px;color:var(--muted)}
 .foot-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 40px;border-top:1px solid var(--line);padding-top:24px}
 .foot-row p{margin:0;max-width:680px;font-size:16px;line-height:1.6;color:var(--muted)}
 
@@ -271,11 +276,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .chip .ct{opacity:.6;margin-left:4px}
 .rail-wrap{position:relative}
 .rail{list-style:none;margin:0;padding:4px 0 18px;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(270px,310px);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin}
-.tour{scroll-snap-align:start;display:flex;flex-direction:column;background:#FFFFFF;border-radius:4px;overflow:hidden;box-shadow:0 10px 30px rgba(21,33,43,.07)}
+.tour{position:relative;scroll-snap-align:start;display:flex;flex-direction:column;background:#FFFFFF;border-radius:4px;overflow:hidden;box-shadow:0 10px 30px rgba(21,33,43,.07)}
 .tour-img{position:relative;aspect-ratio:4/3;background:var(--night)}
 .tour-img img{position:absolute;inset:0}
-.tour-kind{position:absolute;left:14px;top:14px;padding:5px 10px;background:rgba(12,24,32,.7);color:#FFFFFF;border-radius:2px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
-.heart{position:absolute;right:12px;top:12px;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:var(--ink);cursor:pointer;transition:transform .2s}
+.tour-kind{position:absolute;left:14px;top:14px;padding:5px 10px;background:rgba(12,24,32,.7);color:#FFFFFF;border-radius:2px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.heart{position:absolute;z-index:2;right:10px;top:10px;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:var(--ink);cursor:pointer;transition:transform .2s}
 .heart:hover{transform:scale(1.08)}
 .heart[aria-pressed="true"] svg{fill:#E0475B;stroke:#E0475B}
 .heart.pop{animation:pop .35s ease}
@@ -286,6 +291,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .tour-foot{margin-top:auto;padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line-2);font-size:14px}
 .tour-foot b{font-weight:600}
 .tour-foot a{font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:13px;text-decoration:none}
+.tour-foot a::after{content:"";position:absolute;inset:0}
+.tour:hover h3{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
 .rail-ctrl{display:flex;gap:10px}
 .empty{padding:40px 0;color:var(--muted)}
 
@@ -445,6 +452,10 @@ dialog.itin::backdrop{background:rgba(12,24,32,.7);backdrop-filter:blur(3px)}
   .itin-foot{padding:14px 20px}
   .month-card{grid-template-columns:1fr}
   .month-card .m{grid-row:auto}
+  .elev-svg{min-width:980px}
+  .swipe{display:block}
+  .itin-tabs{padding:0 8px}
+  .itin-tabs button{padding:0 10px;letter-spacing:.08em}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -622,8 +633,9 @@ dialog.itin::backdrop{background:rgba(12,24,32,.7);backdrop-filter:blur(3px)}
       <h2 class="h2">From the Arabian Sea to 8,611 metres</h2>
       <p class="lede">Travel north from Karachi and the land keeps climbing: through the plains of Punjab, over the Babusar Pass and into the Karakoram, where the road ends and the glaciers begin.</p>
     </div>
+    <p class="swipe" aria-hidden="true">Swipe the chart to follow the road north →</p>
     <div style="overflow-x:auto">
-      <svg class="elev" id="elev" viewBox="0 0 1200 440" role="img" aria-label="Elevation profile of a journey north through Pakistan, from Karachi at sea level to K2 at 8,611 metres" style="display:block;width:100%;min-width:760px;height:auto;font-family:'Plus Jakarta Sans',Arial,sans-serif">
+      <svg class="elev elev-svg" id="elev" viewBox="0 0 1200 440" role="img" aria-label="Elevation profile of a journey north through Pakistan, from Karachi at sea level to K2 at 8,611 metres" style="display:block;width:100%;height:auto;font-family:'Plus Jakarta Sans',Arial,sans-serif">
         <line x1="0" y1="390" x2="1200" y2="390" stroke="#D8D1C5" stroke-width="1"/>
         <line x1="40" y1="83" x2="1160" y2="83" stroke="#15212B" stroke-opacity=".35" stroke-width="1" stroke-dasharray="6 6"/>
         <text x="40" y="72" fill="#5B6670" font-size="13">8,000 m</text>
@@ -1313,15 +1325,26 @@ var INTENTS = [
   PLACES.forEach(function (pl, i) {
     var p = px(pl.lon, pl.lat);
     var g = el("g", { class: "pin", tabindex: "0", role: "button", "aria-label": pl.name, "data-i": i, transform: "translate(" + p[0] + "," + p[1] + ")" });
-    el("circle", { class: "halo", r: 10 }, g);
-    el("circle", { class: "dot", r: 7 }, g);
+    var s = el("g", { class: "pin-s" }, g);
+    el("circle", { class: "hit", r: 16 }, s);
+    el("circle", { class: "halo", r: 10 }, s);
+    el("circle", { class: "dot", r: 7 }, s);
     var left = pl.side === "l";
-    var lab = el("text", { x: left ? -12 : 12, y: 4, "text-anchor": left ? "end" : "start" }, g);
+    var lab = el("text", { x: left ? -12 : 12, y: 4, "text-anchor": left ? "end" : "start" }, s);
     lab.textContent = pl.name.split(" & ")[0].replace(" Valley", "");
   });
+  /* On narrow screens the map shrinks, so scale pins up to stay tappable and
+     show only the selected pin's label to avoid overlaps. */
+  function sizePins() {
+    var w = svg.getBoundingClientRect().width || 700, k = w >= 600 ? 1 : Math.min(2.6, 1.25 * 700 / w);
+    svg.classList.toggle("compact", k > 1);
+    $$(".pin-s", svg).forEach(function (s) { s.setAttribute("transform", "scale(" + k.toFixed(2) + ")"); });
+  }
+  sizePins(); addEventListener("resize", sizePins);
   function showPlace(i, focus) {
     pi = (i + PLACES.length) % PLACES.length; var pl = PLACES[pi];
     $$(".pin", svg).forEach(function (g) { g.classList.toggle("on", +g.dataset.i === pi); g.setAttribute("aria-pressed", +g.dataset.i === pi); });
+    svg.appendChild($$(".pin", svg).filter(function (g) { return +g.dataset.i === pi; })[0]);
     var img = $("#placeImg"); img.style.opacity = 0;
     setTimeout(function () { img.src = pl.img; img.alt = pl.name; img.style.opacity = 1; }, reduce ? 0 : 200);
     $("#placeReg").textContent = pl.reg; $("#placeName").textContent = pl.name; $("#placeTxt").textContent = pl.txt;
@@ -1329,7 +1352,7 @@ var INTENTS = [
     var a = $("#placeLink"); a.href = pl.link;
     if (pl.filter) a.dataset.filter = pl.filter; else delete a.dataset.filter;
     a.firstChild.textContent = pl.link === "#departures" ? "See the Blossom Tour " : pl.link === "#enquire" ? "Plan a private trip " : "See tours ";
-    if (focus) $$(".pin", svg)[pi].focus();
+    if (focus) $(".pin.on", svg).focus();
   }
   svg.addEventListener("click", function (e) { var g = e.target.closest(".pin"); if (g) showPlace(+g.dataset.i); });
   svg.addEventListener("keydown", function (e) {
