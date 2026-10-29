@@ -602,3 +602,48 @@ html.menu-open{overflow:hidden}
 .site-head{transition:transform .35s ease}
 .site-head.hide{transform:translateY(-130%)}
 @media (prefers-reduced-motion:reduce){.site-head{transition:none}}
+
+/* ---------- ways to travel ---------- */
+.ways{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.way{display:flex;flex-direction:column;background:#FFFFFF;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s}
+.way:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.way>img{display:block;width:100%;height:170px;object-fit:cover}
+.way-in{flex:1;display:flex;flex-direction:column;gap:10px;padding:0 24px 24px}
+.way-ic{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;margin-top:-26px;border-radius:50%;background:#FFFFFF;color:var(--blue);box-shadow:var(--shadow)}
+.way h3{margin:4px 0 0;font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.15;letter-spacing:-.01em}
+.way p{margin:0;font-size:15px;line-height:1.55;color:var(--muted)}
+.way ul{list-style:none;margin:4px 0 8px;padding:0;display:flex;flex-direction:column;gap:8px}
+.way li{position:relative;padding-left:22px;font-size:15px;line-height:1.45;color:var(--body)}
+.way li::before{content:"";position:absolute;left:2px;top:.5em;width:8px;height:8px;border-radius:50%;background:var(--orange)}
+.way .link-arrow{margin-top:auto}
+
+/* ---------- signature experiences ---------- */
+.xps{list-style:none;margin:0;padding:4px 0 18px;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(250px,290px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.xp{position:relative;aspect-ratio:3/4;border-radius:var(--r-lg);overflow:hidden;background:var(--night);color:#FFFFFF;scroll-snap-align:start;transition:transform .3s,box-shadow .3s}
+.xp:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.xp img{position:absolute;inset:0}
+.xp .shade{background:linear-gradient(180deg,rgba(12,24,32,0) 35%,rgba(12,24,32,.9) 100%)}
+.xp-in{position:absolute;left:20px;right:20px;bottom:20px;display:flex;flex-direction:column;gap:8px}
+.xp-tag{align-self:flex-start;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);font-size:12px;font-weight:600}
+.xp h3{margin:0;font-family:var(--serif);font-weight:500;font-size:24px;line-height:1.15}
+.xp p{margin:0;font-size:15px;line-height:1.5;color:rgba(255,255,255,.85)}
+
+/* ---------- how booking works ---------- */
+.how-sec{background:var(--night);color:#FFFFFF}
+.how-sec .eyebrow{background:rgba(255,161,0,.14);color:var(--orange)}
+.how{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.how li{display:flex;flex-direction:column;gap:10px;padding:28px;border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);background:rgba(255,255,255,.05)}
+.hw-n{font-family:var(--serif);font-size:44px;line-height:1;color:var(--orange)}
+.how h3{margin:0;font-size:19px;font-weight:600}
+.how p{margin:0;font-size:15px;line-height:1.6;color:rgba(255,255,255,.75)}
+
+/* ---------- before you go ---------- */
+.ess{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.ess-i{display:flex;flex-direction:column;gap:8px;padding:26px;border-radius:var(--r-lg);background:var(--sand)}
+.ess-ic{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;margin-bottom:6px;border-radius:50%;background:#FFFFFF;color:var(--blue);box-shadow:var(--shadow)}
+.ess-i h3{margin:0;font-size:19px;font-weight:600}
+.ess-i p{margin:0;font-size:15px;line-height:1.6;color:var(--body)}
+.ess-i a{margin-top:auto;padding-top:6px;font-size:14px;font-weight:600;text-decoration:none}
+
+@media (max-width:1100px){.ways,.how,.ess{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.ways,.how,.ess{grid-template-columns:1fr}.how li,.ess-i{padding:22px}}

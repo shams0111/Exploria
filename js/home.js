@@ -175,6 +175,10 @@
     });
   }
 
+  /* ---------- signature experiences arrows ---------- */
+  var xps = $("#xps");
+  $$("[data-xp]").forEach(function (b) { b.addEventListener("click", function () { xps.scrollBy({ left: +b.dataset.xp * 306, behavior: reduce ? "auto" : "smooth" }); }); });
+
   /* ---------- heritage arrows ---------- */
   var tl = $("#timeline");
   $$("[data-tl]").forEach(function (b) { b.addEventListener("click", function () { tl.scrollBy({ left: +b.dataset.tl * 320, behavior: reduce ? "auto" : "smooth" }); }); });
