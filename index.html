@@ -3,38 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Exploria.pk — Travel Pakistan | Tours, Treks &amp; Small-Group Departures</title>
-<meta name="description" content="Small-group tours, treks and tailor-made journeys across Pakistan, from a team born in Hunza. Spring Blossom Tour 2027, K2 Base Camp, Hunza, Skardu, Lahore and more.">
+<title>Exploria.pk — Experience Pakistan with Award-Winning Local Travel Experts</title>
+<meta name="description" content="Small-group departures, private tours and treks across Pakistan with Exploria, a locally founded travel company from Hunza. Rated 4.9/5 from 93 TourRadar reviews.">
+<link rel="preload" href="/media/fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/media/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/media/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/site.css">
+<link rel="icon" href="/media/img/exploria-logo.png">
+<link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-<script>document.documentElement.classList.add("js")</script>
 
 <div class="progress" id="progress" aria-hidden="true"></div>
 
 <!-- ============ HEADER ============ -->
 <header class="site-head" id="top">
   <div class="bar">
-    <a class="logo" href="https://www.exploria.pk/"><img src="media/img/exploria-logo-reversed.png" alt="Exploria.pk — Experience Pakistan" width="160" height="46"></a>
+    <a class="logo" href="/" aria-label="Exploria.pk home">
+      <img class="light-logo" src="/media/img/exploria-logo-reversed.png" alt="Exploria.pk — Experience Pakistan" width="150" height="43">
+      <img class="dark-logo" src="/media/img/exploria-logo.png" alt="" width="150" height="43">
+    </a>
     <nav class="nav" aria-label="Main">
-      <a href="#departures">Departures</a>
-      <a href="#tours">Tours</a>
-      <a href="#tours" data-filter="trek">Treks</a>
-      <a href="#map">Destinations</a>
+      <a href="#journey">Journeys</a>
+      <a href="#journeys">Departures</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#story">Why Exploria</a>
+      <a href="#guide">Travel guide</a>
       <a href="#journal">Journal</a>
-      <a href="#why">About</a>
     </nav>
     <div class="head-cta">
       <a class="phone" href="tel:+923495966540">+92 349 5966540</a>
-      <button type="button" class="saved-pill" id="savedPill" aria-label="Show saved tours">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3.1 4.5 6.8 4.5c2.1 0 3.6 1.1 5.2 3 1.6-1.9 3.1-3 5.2-3 3.7 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>
-        <span class="lbl">Saved</span> <span id="savedCount">0</span>
-      </button>
-      <a class="btn btn-primary" href="#enquire">Enquire now</a>
+      <a class="btn" href="https://www.exploria.pk/customize-your-tour/">Plan a trip</a>
       <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
       </button>
     </div>
   </div>
@@ -43,568 +42,366 @@
 <div class="menu" id="menu" hidden role="dialog" aria-modal="true" aria-label="Menu">
   <div class="menu-top">
     <img src="/media/img/exploria-logo-reversed.png" alt="Exploria.pk" width="140" height="40">
-    <button type="button" class="menu-close" id="menuClose" aria-label="Close menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <button type="button" class="menu-close" id="menuClose" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   </div>
   <nav class="menu-links" aria-label="Menu">
-    <a href="/tours/spring-blossom-tour-2027"><small>Group departure · April 2027</small>Spring Blossom Tour</a>
-    <a href="/#departures"><small>Small groups</small>2027 departures</a>
-    <a href="/#tours"><small>Private &amp; tailor-made</small>Tours &amp; treks</a>
-    <a href="/#map"><small>Hunza to the Arabian Sea</small>Destinations</a>
-    <a href="/#journal"><small>Guides &amp; stories</small>Journal</a>
-    <a href="/#why"><small>Born in Hunza</small>About Exploria</a>
+    <a href="#journey">Start your journey</a>
+    <a href="#journeys">Group departures 2027</a>
+    <a href="#experiences">Signature experiences</a>
+    <a href="#story">Why Exploria</a>
+    <a href="#guide">Pakistan travel guide</a>
+    <a href="#journal">Journal</a>
   </nav>
   <div class="menu-foot">
-    <a class="btn btn-primary" href="https://wa.me/923495966540">WhatsApp a planner</a>
+    <a class="btn btn-light" href="https://wa.me/923495966540">WhatsApp a trip planner</a>
     <a href="tel:+923495966540">+92 349 5966540</a>
     <a href="mailto:info@exploria.pk">info@exploria.pk</a>
   </div>
 </div>
 
 <main>
-<!-- ============ HERO ============ -->
-<section class="hero" aria-label="Travel Pakistan">
-  <div class="hero-media" aria-hidden="true">
-    <video class="bg-video hero-vid on" autoplay muted loop playsinline preload="auto" poster="media/video/hero-hunza-poster.jpg" data-cap="Hunza Valley, Gilgit-Baltistan"><source src="media/video/hero-hunza.mp4" type="video/mp4"></video>
-    <video class="hero-vid" muted loop playsinline preload="none" poster="media/video/indus-winter-poster.jpg" data-cap="The Indus in winter, Gilgit-Baltistan"><source src="media/video/indus-winter.mp4" type="video/mp4"></video>
-    <video class="hero-vid" muted loop playsinline preload="none" poster="media/video/autumn-katpana-poster.jpg" data-cap="Autumn poplars near Skardu"><source src="media/video/autumn-katpana.mp4" type="video/mp4"></video>
-  </div>
+<!-- ============ 01 HERO / BRAND STATEMENT ============ -->
+<section class="hero" aria-label="Exploria">
+  <img class="poster" src="/media/video/hero-hunza-poster.jpg" alt="">
+  <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="/media/video/hero-hunza-poster.jpg" aria-hidden="true"><source src="/media/video/hero-hunza.mp4" type="video/mp4"></video>
   <div class="veil" aria-hidden="true"></div>
   <div class="hero-in">
-    <h1>Travel Pakistan</h1>
-    <p class="sub">Extraordinary Pakistan experiences, from <b id="heroWord">mountains</b></p>
-    <div class="hero-btns">
-      <a class="btn btn-primary" href="#journey">Find my journey</a>
-      <a class="btn btn-line" href="#departures">2027 departures</a>
+    <h1>Experience Pakistan with award-winning local travel experts.</h1>
+    <p class="hero-sub">Private journeys, small-group departures and mountain treks, designed by a team born in Hunza.</p>
+    <div class="hero-cta">
+      <a class="btn btn-light" href="#journey">Start your journey</a>
+      <a class="btn btn-ghost-light" href="#journeys">Join a 2027 group departure</a>
     </div>
-    <div class="where" aria-label="Jump to a destination">
-      <span>Where to?</span>
-      <button type="button" class="chip-dark" data-place="hunza">Hunza</button>
-      <button type="button" class="chip-dark" data-place="skardu">Skardu</button>
-      <button type="button" class="chip-dark" data-place="k2">K2</button>
-      <button type="button" class="chip-dark" data-place="kalash">Kalash</button>
-      <button type="button" class="chip-dark" data-place="lahore">Lahore</button>
+    <div class="hero-foot">
+      <ul class="proof">
+        <li><b>4.9</b><span><span class="stars" aria-hidden="true">★★★★★</span><br>93 reviews on TourRadar</span></li>
+        <li>TourRadar Silver 2024</li>
+        <li>Tripadvisor Travellers’ Choice 2024</li>
+        <li>Since 2016</li>
+      </ul>
+      <p class="hero-cap">Hunza Valley, Gilgit-Baltistan</p>
     </div>
   </div>
-  <a class="next-dep" href="/tours/spring-blossom-tour-2027">
-    <img src="media/img/blossom-branch.jpg" alt="">
-    <span>
-      <small>Next group departure</small>
-      <strong>Spring Blossom Tour · 2 April 2027</strong>
-      <span id="heroCount">10 days · Hunza &amp; Skardu · 4–8 guests</span>
-    </span>
-  </a>
-  <a class="scroll-cue" href="#departures">Scroll to explore
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-  </a>
-  <p class="hero-cap" id="heroCap">Hunza Valley, Gilgit-Baltistan</p>
 </section>
 
-<!-- ============ TRUST STRIP ============ -->
-<section class="trust" aria-label="Why travellers trust Exploria">
-  <ul>
-    <li><b>4.9/5</b> traveller rating</li>
-    <li><b>10+</b> years guiding in Pakistan</li>
-    <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.2 7 22l5-3 5 3-1.5-7.8"/></svg> TourRadar Silver Badge</li>
-    <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 20 6-11 4 6 3-4 5 9z"/></svg> Born in Hunza, rooted in the Karakoram</li>
-  </ul>
+<!-- ============ 02 OUR STORY ============ -->
+<section class="sec" id="story">
+  <div class="wrap story">
+    <div class="story-media">
+      <div class="story-main ph"><img class="cover zoom" src="/media/img/story/founders-burning-brownies.jpg" alt="Exploria's founders at Burning Brownies" loading="lazy"></div>
+      <div class="story-side ph"><img class="cover zoom" src="/media/img/story/founder-blossom-hunza.jpg" alt="An Exploria founder in Hunza during blossom season" loading="lazy"></div>
+      <p class="story-cap"><b>Burning Brownies,</b> our cozy corner to talk business and beyond.</p>
+    </div>
+    <div class="story-text">
+      <p class="kicker"><b>02</b> Our story</p>
+      <h2 class="title" style="margin-bottom:30px">A passion project, rooted in the place we call home.</h2>
+      <p class="big">Exploria began in 2016 as a passion project, rooted in our love for travel and a deep connection to the place we call home.</p>
+      <p>We are natives of the beautiful Hunza and Barjungle, some of Pakistan’s most celebrated travel destinations, where tourism has been an integral part of community life for generations. Here, welcoming travellers is more than an economic activity; it is deeply woven into the region’s cultural heritage, traditions and way of life.</p>
+      <p>Growing up in this environment gave us a natural appreciation for the beauty of our homeland and the importance of sharing it with others. We witnessed firsthand how travel brings people, cultures and communities together, creating connections that extend far beyond the journey itself.</p>
+      <p>Inspired by this heritage and driven by a passion to showcase Pakistan to the world, we set out to create something of our own.</p>
+      <p class="sign">That passion became <b>Exploria.</b></p>
+      <ul class="story-facts">
+        <li><b>2016</b><span>Founded in Hunza</span></li>
+        <li><b>4.9/5</b><span>93 TourRadar reviews</span></li>
+        <li><b>41</b><span>Tours on TourRadar</span></li>
+      </ul>
+      <a class="more" href="#trust">Why travellers choose us <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
 </section>
 
-<!-- ============ SIGNATURE DEPARTURES ============ -->
-<section class="sec sand" id="departures">
-  <div class="wrap stack">
-    <div class="head-row reveal">
-      <div class="head">
-        <p class="eyebrow">Small-group departures · 2027</p>
-        <h2 class="h2">Fixed dates, small groups, local hosts</h2>
-        <p class="lede">Join a planned departure with 4 to 8 travellers. We fix the dates for the best season, handle every flight and transfer, and take you to the villages we grew up in.</p>
+<!-- ============ 03 TRUST & RECOGNITION ============ -->
+<section class="sec ivory" id="trust">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="kicker"><b>03</b> Trust &amp; recognition</p>
+        <h2 class="title">What our travellers say</h2>
+        <p class="lead">Every review below is from a real Exploria traveller on TourRadar, where we hold a 4.9 rating across 93 reviews.</p>
       </div>
     </div>
-
-    <div id="depFeatured"></div>
-    <div class="dep-more reveal" id="depMore"></div>
-  </div>
-</section>
-
-<!-- ============ WHERE TO GO (bento) ============ -->
-<section class="sec" id="where">
-  <div class="wrap stack" style="gap:32px">
-    <div class="head-row">
-      <div class="head">
-        <p class="eyebrow">Where to go</p>
-        <h2 class="h2">Six regions, six different trips</h2>
-        <p class="lede">From apricot orchards under 7,000-metre peaks to Mughal mosques and Indus Valley ruins. Tap a region to see the tours that go there.</p>
-      </div>
-    </div>
-    <div class="bento">
-      <button type="button" class="bt bt-xl photo" data-where="hunza"><img class="zoom cover" src="media/img/attabad.jpg" alt="Attabad Lake in the Hunza valley" loading="lazy"><span class="shade"></span>
-        <span class="bt-in"><span class="bt-tag">Most popular</span><b>Hunza &amp; Nagar</b><span class="bt-line">Forts, orchards, Attabad Lake and the Passu Cones. Best April to October.</span><span class="bt-count" data-count-where="hunza"></span></span></button>
-      <button type="button" class="bt bt-tall photo" data-where="skardu"><img class="zoom cover" src="media/img/k2-concordia.jpg" alt="K2 seen from Concordia" loading="lazy"><span class="shade"></span>
-        <span class="bt-in"><b>Skardu, K2 &amp; Baltistan</b><span class="bt-line">Cold desert dunes, Deosai and the road to K2.</span><span class="bt-count" data-count-where="skardu"></span></span></button>
-      <button type="button" class="bt photo" data-where="punjab"><img class="zoom cover" src="media/img/badshahi-dusk.jpg" alt="Badshahi Mosque at dusk" loading="lazy"><span class="shade"></span>
-        <span class="bt-in"><b>Lahore &amp; Punjab</b><span class="bt-line">Mughal Lahore, food streets, Taxila.</span><span class="bt-count" data-count-where="punjab"></span></span></button>
-      <button type="button" class="bt photo" data-where="chitral"><img class="zoom cover" src="media/img/chilam-joshi.jpg" alt="Kalash festival dancers" loading="lazy"><span class="shade"></span>
-        <span class="bt-in"><b>Chitral &amp; Kalash</b><span class="bt-line">Hindu Kush valleys and festivals.</span><span class="bt-count" data-count-where="chitral"></span></span></button>
-      <button type="button" class="bt bt-wide photo" data-where="sindh"><img class="zoom cover" src="media/img/mohenjo-daro.jpg" alt="Ruins of Mohenjo-daro" loading="lazy"><span class="shade"></span>
-        <span class="bt-in"><b>Sindh &amp; the Indus</b><span class="bt-line">Mohenjo-daro, Makli and Sufi shrines. Best November to February.</span><span class="bt-count" data-count-where="sindh"></span></span></button>
-      <a class="bt bt-cta" href="https://www.exploria.pk/customize-your-tour/">
-        <span class="bt-in"><span class="bt-tag">Tailor-made</span><b>Not sure where to start?</b><span class="bt-line">Tell us your dates and interests. A planner from Hunza builds the route with you.</span><span class="bt-go">Plan a private trip →</span></span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WAYS TO TRAVEL ============ -->
-<section class="sec sand" id="ways">
-  <div class="wrap stack" style="gap:36px">
-    <div class="head">
-      <p class="eyebrow">Ways to travel with us</p>
-      <h2 class="h2">Pick the style that suits you</h2>
-      <p class="lede">Join a small group on fixed dates, travel privately on your own schedule, take on a high-altitude trek, or spend a day with a local guide in the city.</p>
-    </div>
-    <div class="ways"><article class="way"><img class="cover" src="media/img/blossom-village.jpg" alt="" loading="lazy"><div class="way-in"><span class="way-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 14.2c.6-.1 1.3-.2 2-.2 2.8 0 5 2.2 5 5"/></svg></span><h3>Small-group departures</h3><p>Fixed dates in the best season, 4 to 8 guests, everything arranged.</p><ul><li>Flights, hotels and guide included</li><li>Meet travellers from around the world</li><li>From USD 1,900 for 10 days</li></ul><a class="link-arrow" href="#departures">See 2027 departures <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a></div></article><article class="way"><img class="cover" src="media/img/hunza-biking.jpg" alt="" loading="lazy"><div class="way-in"><span class="way-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><h3>Private &amp; tailor-made</h3><p>Your dates, your pace, your own guide and vehicle.</p><ul><li>Any route, any length</li><li>Families, couples and friends</li><li>Planned with you by our Hunza team</li></ul><a class="link-arrow" href="https://www.exploria.pk/customize-your-tour/">Plan a private trip <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a></div></article><article class="way"><img class="cover" src="media/img/snow-lake.jpg" alt="" loading="lazy"><div class="way-in"><span class="way-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 20 6-11 4 6 3-4 5 9z"/></svg></span><h3>Treks &amp; expeditions</h3><p>Base camps, glaciers and high passes in the Karakoram.</p><ul><li>K2, Nanga Parbat, Rakaposhi, Snow Lake</li><li>Camps, cooks and porters arranged</li><li>Season: June to September</li></ul><a class="link-arrow" href="#tours" data-filter="trek">See treks <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a></div></article><article class="way"><img class="cover" src="media/img/food-street.webp" alt="" loading="lazy"><div class="way-in"><span class="way-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></span><h3>Day tours</h3><p>A day or an evening with a local guide.</p><ul><li>Lahore Fort and the Walled City</li><li>Night food tours</li><li>Taxila and Rohtas Fort from Islamabad</li></ul><a class="link-arrow" href="#tours" data-filter="day">See day tours <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a></div></article></div>
-  </div>
-</section>
-
-<!-- ============ JOURNEY FINDER ============ -->
-<section class="sec" id="journey" style="scroll-margin-top:60px">
-  <div class="wrap" style="display:flex;flex-direction:column;gap:40px">
-    <div class="head-row">
-      <div class="head" style="gap:14px;max-width:720px">
-        <p class="eyebrow">Find your journey</p>
-        <h2 class="h2" id="jfTitle">Three ways to see Pakistan</h2>
-      </div>
-      <ol class="steps" id="jfSteps" aria-label="Progress"></ol>
-    </div>
-    <div id="jfChosen"></div>
-    <div id="jfBody" aria-live="polite"></div>
-  </div>
-</section>
-
-<!-- ============ WHY PAKISTAN ============ -->
-<section class="sec" style="padding-top:0">
-  <div class="statement reveal">
-    <p class="eyebrow">Why Pakistan</p>
-    <p class="big">Three of the world's great mountain ranges meet here. The Indus Valley built some of the first planned cities here. And on a Lahore food street, it is still busy at midnight.</p>
-  </div>
-</section>
-
-<!-- ============ AT A GLANCE ============ -->
-<section style="padding:0 var(--pad) var(--sec)">
-  <div class="wrap grid tiles">
-    <figure class="tile photo reveal"><img class="zoom cover" src="media/img/k2-trek.jpg" alt="Trekkers below K2 at Concordia" loading="lazy"><span class="shade" aria-hidden="true"></span>
-      <figcaption><span class="num"><span data-count="8611" data-sep="1">8,611</span><small> m</small></span><span class="cap">K2, the second-highest mountain on Earth</span></figcaption></figure>
-    <figure class="tile photo reveal"><img class="zoom cover" src="media/img/nanga-rupal.jpg" alt="Expedition tents below Nanga Parbat at night" loading="lazy"><span class="shade" aria-hidden="true"></span>
-      <figcaption><span class="num"><span data-count="5">5</span><small> of 14</small></span><span class="cap">of the world's 8,000-metre peaks stand in Pakistan</span></figcaption></figure>
-    <figure class="tile photo reveal"><img class="zoom cover" src="media/img/rohtas.jpg" alt="Aerial view of Rohtas Fort" loading="lazy"><span class="shade" aria-hidden="true"></span>
-      <figcaption><span class="num"><span data-count="6">6</span></span><span class="cap">UNESCO World Heritage Sites, from Mohenjo-daro to Rohtas Fort</span></figcaption></figure>
-    <figure class="tile photo reveal"><img class="zoom cover" src="media/img/khunjerab-ibex.jpg" alt="Himalayan ibex in Khunjerab National Park" loading="lazy"><span class="shade" aria-hidden="true"></span>
-      <figcaption><span class="num"><span data-count="4693" data-sep="1">4,693</span><small> m</small></span><span class="cap">Khunjerab Pass, top of the Karakoram Highway and home to wild ibex</span></figcaption></figure>
-  </div>
-</section>
-
-<!-- ============ MAP EXPLORER ============ -->
-<section class="sec sand" id="map" style="scroll-margin-top:40px">
-  <div class="wrap stack">
-    <div class="head reveal">
-      <p class="eyebrow">Explore the map</p>
-      <h2 class="h2">Pick a place, any place</h2>
-      <p class="lede">Tap a pin to see where it is, when to go and which of our tours takes you there. Use the arrows to travel from the mountains to the sea.</p>
-    </div>
-    <div class="mapx">
-      <div class="reveal">
-        <svg class="map-svg" id="mapSvg" viewBox="0 0 700 650" role="group" aria-label="Map of Pakistan with destinations"></svg>
-        <p class="map-note">Illustrative map, not to scale.</p>
-      </div>
-      <article class="place reveal" id="place" aria-live="polite">
-        <div class="place-img"><img class="cover" id="placeImg" src="media/img/attabad.jpg" alt=""></div>
-        <div class="place-body">
-          <p class="reg" id="placeReg"></p>
-          <h3 id="placeName"></h3>
-          <p class="txt" id="placeTxt"></p>
-          <div class="place-meta"><span>Best time: <b id="placeSeason"></b></span><span>Height: <b id="placeAlt"></b></span></div>
-          <div class="place-nav">
-            <a class="link-arrow" id="placeLink" href="#">See tours
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
-            <span style="display:flex;gap:8px">
-              <button type="button" class="iconbtn" id="placePrev" aria-label="Previous place"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
-              <button type="button" class="iconbtn" id="placeNext" aria-label="Next place"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
-            </span>
+    <div class="trust">
+      <aside class="score" aria-label="TourRadar rating">
+        <div class="score-top"><img src="/media/img/logos/tourradar-silver-2024.png" alt="TourRadar Silver 2024" loading="lazy"></div>
+        <p class="score-big">4.9<small>/5</small></p>
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <p class="score-note">Based on 93 verified reviews</p>
+        <dl>
+          <div><dt>Guide</dt><dd class="meter"><i style="width:100%"></i></dd><dd>5.0</dd></div>
+          <div><dt>Transport</dt><dd class="meter"><i style="width:100%"></i></dd><dd>5.0</dd></div>
+          <div><dt>Accommodation</dt><dd class="meter"><i style="width:90%"></i></dd><dd>4.5</dd></div>
+          <div><dt>Meals</dt><dd class="meter"><i style="width:90%"></i></dd><dd>4.5</dd></div>
+        </dl>
+        <a class="btn" href="https://www.tourradar.com/o/exploria" target="_blank" rel="noopener">Read all reviews</a>
+      </aside>
+      <div class="rv-wrap">
+        <div class="rv-track" id="rvTrack" tabindex="0" aria-label="Traveller reviews">
+          <article class="rv"><span class="rv-stars" aria-label="Rated 4.8 out of 5">★★★★★</span><p class="rv-trip">Patundas Trek · September 2026</p>
+            <blockquote>“As a solo female traveler who has visited over 50 countries, finding a trekking company that delivers a pure, hiking-focused itinerary can be challenging. I specifically wanted an active trip combining Patundas Meadows and Rakaposhi Base Camp, and Exploria absolutely exceeded every expectation from day one. Communication before booking with Amjad and Arif was phenomenal. Once on the ground in Pakistan, the level of personalized care was unmatched. If you want a raw, authentic and meticulously tailored mountain expedition in Pakistan, they are the absolute gold standard.”</blockquote>
+            <button type="button" class="rv-more">Read more</button>
+            <div class="rv-who"><span class="rv-av">R</span><div><b>Rachel</b><span>Solo traveller · via TourRadar</span></div></div></article>
+          <article class="rv"><span class="rv-stars" aria-label="Rated 5 out of 5">★★★★★</span><p class="rv-trip">Hunza Valley &amp; Nanga Parbat Base Camp Trek · August 2026</p>
+            <blockquote>“I had an incredible experience on this tour and couldn’t recommend it more! A huge thank you to my guide, Rashid, who honestly made the trip. As a solo traveller, he made me feel comfortable from day one. We had some unexpected weather that was completely out of everyone’s control, but the company did an amazing job adapting the itinerary. Pakistan is an absolutely incredible country, and thanks to Rashid and the Exploria team, it ended up being one of my favourite trips I’ve ever done.”</blockquote>
+            <button type="button" class="rv-more">Read more</button>
+            <div class="rv-who"><span class="rv-av">T</span><div><b>Taylah</b><span>Solo traveller · via TourRadar</span></div></div></article>
+          <article class="rv"><span class="rv-stars" aria-label="Rated 5 out of 5">★★★★★</span><p class="rv-trip">Explore Northern Pakistan · August 2026</p>
+            <blockquote>“We booked a 14 days trip to northern Pakistan with Exploria. Choosing Exploria for the tour was the best decision we made. Their team of professional locals did an excellent job in ensuring the smooth execution of the tour. Despite the challenges regarding access to some of the destinations they went above and beyond so we experienced it without any hassle.”</blockquote>
+            <button type="button" class="rv-more">Read more</button>
+            <div class="rv-who"><span class="rv-av">M</span><div><b>Mudassir</b><span>via TourRadar</span></div></div></article>
+          <article class="rv"><span class="rv-stars" aria-label="Rated 5 out of 5">★★★★★</span><p class="rv-trip">Chitral, Kalash, Swat &amp; Peshawar · May 2026</p>
+            <blockquote>“I joined a 10-day tour starting in Islamabad, covering Chitral, Kalash, Swat, and Peshawar. It was an incredible experience, made even better by our fantastic guide, Salim. He was extremely knowledgeable and offered deep insight into the places and communities we visited. I also really appreciated how flexible the itinerary was, allowing us to choose activities based on how we felt each day.”</blockquote>
+            <button type="button" class="rv-more">Read more</button>
+            <div class="rv-who"><span class="rv-av">M</span><div><b>Maria</b><span>via TourRadar</span></div></div></article>
+          <article class="rv"><span class="rv-stars" aria-label="Rated 5 out of 5">★★★★★</span><p class="rv-trip">Explore Northern Pakistan · May 2026</p>
+            <blockquote>“I already felt welcomed by the owners months before the trip even began, and the trip itself was truly one in a million. We got to enjoy an authentic Pakistani experience: not only its breathtaking landscapes, but also its warm and welcoming people. Our team went above and beyond, helping with everything possible (and even impossible!) with the best sense of humor and endless patience.”</blockquote>
+            <button type="button" class="rv-more">Read more</button>
+            <div class="rv-who"><span class="rv-av">P</span><div><b>Paola</b><span>Group of friends · via TourRadar</span></div></div></article>
+          <article class="rv"><span class="rv-stars" aria-label="Rated 4 out of 5">★★★★☆</span><p class="rv-trip">Islamabad, Skardu, Hunza &amp; Lahore · August 2026</p>
+            <blockquote>“It was one of the most beautiful trips we have ever taken. This was certainly thanks to Exploria. A very professional travel organization. Knowledgeable tour guide and good hotels. During our trip, some adjustments had to be made due to circumstances. They handled this very well. I would definitely recommend Exploria!”</blockquote>
+            <button type="button" class="rv-more">Read more</button>
+            <div class="rv-who"><span class="rv-av">M</span><div><b>Mark</b><span>via TourRadar</span></div></div></article>
+        </div>
+        <div class="rv-nav">
+          <div class="dots" id="rvDots" aria-label="Choose review"></div>
+          <div class="arrows">
+            <button type="button" class="arw" data-rv="-1" aria-label="Previous review"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg></button>
+            <button type="button" class="arw" data-rv="1" aria-label="Next review"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></button>
           </div>
         </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SIGNATURE EXPERIENCES ============ -->
-<section class="sec" id="experiences">
-  <div class="wrap stack" style="gap:32px">
-    <div class="head-row">
-      <div class="head">
-        <p class="eyebrow">Signature experiences</p>
-        <h2 class="h2">Moments our travellers remember</h2>
-        <p class="lede">The best part of a trip is rarely the hotel. These are the moments we build our itineraries around.</p>
-      </div>
-      <div class="rail-ctrl">
-        <button type="button" class="iconbtn" data-xp="-1" aria-label="Scroll experiences left"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
-        <button type="button" class="iconbtn" data-xp="1" aria-label="Scroll experiences right"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
       </div>
     </div>
-    <ul class="xps" id="xps" tabindex="0" aria-label="Signature experiences"><li class="xp photo"><img class="zoom cover" src="media/img/folk-dance.jpg" alt="" loading="lazy"><span class="shade" aria-hidden="true"></span><div class="xp-in"><span class="xp-tag">Spring Blossom Tour</span><h3>Hunza Bazam night</h3><p>Folk music, cultural performances and a traditional Hunzai dinner by the fire.</p></div></li><li class="xp photo"><img class="zoom cover" src="media/video/autumn-katpana-poster.jpg" alt="" loading="lazy"><span class="shade" aria-hidden="true"></span><div class="xp-in"><span class="xp-tag">Spring Blossom Tour</span><h3>Cold Desert jeep safari</h3><p>Sand dunes ringed by snow peaks, a short drive from Skardu.</p></div></li><li class="xp photo"><img class="zoom cover" src="media/img/attabad.jpg" alt="" loading="lazy"><span class="shade" aria-hidden="true"></span><div class="xp-in"><span class="xp-tag">Hunza tours</span><h3>Boating on Attabad Lake</h3><p>A turquoise lake formed in 2010, now the jewel of Upper Hunza.</p></div></li><li class="xp photo"><img class="zoom cover" src="media/img/passu-bridge.jpg" alt="" loading="lazy"><span class="shade" aria-hidden="true"></span><div class="xp-in"><span class="xp-tag">Hunza tours</span><h3>Crossing the Passu bridge</h3><p>Swaying planks over the Hunza River, below the Passu Cones.</p></div></li><li class="xp photo"><img class="zoom cover" src="media/img/k2-concordia.jpg" alt="" loading="lazy"><span class="shade" aria-hidden="true"></span><div class="xp-in"><span class="xp-tag">K2 Base Camp Trek</span><h3>Sunrise at Concordia</h3><p>Four 8,000-metre peaks in one view, including K2.</p></div></li><li class="xp photo"><img class="zoom cover" src="media/img/food-street.webp" alt="" loading="lazy"><span class="shade" aria-hidden="true"></span><div class="xp-in"><span class="xp-tag">Lahore Night Food Tour</span><h3>Dinner on a Lahore food street</h3><p>Grills, chai and the Badshahi Mosque lit up after dark.</p></div></li><li class="xp photo"><img class="zoom cover" src="media/img/chilam-joshi.jpg" alt="" loading="lazy"><span class="shade" aria-hidden="true"></span><div class="xp-in"><span class="xp-tag">Kalash festival tour</span><h3>Kalash spring festival</h3><p>Song and dance at Chilam Joshi in the Hindu Kush valleys.</p></div></li><li class="xp photo"><img class="zoom cover" src="media/img/sehwan-shrine.jpg" alt="" loading="lazy"><span class="shade" aria-hidden="true"></span><div class="xp-in"><span class="xp-tag">Culture tours</span><h3>Qawwali at a Sufi shrine</h3><p>Drums and devotion at Lal Shahbaz Qalandar in Sehwan.</p></div></li></ul>
-  </div>
-</section>
 
-<!-- ============ ELEVATION PROFILE ============ -->
-<section class="sec">
-  <div class="wrap stack">
-    <div class="head reveal" style="max-width:720px">
-      <p class="eyebrow">The vertical country</p>
-      <h2 class="h2">From the Arabian Sea to 8,611 metres</h2>
-      <p class="lede">Travel north from Karachi and the land keeps climbing: through the plains of Punjab, over the Babusar Pass and into the Karakoram, where the road ends and the glaciers begin.</p>
-    </div>
-    <p class="swipe" aria-hidden="true">Swipe the chart to follow the road north →</p>
-    <div style="overflow-x:auto">
-      <svg class="elev elev-svg" id="elev" viewBox="0 0 1200 440" role="img" aria-label="Elevation profile of a journey north through Pakistan, from Karachi at sea level to K2 at 8,611 metres" style="display:block;width:100%;height:auto;font-family:'Plus Jakarta Sans',Arial,sans-serif">
-        <line x1="0" y1="390" x2="1200" y2="390" stroke="#D8D1C5" stroke-width="1"/>
-        <line x1="40" y1="83" x2="1160" y2="83" stroke="#15212B" stroke-opacity=".35" stroke-width="1" stroke-dasharray="6 6"/>
-        <text x="40" y="72" fill="#5B6670" font-size="13">8,000 m</text>
-        <path class="elev-fill" d="M40,390 L180,382 L320,369 L460,230 L600,79 L740,294 L880,232 L1020,305 L1160,60 L1160,390 L40,390 Z" fill="#01539D" fill-opacity=".1"/>
-        <polyline class="elev-line" points="40,390 180,382 320,369 460,230 600,79 740,294 880,232 1020,305 1160,60" fill="none" stroke="#01539D" stroke-width="2.5" stroke-linejoin="round"/>
-        <g fill="#FFFFFF" stroke="#01539D" stroke-width="2">
-          <circle cx="40" cy="390" r="5"/><circle cx="180" cy="382" r="5"/><circle cx="320" cy="369" r="5"/><circle cx="460" cy="230" r="5"/>
-          <circle cx="740" cy="294" r="5"/><circle cx="880" cy="232" r="5"/><circle cx="1020" cy="305" r="5"/>
-        </g>
-        <circle cx="600" cy="79" r="7" fill="#FFA100"/><circle cx="1160" cy="60" r="7" fill="#FFA100"/>
-        <g font-size="16" font-weight="600" fill="#15212B">
-          <text x="40" y="356">Karachi</text><text x="180" y="348" text-anchor="middle">Lahore</text><text x="310" y="335" text-anchor="end">Islamabad</text>
-          <text x="448" y="200" text-anchor="end">Babusar Pass</text><text x="600" y="44" text-anchor="middle">Nanga Parbat</text><text x="740" y="320" text-anchor="middle">Hunza</text>
-          <text x="880" y="198" text-anchor="middle">Deosai Plateau</text><text x="1020" y="331" text-anchor="middle">Skardu</text><text x="1148" y="30" text-anchor="end">K2</text>
-        </g>
-        <g font-size="13" fill="#5B6670">
-          <text x="40" y="374">0 m</text><text x="180" y="366" text-anchor="middle">217 m</text><text x="310" y="353" text-anchor="end">540 m</text>
-          <text x="448" y="218" text-anchor="end">4,173 m</text><text x="600" y="62" text-anchor="middle">8,126 m</text><text x="740" y="338" text-anchor="middle">2,500 m</text>
-          <text x="880" y="216" text-anchor="middle">4,114 m</text><text x="1020" y="349" text-anchor="middle">2,228 m</text><text x="1148" y="48" text-anchor="end">8,611 m</text>
-        </g>
-        <text x="40" y="422" fill="#5B6670" font-size="12" letter-spacing="1.5">ARABIAN SEA</text>
-        <text x="1160" y="422" fill="#5B6670" font-size="12" letter-spacing="1.5" text-anchor="end">NORTH — NOT TO SCALE</text>
-      </svg>
-    </div>
-    <div class="grid strip">
-      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/karachi-coast.jpg" alt="Rocky coastline near Karachi" loading="lazy"></span><figcaption><strong>Karachi coast</strong><span>0 m</span></figcaption></figure>
-      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/wazir-khan.jpg" alt="Wazir Khan Mosque and old Lahore at sunset" loading="lazy"></span><figcaption><strong>Old Lahore</strong><span>217 m</span></figcaption></figure>
-      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/attabad.jpg" alt="Attabad Lake in the Hunza valley" loading="lazy"></span><figcaption><strong>Attabad Lake, Hunza</strong><span>2,500 m</span></figcaption></figure>
-      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/deosai.jpg" alt="The green Deosai Plateau below snow peaks" loading="lazy"></span><figcaption><strong>Deosai Plateau</strong><span>4,114 m</span></figcaption></figure>
-      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/k2-concordia.jpg" alt="K2 seen from a tent on the Baltoro Glacier" loading="lazy"></span><figcaption><strong>K2 from the Baltoro</strong><span>8,611 m</span></figcaption></figure>
-    </div>
-    <div class="foot-row">
-      <p>Above the dashed line: the 8,000-metre club. K2, Nanga Parbat, Broad Peak, Gasherbrum I and Gasherbrum II are all in Pakistan.</p>
-      <a class="link-arrow" href="#tours" data-filter="trek">Explore treks
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    <div class="assoc">
+      <div class="assoc-head">
+        <h3>Registrations &amp; associations</h3>
+        <p>A registered company, recognised by the travel industry.</p>
+      </div>
+      <ul class="logos">
+        <li><img src="/media/img/logos/tourradar-silver-2024.png" alt="" loading="lazy"><b>TourRadar Silver<span>Operator award 2024</span></b></li>
+        <li><img src="/media/img/logos/tripadvisor-travellers-choice-2024.png" alt="" loading="lazy"><b>Tripadvisor<span>Travellers’ Choice 2024</span></b></li>
+        <li><img src="/media/img/logos/pato.png" alt="" loading="lazy"><b>PATO member<span>Pakistan Association of Tour Operators</span></b></li>
+        <li><img src="/media/img/logos/secp.png" alt="" loading="lazy"><b>SECP registered<span>Securities &amp; Exchange Commission of Pakistan</span></b></li>
+        <li><img src="/media/img/logos/govt-of-pakistan.png" alt="" loading="lazy"><b>Government of Pakistan<span>Licensed tour operator</span></b></li>
+      </ul>
+      <div class="fair">
+        <div class="fair-img"><img class="cover" src="/media/img/story/thai-travel-fair.jpg" alt="The Exploria Tours stand at the Thai International Travel Fair" loading="lazy"></div>
+        <div class="fair-in">
+          <p class="kicker" style="margin:0">On the world stage</p>
+          <h3>Representing Pakistan at the Thai International Travel Fair</h3>
+          <p>We take Pakistan to international travel fairs to show the world its mountains, festivals and people, and to meet the travellers who will discover them next.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ VIDEO INTERLUDE ============ -->
-<section class="interlude">
-  <video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="media/video/indus-winter-poster.jpg" aria-hidden="true"><source src="media/video/indus-winter.mp4" type="video/mp4"></video>
+<!-- ============ 04 ULTIMATE TRAVEL GUIDE ============ -->
+<section class="guide" id="guide">
+  <img src="/media/img/k2-trek.jpg" alt="" loading="lazy">
   <div class="veil" aria-hidden="true"></div>
-  <div class="interlude-in reveal">
-    <p class="eyebrow" style="color:#FFFFFF">Gilgit-Baltistan in winter</p>
-    <p class="big">Turquoise rivers, white valleys and almost no one else.</p>
-  </div>
-</section>
-
-<!-- ============ THREE RANGES ============ -->
-<section class="sec">
-  <div class="wrap" style="display:flex;flex-direction:column;gap:48px">
-    <div class="head reveal">
-      <p class="eyebrow">Where three ranges meet</p>
-      <h2 class="h2">The Hindu Kush, Karakoram and Himalaya meet here</h2>
-      <p class="lede">Near Gilgit, three of the world's great mountain ranges come together at a single junction. Each one raises a giant inside Pakistan. The bars compare each summit with K2.</p>
+  <div class="wrap guide-in">
+    <div>
+      <p class="kicker"><b>04</b> Free travel guide</p>
+      <h2>The Ultimate Pakistan Travel Guide</h2>
+      <p class="lead">Everything you need to know before visiting Pakistan, written by locals who guide travellers here every season.</p>
+      <ol class="chapters">
+        <li>Visas &amp; entry</li>
+        <li>Getting there &amp; around</li>
+        <li>Best time to visit</li>
+        <li>Safety &amp; solo travel</li>
+        <li>Money, SIMs &amp; budgets</li>
+        <li>Culture &amp; etiquette</li>
+        <li>What to pack</li>
+        <li>Itinerary ideas</li>
+      </ol>
+      <a class="btn btn-light" href="https://www.exploria.pk/blog/">Read the guide</a>
     </div>
-    <div class="three">
-      <div class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/chitral.jpg" alt="Grazing herds in the Chitral valley below Hindu Kush peaks" loading="lazy"></span>
-        <div class="rbar" role="img" aria-label="Tirich Mir is 89.5% of K2's height"><i style="--w:89.5%"></i></div>
-        <p class="eyebrow">Hindu Kush</p><p class="peak">Tirich Mir <span>7,708 m</span></p><p class="d">The highest peak of the Hindu Kush, rising above Chitral and the Kalash valleys.</p></div>
-      <div class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/k2-summit.jpg" alt="A climber on a snow ridge below K2" loading="lazy"></span>
-        <div class="rbar" role="img" aria-label="K2, the reference height"><i style="--w:100%"></i></div>
-        <p class="eyebrow">Karakoram</p><p class="peak">K2 <span>8,611 m</span></p><p class="d">The second-highest mountain on Earth, at the head of the Baltoro Glacier.</p></div>
-      <div class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/fairy-meadows.jpg" alt="A hiker looks at Nanga Parbat from Fairy Meadows" loading="lazy"></span>
-        <div class="rbar" role="img" aria-label="Nanga Parbat is 94.4% of K2's height"><i style="--w:94.4%"></i></div>
-        <p class="eyebrow">Himalaya</p><p class="peak">Nanga Parbat <span>8,126 m</span></p><p class="d">The western anchor of the Himalaya, seen from Fairy Meadows.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FOUR LANDSCAPES ============ -->
-<section class="sec sand">
-  <div class="wrap stack">
-    <div class="head reveal">
-      <p class="eyebrow">More than mountains</p>
-      <h2 class="h2">Four landscapes in one country</h2>
-    </div>
-    <div class="grid lands">
-      <figure class="land-card photo reveal" tabindex="0"><img class="zoom cover" src="media/img/passu-bridge.jpg" alt="The Passu suspension bridge over the Hunza River" loading="lazy"><span class="shade" aria-hidden="true"></span>
-        <figcaption><span class="k">The north</span><span class="t">Valleys &amp; glaciers</span><span class="d">Hunza, Skardu, Chitral and the rope bridges of Passu.</span></figcaption></figure>
-      <figure class="land-card photo reveal" tabindex="0"><img class="zoom cover" src="media/img/faisal-mosque.jpg" alt="Faisal Mosque in Islamabad" loading="lazy"><span class="shade" aria-hidden="true"></span>
-        <figcaption><span class="k">The plains</span><span class="t">Cities &amp; heritage</span><span class="d">Islamabad, Lahore and the Indus valley sites.</span></figcaption></figure>
-      <figure class="land-card photo reveal" tabindex="0"><img class="zoom cover" src="media/img/derawar-fort.jpg" alt="Travellers on the walls of Derawar Fort in the Cholistan desert" loading="lazy"><span class="shade" aria-hidden="true"></span>
-        <figcaption><span class="k">The desert</span><span class="t">Forts &amp; dunes</span><span class="d">Derawar Fort and the Cholistan desert near Bahawalpur.</span></figcaption></figure>
-      <figure class="land-card photo reveal" tabindex="0"><img class="zoom cover" src="media/img/hingol.jpg" alt="Eroded cliffs of Hingol National Park on the Makran coast" loading="lazy"><span class="shade" aria-hidden="true"></span>
-        <figcaption><span class="k">The coast</span><span class="t">Cliffs &amp; beaches</span><span class="d">Hingol, Gwadar and over 1,000 km of Arabian Sea shore.</span></figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ POPULAR TOURS ============ -->
-<section class="sec" id="tours" style="scroll-margin-top:40px">
-  <div class="wrap stack" style="gap:32px">
-    <div class="head-row reveal">
-      <div class="head">
-        <p class="eyebrow">Tours &amp; treks</p>
-        <h2 class="h2">Our most-loved journeys</h2>
-        <p class="lede">Every tour can be run privately on your own dates. Tap the heart to save the ones you like and compare them later.</p>
+    <form class="guide-card js-notify" novalidate>
+      <h3>Get the guide by email</h3>
+      <p>Prefer to read it offline? We’ll send the full guide as a PDF to your inbox.</p>
+      <div class="field">
+        <label class="sr" for="gEmail">Email address</label>
+        <input id="gEmail" type="email" placeholder="Your email address" required>
+        <button class="btn btn-light" type="submit">Send me the guide</button>
       </div>
-      <div class="rail-ctrl">
-        <button type="button" class="iconbtn" data-rail="-1" aria-label="Scroll tours left"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
-        <button type="button" class="iconbtn" data-rail="1" aria-label="Scroll tours right"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+      <p class="fine">One email with the guide, then occasional travel news. Unsubscribe any time.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ 05 START YOUR JOURNEY ============ -->
+<section class="sec" id="journey">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="kicker"><b>05</b> Start your journey</p>
+        <h2 class="title">Where would you like to begin?</h2>
       </div>
+      <a class="more" href="https://www.exploria.pk/customize-your-tour/">Tailor-make a trip <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
     </div>
-    <div class="chips" id="tourChips" role="group" aria-label="Filter tours"></div>
-    <p class="where-note" id="whereNote" aria-live="polite"></p>
-    <p class="month-hint" id="monthHint" aria-live="polite"></p>
-    <div class="rail-wrap"><ul class="rail" id="rail" tabindex="0" aria-label="Tours"></ul></div>
-    <div class="foot-row" style="border:0;padding:0">
-      <p>Don't see what you want? We build private, tailor-made trips around your dates, pace and budget.</p>
-      <a class="link-arrow" href="https://www.exploria.pk/customize-your-tour/">Customise your tour
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    <div class="tabs" role="tablist" aria-label="Browse trips">
+      <button role="tab" id="t-trav" aria-controls="p-trav" aria-selected="true">By traveller</button>
+      <button role="tab" id="t-pop" aria-controls="p-pop" aria-selected="false">Most popular</button>
+      <button role="tab" id="t-season" aria-controls="p-season" aria-selected="false">By season</button>
+      <button role="tab" id="t-dur" aria-controls="p-dur" aria-selected="false">By duration</button>
+    </div>
+
+    <div class="tiles" role="tabpanel" id="p-trav" aria-labelledby="t-trav">
+      <a class="tile ph" href="https://www.exploria.pk/customize-your-tour/"><img class="cover zoom" src="/media/img/fairy-meadows.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>Including solo women</small><b>Solo travellers</b><span>A private guide, round-the-clock support and a team that checks in.</span></span></a>
+      <a class="tile ph" href="https://www.exploria.pk/customize-your-tour/"><img class="cover zoom" src="/media/img/attabad.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>Honeymoons &amp; anniversaries</small><b>Couples</b><span>Lakeside stays and slow days in Hunza and Skardu.</span></span></a>
+      <a class="tile ph" href="https://www.exploria.pk/customize-your-tour/"><img class="cover zoom" src="/media/img/story/hunza-children.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>All ages</small><b>Families</b><span>Shorter drives, flexible days and family-friendly stays.</span></span></a>
+      <a class="tile ph" href="#journeys"><img class="cover zoom" src="/media/img/blossom-village.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>4 to 8 guests</small><b>Small groups</b><span>Join a fixed-date departure with like-minded travellers.</span></span></a>
+      <a class="tile ph" href="https://www.exploria.pk/where-do-you-want-to-go/"><img class="cover zoom" src="/media/img/faisal-mosque.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>Teams &amp; offsites</small><b>Corporate &amp; retreats</b><span>Team trips and retreats planned end to end.</span></span></a>
+    </div>
+    <div class="tiles" role="tabpanel" id="p-pop" aria-labelledby="t-pop" hidden>
+      <a class="tile ph" href="https://www.exploria.pk/treks-in-pakistan/"><img class="cover zoom" src="/media/img/tours/patundas.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>K2 · Nanga Parbat · Hunza</small><b>Hiking &amp; trekking adventures</b><span>Base camps, glaciers and high meadows in the Karakoram.</span></span></a>
+      <a class="tile ph" href="https://www.exploria.pk/tours/"><img class="cover zoom" src="/media/img/badshahi-day.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>Lahore · Taxila · Mohenjo-daro</small><b>Culture &amp; sightseeing tours</b><span>Mughal cities, ancient ruins and living traditions.</span></span></a>
+      <a class="tile ph" href="https://www.exploria.pk/customize-your-tour/"><img class="cover zoom" src="/media/img/fairy-meadows.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>Slow travel in the mountains</small><b>Wellness retreats</b><span>Quiet valleys, mountain walks and time to switch off.</span></span></a>
+      <a class="tile ph" href="#experiences"><img class="cover zoom" src="/media/img/folk-dance.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>Homestays · music · food</small><b>Experiences</b><span>Folk music nights, Hunzai dinners and village life.</span></span></a>
+      <a class="tile ph" href="https://www.exploria.pk/tour/sikh-pilgrimage-kartarpur-sahib-tour-pakistan/"><img class="cover zoom" src="/media/img/tours/sikh.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>Sikh · Buddhist · Sufi</small><b>Religious pilgrimage tours</b><span>Kartarpur, Nankana Sahib, Taxila and the Sufi shrines.</span></span></a>
+    </div>
+    <div class="tiles n4" role="tabpanel" id="p-season" aria-labelledby="t-season" hidden>
+      <a class="tile ph" href="/tours/spring-blossom-tour-2027"><img class="cover zoom" src="/media/img/blossom-rakaposhi.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>March – May</small><b>Spring blossom</b><span>Apricot and cherry orchards in flower across Hunza and Skardu.</span></span></a>
+      <a class="tile ph" href="https://www.exploria.pk/treks-in-pakistan/"><img class="cover zoom" src="/media/img/k2-concordia.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>June – September</small><b>Summer treks</b><span>Base camps open, meadows bloom and festivals fill the valleys.</span></span></a>
+      <a class="tile ph" href="https://www.exploria.pk/tour/hunza-autumn-tour/"><img class="cover zoom" src="/media/img/tours/hunza-autumn.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>October – November</small><b>Autumn gold</b><span>Golden poplars, harvest time and crisp clear skies.</span></span></a>
+      <a class="tile ph" href="https://www.exploria.pk/tours/"><img class="cover zoom" src="/media/img/badshahi-dusk.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>December – February</small><b>Winter cities</b><span>Lahore, Sindh and the Indus Valley at their best.</span></span></a>
+    </div>
+    <div class="tiles n4" role="tabpanel" id="p-dur" aria-labelledby="t-dur" hidden>
+      <a class="tile ph" href="https://www.exploria.pk/tour/lahore-full-day-sightseeing-guided-tour/"><img class="cover zoom" src="/media/img/food-street.webp" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>A day or an evening</small><b>Day tours</b><span>Lahore, Islamabad, Taxila and night food tours.</span></span></a>
+      <a class="tile ph" href="https://www.exploria.pk/tour/5-days-trip-to-hunza/"><img class="cover zoom" src="/media/img/passu-bridge.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>3 – 7 days</small><b>Short escapes</b><span>Hunza or Skardu by air, perfect for a first taste.</span></span></a>
+      <a class="tile ph" href="/tours/spring-blossom-tour-2027"><img class="cover zoom" src="/media/img/deosai.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>8 – 14 days</small><b>Classic journeys</b><span>Hunza and Skardu together, or culture plus mountains.</span></span></a>
+      <a class="tile ph" href="https://www.exploria.pk/tour/k2-base-camp-trek-pakistan/"><img class="cover zoom" src="/media/img/mitre-peak.jpg" alt="" loading="lazy"><span class="shade"></span><span class="tile-in"><small>15 days +</small><b>Grand expeditions</b><span>K2 Base Camp, Snow Lake and the length of Pakistan.</span></span></a>
     </div>
   </div>
 </section>
 
-<!-- ============ HERITAGE TIMELINE ============ -->
-<section class="dark" style="padding:var(--sec) 0">
-  <div class="wrap head-row reveal" style="padding:0 var(--pad)">
-    <div class="head">
-      <p class="eyebrow">Culture &amp; heritage</p>
-      <h2 class="h2">Nine thousand years in one country</h2>
-      <p class="lede">From one of South Asia's first farming villages to the Mughal monuments of Lahore. All six UNESCO World Heritage Sites are on this line.</p>
-    </div>
-    <div class="rail-ctrl">
-      <button type="button" class="iconbtn" data-tl="-1" aria-label="Earlier"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
-      <button type="button" class="iconbtn" data-tl="1" aria-label="Later"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
-    </div>
-  </div>
-  <ol class="timeline" id="timeline" tabindex="0" aria-label="Heritage timeline">
-    <li class="photo"><span class="clip"><img class="zoom cover" src="media/img/mehrgarh.jpg" alt="Excavated mud-brick walls at Mehrgarh" loading="lazy"></span><span class="when">c. 7000 BCE</span><span class="t">Mehrgarh</span><span class="d">One of South Asia's earliest farming villages, in Balochistan.</span></li>
-    <li class="photo"><span class="clip"><img class="zoom cover" src="media/img/mohenjo-daro.jpg" alt="The ruins of Mohenjo-daro" loading="lazy"></span><span class="when">c. 2500 BCE · UNESCO</span><span class="t">Mohenjo-daro</span><span class="d">A planned Indus Valley city with grid streets, wells and covered drains.</span></li>
-    <li class="photo"><span class="clip"><img class="zoom cover" src="media/img/taxila.jpg" alt="Visitors at the Taxila archaeological site" loading="lazy"></span><span class="when">1st – 5th c. CE · UNESCO</span><span class="t">Taxila &amp; Takht-i-Bahi</span><span class="d">Buddhist monasteries and stone sculpture from the age of Gandhara. Two separate UNESCO sites.</span></li>
-    <li class="photo"><span class="clip"><img class="zoom cover" src="media/img/makli.jpg" alt="Carved stone tombs at Makli necropolis" loading="lazy"></span><span class="when">14th – 18th c. · UNESCO</span><span class="t">Makli, Thatta</span><span class="d">One of the largest necropolises in the world, on a ridge in Sindh.</span></li>
-    <li class="photo"><span class="clip"><img class="zoom cover" src="media/img/rohtas.jpg" alt="The walls and gates of Rohtas Fort" loading="lazy"></span><span class="when">1541 · UNESCO</span><span class="t">Rohtas Fort</span><span class="d">Sher Shah Suri's fortress on the Grand Trunk Road, its walls running for about 4 km.</span></li>
-    <li class="photo"><span class="clip"><img class="zoom cover" src="media/img/lahore-fort.jpg" alt="The Alamgiri Gate of Lahore Fort" loading="lazy"></span><span class="when">16th – 17th c. · UNESCO</span><span class="t">Lahore Fort &amp; Shalimar</span><span class="d">The Mughal citadel and Shah Jahan's terraced gardens, listed together.</span></li>
-    <li class="photo"><span class="clip"><img class="zoom cover" src="media/img/badshahi-dusk.jpg" alt="The Badshahi Mosque reflected at dusk" loading="lazy"></span><span class="when">1673</span><span class="t">Badshahi Mosque</span><span class="d">Completed under Aurangzeb, facing Lahore Fort across the Hazuri Bagh.</span></li>
-  </ol>
-  <div class="wrap" style="margin-top:28px;padding:0 var(--pad);display:flex;justify-content:flex-end">
-    <a class="link-arrow" href="#tours" data-filter="culture" style="color:var(--orange)">Explore culture tours
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
-  </div>
-</section>
-
-<!-- ============ LIVING CULTURE ============ -->
-<section class="sec">
-  <div class="wrap stack">
-    <div class="head reveal">
-      <p class="eyebrow">Living culture</p>
-      <h2 class="h2">Shrines, bazaars, music and food</h2>
-      <p class="lede">Pakistan's history is not only in its ruins. You hear it in the qawwali at a Sufi shrine and taste it on a Lahore food street.</p>
-    </div>
-    <div class="grid culture">
-      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/sehwan-shrine.jpg" alt="The tiled entrance of the Lal Shahbaz Qalandar shrine in Sehwan" loading="lazy"></span><figcaption><strong>Sufi shrines</strong><span>Dhamaal drumming at Lal Shahbaz Qalandar, Sehwan.</span></figcaption></figure>
-      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/food-street.webp" alt="The Fort Road food street in Lahore at night" loading="lazy"></span><figcaption><strong>Food streets</strong><span>Dinner under the walls of the Badshahi Mosque, Lahore.</span></figcaption></figure>
-      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/kalash-houses.jpg" alt="Wooden houses stacked on a hillside in the Kalash valleys" loading="lazy"></span><figcaption><strong>The Kalash valleys</strong><span>A small community with its own faith and festivals, near Chitral.</span></figcaption></figure>
-      <figure class="photo reveal"><span class="clip"><img class="zoom cover" src="media/img/folk-dance.jpg" alt="Folk dancers in bright costume" loading="lazy"></span><figcaption><strong>Music &amp; dance</strong><span>Folk festivals in Sindh, Punjab and the mountains.</span></figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WHEN TO GO ============ -->
-<section class="sec sand" id="when">
-  <div class="wrap" style="display:flex;flex-direction:column;gap:32px">
-    <div class="head reveal">
-      <p class="eyebrow">When to go</p>
-      <h2 class="h2">Two seasons, two Pakistans</h2>
-      <p class="lede">The mountains open up in summer. The plains and cities are at their best in winter. Pick a month to see what it's good for.</p>
-    </div>
-    <div style="overflow-x:auto"><div class="cal" id="cal"></div></div>
-    <div class="legend">
-      <span><i class="sw" style="background:#FFA100"></i><i class="sw" style="background:#01539D"></i>Best</span>
-      <span><i class="sw" style="background:#FFD98F"></i><i class="sw" style="background:#A9C4E4"></i>Good</span>
-      <span><i class="sw" style="background:#E6E0D6;border:1px solid #D3CBBE"></i>Off-season</span>
-    </div>
-    <div class="month-card" id="monthCard" aria-live="polite"></div>
-    <div class="moments">
-      <div class="photo"><span class="clip"><img class="zoom" src="media/img/hunza-blossom.webp" alt="Apricot blossom in Hunza in front of snow peaks" loading="lazy"></span><span class="k">April</span><span class="d">Apricot and cherry blossom across the Hunza valley.</span></div>
-      <div class="photo"><span class="clip"><img class="zoom" src="media/img/chilam-joshi.jpg" alt="Kalash women dancing at the Chilam Joshi festival" loading="lazy"></span><span class="k">Mid-May</span><span class="d">Chilam Joshi, the Kalash spring festival of song and dance.</span></div>
-      <div class="photo"><span class="clip"><img class="zoom" src="media/img/shandur-polo.jpg" alt="Polo players at the Shandur festival" loading="lazy"></span><span class="k">July</span><span class="d">The Shandur Polo Festival, played on a mountain pass at about 3,700 m.</span></div>
-      <div><video class="bg-video" autoplay muted loop playsinline preload="metadata" poster="media/video/autumn-katpana-poster.jpg" aria-label="Golden poplars near Skardu in autumn"><source src="media/video/autumn-katpana.mp4" type="video/mp4"></video><span class="k">Late October</span><span class="d">Autumn gold in the poplar groves of Hunza and Skardu.</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ HOW BOOKING WORKS ============ -->
-<section class="sec how-sec">
-  <div class="wrap stack" style="gap:36px">
-    <div class="head-row">
-      <div class="head">
-        <p class="eyebrow">How booking works</p>
-        <h2 class="h2">Four simple steps, no surprises</h2>
+<!-- ============ 06 SIGNATURE EXPERIENCES ============ -->
+<section class="sec ivory" id="experiences">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="kicker"><b>06</b> Signature experiences</p>
+        <h2 class="title">Our best-selling journeys</h2>
+        <p class="lead">The tours our travellers book and recommend most, each one adaptable to your dates and pace.</p>
       </div>
-      <a class="btn btn-primary" href="https://wa.me/923495966540">Start on WhatsApp</a>
-    </div>
-    <ol class="how"><li><span class="hw-n">01</span><h3>Send a request</h3><p>Email or WhatsApp us with the tour, number of travellers and your room preference.</p></li><li><span class="hw-n">02</span><h3>We confirm</h3><p>Our team checks availability and sends you payment details. No payment before that.</p></li><li><span class="hw-n">03</span><h3>Secure your place</h3><p>A 20% deposit holds your seat. The balance is due 20 days before departure.</p></li><li><span class="hw-n">04</span><h3>Fly in, we take over</h3><p>We meet you at Islamabad airport and look after every transfer, flight and hotel.</p></li></ol>
-  </div>
-</section>
-
-<!-- ============ WHY EXPLORIA ============ -->
-<section class="sec" id="why" style="scroll-margin-top:40px">
-  <div class="wrap why">
-    <div class="why-img reveal">
-      <img class="cover" src="media/img/blossom-village.jpg" alt="Apple blossom in a Hunza village below Rakaposhi" loading="lazy">
-      <p class="quote">“Northern Pakistan is our home, and we want to share it through the warmth of our people and the stories of our villages.”</p>
-    </div>
-    <div class="reveal" style="display:flex;flex-direction:column;gap:18px">
-      <p class="eyebrow">Why travel with Exploria</p>
-      <h2 class="h2">Not a booking site. A local team.</h2>
-      <p class="lede">Exploria was born in Hunza. Our guides, drivers and planners live in the valleys you'll travel through, so you meet people, not just places.</p>
-      <div class="why-list">
-        <div><b data-count="10" data-suffix="+">10+</b><strong>Years in Pakistan</strong><span>Tours, treks and expeditions across every province.</span></div>
-        <div><b>4.9/5</b><strong>Traveller rating</strong><span>And a TourRadar Silver Badge for service.</span></div>
-        <div><b>4–8</b><strong>Guests per group</strong><span>Small groups, so village homes and family kitchens still open their doors.</span></div>
-        <div><b>24/7</b><strong>On-ground support</strong><span>If a mountain flight is cancelled, we arrange the road transfer at no extra cost.</span></div>
+      <div class="arrows">
+        <button type="button" class="arw" data-sx="-1" aria-label="Previous journeys"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg></button>
+        <button type="button" class="arw" data-sx="1" aria-label="More journeys"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></button>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ============ REVIEWS ============ -->
-<section class="sec sand">
-  <div class="wrap stack">
-    <div class="head-row reveal">
-      <div class="head"><p class="eyebrow">From our travellers</p><h2 class="h2">In their words</h2></div>
-      <p style="margin:0;font-size:15px;color:var(--muted)"><span class="stars" aria-hidden="true">★★★★★</span> Reviews on Google and <a href="https://www.tourradar.com/o/exploria">TourRadar</a></p>
-    </div>
-    <div class="reviews">
-      <figure class="reveal"><blockquote>“I recently went on an unforgettable 10-day tour through Skardu and Hunza with Exploria, and I cannot recommend their services highly enough.”</blockquote><figcaption>Ayesha S.</figcaption></figure>
-      <figure class="reveal"><blockquote>“I feel this tour was a great way to start to get to know the ‘real’ Pakistan.”</blockquote><figcaption>Barb D. · Hindu Kush tour</figcaption></figure>
-      <figure class="reveal"><blockquote>“Don’t be scared to come over, the region is safe and you’re in very good hands with Exploria.”</blockquote><figcaption>Francesca P. · Skardu &amp; Hunza</figcaption></figure>
+    <div class="sx-track" id="sxTrack" tabindex="0" aria-label="Best-selling journeys">
+      <a class="sx ph" href="https://www.exploria.pk/tour/hunza-skardu-nanga-parbat-tour/"><div class="sx-img"><img class="cover zoom" src="/media/img/attabad.jpg" alt="" loading="lazy"><span class="sx-badge hot">Best seller</span></div><p class="sx-meta">Private tour · Hunza, Skardu, Nanga Parbat</p><h3>Explore Northern Pakistan</h3><p>Our most-reviewed journey: Skardu’s lakes, the forts of Hunza and the view of Nanga Parbat.</p><div class="sx-foot"><b>Flexible length</b><span>View journey →</span></div></a>
+      <a class="sx ph" href="https://www.exploria.pk/tour/k2-base-camp-trek-pakistan/"><div class="sx-img"><img class="cover zoom" src="/media/img/tours/k2-base-camp.jpg" alt="" loading="lazy"><span class="sx-badge">Trek</span></div><p class="sx-meta">Karakoram · Baltoro Glacier</p><h3>K2 Base Camp Trek</h3><p>Askole to Concordia, ringed by four 8,000-metre peaks.</p><div class="sx-foot"><b>21 days</b><span>View journey →</span></div></a>
+      <a class="sx ph" href="https://www.exploria.pk/tour/patundas-trek-pakistan/"><div class="sx-img"><img class="cover zoom" src="/media/img/tours/patundas.jpg" alt="" loading="lazy"><span class="sx-badge">Trek</span></div><p class="sx-meta">Hunza · Passu Glacier</p><h3>Patundas Trek</h3><p>High meadows above Passu with views across the Batura glacier.</p><div class="sx-foot"><b>9 days</b><span>View journey →</span></div></a>
+      <a class="sx ph" href="https://www.exploria.pk/tour/hindu-kush-tour-northern-pakistan/"><div class="sx-img"><img class="cover zoom" src="/media/img/tours/hindu-kush.jpg" alt="" loading="lazy"><span class="sx-badge">Culture</span></div><p class="sx-meta">Chitral · Kalash · Hunza</p><h3>Hindu Kush Overland</h3><p>Kalash valleys, Chitral and the Shandur Pass by road.</p><div class="sx-foot"><b>15 days</b><span>View journey →</span></div></a>
+      <a class="sx ph" href="https://www.exploria.pk/tour/hunza-autumn-tour/"><div class="sx-img"><img class="cover zoom" src="/media/img/tours/hunza-autumn.jpg" alt="" loading="lazy"><span class="sx-badge">Seasonal</span></div><p class="sx-meta">Hunza · October</p><h3>Autumn in Hunza</h3><p>Golden poplars, forts and orchards at harvest time.</p><div class="sx-foot"><b>7 days</b><span>View journey →</span></div></a>
+      <a class="sx ph" href="https://www.exploria.pk/tour/indus-valley-civilization-tour/"><div class="sx-img"><img class="cover zoom" src="/media/img/tours/indus.jpg" alt="" loading="lazy"><span class="sx-badge">Culture</span></div><p class="sx-meta">Sindh · Punjab · Gandhara</p><h3>Indus Valley &amp; Gandhara</h3><p>Mohenjo-daro, Taxila, Takht-i-Bahi and Makli.</p><div class="sx-foot"><b>14 days</b><span>View journey →</span></div></a>
     </div>
   </div>
 </section>
 
-<!-- ============ BEFORE YOU GO ============ -->
-<section class="sec" id="essentials">
-  <div class="wrap stack" style="gap:36px">
-    <div class="head">
-      <p class="eyebrow">Before you go</p>
-      <h2 class="h2">Travel essentials for Pakistan</h2>
-      <p class="lede">The practical things first-time visitors ask us about, in one place.</p>
+<!-- ============ 07 TRAVELLER STORIES ============ -->
+<section class="sec dark" id="stories">
+  <div class="wrap stories">
+    <div class="st-img"><img class="cover" id="stImg" src="/media/img/fairy-meadows.jpg" alt="" loading="lazy"></div>
+    <div class="st-quote">
+      <p class="kicker"><b>07</b> Traveller stories</p>
+      <div class="st-mark" aria-hidden="true">“</div>
+      <p class="st-text" id="stText" aria-live="polite"></p>
+      <p class="st-who" id="stWho"></p>
+      <div class="st-pick" id="stPick" aria-label="Choose a story"></div>
     </div>
-    <div class="ess"><div class="ess-i"><span class="ess-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="12" r="2.5"/><path d="M14 10h4M14 14h3"/></svg></span><h3>Visa</h3><p>Most nationalities apply online for an e-visa before they travel. We help with any documents you need.</p><a href="https://www.exploria.pk/how-to-get-a-tourist-visa-for-pakistan/">Read our visa guide &rarr;</a></div><div class="ess-i"><span class="ess-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16l20-6-2-3-7 2-6-5-2 1 4 6-4 1-2-2-1 1z"/><path d="M3 20h18"/></svg></span><h3>Flying in</h3><p>International flights land in Islamabad, Lahore and Karachi. Most trips to the north start in Islamabad.</p></div><div class="ess-i"><span class="ess-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16"/><path d="M6 19l3-9 3 5 2-3 4 7"/></svg></span><h3>Getting north</h3><p>Flights to Skardu and Gilgit take about an hour, weather permitting. By road, the Karakoram Highway takes around two days.</p></div><div class="ess-i"><span class="ess-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg></span><h3>Money</h3><p>The currency is the Pakistani rupee (PKR). Cards work in big cities; carry cash in the mountains, where ATMs are few.</p></div><div class="ess-i"><span class="ess-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><h3>Staying connected</h3><p>Buy a local SIM on arrival with your passport; our team helps on day one. Signal is patchy in the high valleys.</p></div><div class="ess-i"><span class="ess-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><h3>Dress &amp; culture</h3><p>Modest clothing that covers shoulders and knees is respectful, especially at mosques, shrines and in villages.</p></div><div class="ess-i"><span class="ess-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 20 6-11 4 6 3-4 5 9z"/></svg></span><h3>Altitude</h3><p>Treks climb above 4,000 metres. Itineraries include rest days to acclimatise, and guides watch for altitude sickness.</p></div><div class="ess-i"><span class="ess-ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><h3>Weather</h3><p>The plains can pass 40&deg;C in June. Mountain nights are cold even in summer, so pack warm layers.</p><a href="#when">See when to go &rarr;</a></div></div>
   </div>
 </section>
 
-<!-- ============ JOURNAL ============ -->
-<section class="sec" id="journal" style="scroll-margin-top:40px">
-  <div class="wrap stack">
-    <div class="head-row reveal">
-      <div class="head"><p class="eyebrow">Travel journal</p><h2 class="h2">Plan with people who live here</h2></div>
-      <a class="link-arrow" href="https://www.exploria.pk/blog/">All stories
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+<!-- ============ 08 FEATURED JOURNEYS ============ -->
+<section class="sec" id="journeys">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="kicker"><b>08</b> Featured journeys</p>
+        <h2 class="title">Group departures 2027</h2>
+        <p class="lead">Fixed dates in the best season, small groups of 4 to 8 travellers and everything arranged, from domestic flights to the last dinner.</p>
+      </div>
+      <a class="more" href="https://wa.me/923495966540">Ask about private dates <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="journeys" id="jrList"></div>
+  </div>
+</section>
+
+<!-- ============ 09 JOURNAL & INSPIRATION ============ -->
+<section class="sec ivory" id="journal">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="kicker"><b>09</b> Journal &amp; inspiration</p>
+        <h2 class="title">Stories from the mountains</h2>
+      </div>
+      <a class="more" href="https://www.exploria.pk/blog/">See all stories <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
     </div>
     <div class="journal">
-      <a class="post lead photo reveal" href="https://www.exploria.pk/cherry-blossoms-in-pakistan/">
-        <span class="clip img"><img class="zoom cover" src="media/img/blog/cherry-blossom.webp" alt="Cherry blossom in a northern valley" loading="lazy"></span>
-        <span class="k">Seasons · 6 min read</span>
-        <h3>Everything about cherry blossom season in Pakistan</h3>
-        <p>When the orchards flower in Hunza, Skardu and Nagar, and how to time your trip for peak bloom.</p>
-      </a>
-      <div class="side">
-        <a class="post post-row photo reveal" href="https://www.exploria.pk/how-to-get-a-tourist-visa-for-pakistan/"><span class="clip img"><img class="zoom cover" src="media/img/blog/visa.webp" alt="" loading="lazy"></span><span style="display:flex;flex-direction:column;gap:6px"><span class="k">Before you go</span><h3>How to get a tourist visa for Pakistan, step by step</h3></span></a>
-        <a class="post post-row photo reveal" href="https://www.exploria.pk/best-time-to-visit-hunza/"><span class="clip img"><img class="zoom cover" src="media/img/blog/best-time-hunza.jpg" alt="" loading="lazy"></span><span style="display:flex;flex-direction:column;gap:6px"><span class="k">Hunza</span><h3>The best time to visit Hunza, month by month</h3></span></a>
-        <a class="post post-row photo reveal" href="https://www.exploria.pk/how-to-plan-your-trek-to-k2-base-camp-tips-and-trick/"><span class="clip img"><img class="zoom cover" src="media/img/blog/k2-plan.jpg" alt="" loading="lazy"></span><span style="display:flex;flex-direction:column;gap:6px"><span class="k">Trekking</span><h3>How to plan your trek to K2 Base Camp</h3></span></a>
-        <a class="post post-row photo reveal" href="https://www.exploria.pk/famous-food-cities-in-pakistan/"><span class="clip img"><img class="zoom cover" src="media/img/blog/food-cities.webp" alt="" loading="lazy"></span><span style="display:flex;flex-direction:column;gap:6px"><span class="k">Food</span><h3>Six famous food cities in Pakistan</h3></span></a>
-      </div>
+      <a class="post ph" href="https://www.exploria.pk/cherry-blossoms-in-pakistan/"><div class="post-img"><img class="cover zoom" src="/media/img/hunza-blossom.webp" alt="" loading="lazy"></div><small>Seasons · Hunza</small><h3>Everything about cherry blossom season in Pakistan</h3><p>When the orchards flower in Hunza, Skardu and Nagar, and how to time your trip for peak bloom.</p></a>
+      <a class="post ph" href="https://www.exploria.pk/how-to-plan-your-trek-to-k2-base-camp-tips-and-trick/"><div class="post-img"><img class="cover zoom" src="/media/img/k2-concordia.jpg" alt="" loading="lazy"></div><small>Trekking · Karakoram</small><h3>How to plan your trek to K2 Base Camp</h3><p>Permits, fitness, season and what a day on the Baltoro Glacier really looks like.</p></a>
     </div>
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
-<section class="sec sand" id="faq">
-  <div class="wrap faq">
-    <div class="head reveal" style="position:sticky;top:100px">
-      <p class="eyebrow">Good to know</p>
-      <h2 class="h2">Questions travellers ask us</h2>
-      <p class="lede">Still wondering? Message a trip planner on WhatsApp. A real person from our team will reply.</p>
-      <a class="link-arrow" href="https://wa.me/923495966540">Ask on WhatsApp
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
-    </div>
-    <div class="reveal">
-      <details open><summary>Is Pakistan safe to travel?<span class="pm" aria-hidden="true">+</span></summary><p>The northern valleys of Gilgit-Baltistan, and cities like Lahore and Islamabad, welcome thousands of international visitors every year. Our local team travels the same routes all season, watches weather and road conditions daily and is with you on the ground from arrival to departure.</p></details>
-      <details><summary>Can solo and solo female travellers join?<span class="pm" aria-hidden="true">+</span></summary><p>Yes. Solo travellers, including solo women, are welcome on our group departures and private tours. A single supplement applies if you want your own room. Talk to us before booking if you'd like to discuss anything.</p></details>
-      <details><summary>How big are your groups?<span class="pm" aria-hidden="true">+</span></summary><p>Our fixed-date departures are planned for 4 to 8 guests. Any tour can also run privately, just for you, on your own dates.</p></details>
-      <details><summary>How do I get a visa?<span class="pm" aria-hidden="true">+</span></summary><p>Most visitors apply online before travelling. Our <a href="https://www.exploria.pk/how-to-get-a-tourist-visa-for-pakistan/">step-by-step visa guide</a> walks through the process, and our team will help with any paperwork your application needs.</p></details>
-      <details><summary>What if a mountain flight is cancelled?<span class="pm" aria-hidden="true">+</span></summary><p>Flights to Skardu and Gilgit depend on the weather. If one is cancelled, we arrange the road journey instead at no extra charge, wherever it's safe and feasible.</p></details>
-      <details><summary>How do I book a group departure?<span class="pm" aria-hidden="true">+</span></summary><p>Send us a booking request with the number of travellers and your room preference. We confirm availability and send payment details. A 20% deposit secures your place and the balance is due 20 days before the tour.</p></details>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CLOSING CTA ============ -->
-<section class="closing" id="enquire">
-  <img src="media/img/rakaposhi.jpg" alt="" loading="lazy">
+<!-- ============ CLOSING ============ -->
+<section class="close">
+  <img src="/media/img/rakaposhi.jpg" alt="" loading="lazy">
   <div class="veil" aria-hidden="true"></div>
-  <div class="closing-in reveal">
-    <p class="eyebrow" style="color:#FFFFFF">Rakaposhi Base Camp, Nagar</p>
-    <h2>So, ready to start?</h2>
-    <p style="font-size:19px;line-height:1.6;color:rgba(255,255,255,.9)">Find your direction in three taps, or talk to a local trip planner on WhatsApp.</p>
-    <div class="hero-btns" style="margin-top:6px">
-      <a class="btn btn-primary" href="#journey">Find my journey</a>
-      <a class="btn btn-line" href="https://wa.me/923495966540">WhatsApp a planner</a>
+  <div class="close-in">
+    <h2>Explore Pakistan. Experience the extraordinary.</h2>
+    <p>Tell us how you like to travel. A planner from our Hunza team will shape the journey with you.</p>
+    <div class="hero-cta" style="justify-content:center;margin-top:8px">
+      <a class="btn btn-light" href="https://www.exploria.pk/customize-your-tour/">Book a private tour</a>
+      <a class="btn btn-ghost-light" href="#journeys">Join a group departure</a>
     </div>
-    <form class="field js-notify" style="margin-top:22px" novalidate>
-      <label class="sr" for="nl">Email address</label>
-      <input id="nl" type="email" placeholder="Your email for 2027 departure news" required>
-      <button class="btn btn-line" type="submit">Keep me posted</button>
-    </form>
   </div>
 </section>
 </main>
 
 <!-- ============ FOOTER ============ -->
 <footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="c">
-        <img src="media/img/exploria-logo-reversed.png" alt="Exploria.pk" width="150" height="43" style="display:block;width:150px;height:auto">
-        <a href="tel:+923495966540" style="color:#FFFFFF">+92 349 5966540</a>
-        <a href="mailto:info@exploria.pk">info@exploria.pk</a>
-        <a href="https://wa.me/923495966540" style="color:var(--orange)">Chat on WhatsApp</a>
-      </div>
-      <nav aria-label="Tours"><h4>Tours</h4><a href="/tours/spring-blossom-tour-2027">Spring Blossom Tour 2027</a><a href="#departures">Group departures 2027</a><a href="#">One-day tours</a><a href="#">Hunza tours</a><a href="#">Skardu tours</a><a href="#">Religious tours</a></nav>
-      <nav aria-label="Treks"><h4>Treks</h4><a href="#">K2 Base Camp</a><a href="#">K2 &amp; Gondogoro La</a><a href="#">Nanga Parbat</a><a href="#">Snow Lake &amp; Hispar La</a><a href="#">Rakaposhi Base Camp</a></nav>
-      <nav aria-label="Destinations"><h4>Destinations</h4><a href="#map">Hunza Valley</a><a href="#map">Skardu</a><a href="#map">Fairy Meadows</a><a href="#map">Kalash Valley</a><a href="#map">Lahore</a></nav>
+  <div class="wrap foot-top">
+    <div class="foot-brand">
+      <img src="/media/img/exploria-logo-reversed.png" alt="Exploria.pk" width="160" height="46">
+      <p>Born in Hunza and operating across Pakistan since 2016. Award-winning local travel experts.</p>
+      <form class="field js-notify" novalidate>
+        <label class="sr" for="fEmail">Email address</label>
+        <input id="fEmail" type="email" placeholder="Newsletter: your email" required>
+        <button class="btn btn-light" type="submit">Sign up</button>
+      </form>
     </div>
-    <div class="foot-base"><span>© 2026 Exploria.pk</span><span>Photos: Exploria.pk · Video: Asif Khan via Pexels</span></div>
+    <nav aria-label="About"><h4>About us</h4><a href="#story">Our story</a><a href="#story">Why Exploria</a><a href="#trust">Reviews</a><a href="#journal">Journal</a></nav>
+    <nav aria-label="Popular tours"><h4>Popular tours</h4><a href="https://www.exploria.pk/tour/hunza-skardu-nanga-parbat-tour/">Explore Northern Pakistan</a><a href="https://www.exploria.pk/tour/k2-base-camp-trek-pakistan/">K2 Base Camp Trek</a><a href="/tours/spring-blossom-tour-2027">Spring Blossom Tour 2027</a><a href="https://www.exploria.pk/tour/hindu-kush-tour-northern-pakistan/">Hindu Kush Overland</a><a href="https://www.exploria.pk/tour/patundas-trek-pakistan/">Patundas Trek</a></nav>
+    <nav aria-label="Travel with us"><h4>Travel with us</h4><a href="https://www.exploria.pk/customize-your-tour/">Book a private tour</a><a href="#journeys">Join a group departure</a><a href="#guide">Pakistan travel guide</a><a href="https://www.exploria.pk/faq/">FAQs</a><a href="https://www.exploria.pk/terms-and-conditions/">Terms &amp; conditions</a></nav>
+    <div><h4>Contact us</h4><div class="foot-contact"><a href="tel:+923495966540">+92 349 5966540</a><a href="mailto:info@exploria.pk">info@exploria.pk</a><a href="https://wa.me/923495966540">Chat on WhatsApp</a><span>Headquarters: Islamabad, Pakistan</span></div></div>
   </div>
+  <div class="wrap foot-badges">
+    <ul aria-label="Registrations and awards">
+      <li><img src="/media/img/logos/tourradar-silver-2024.png" alt="TourRadar Silver 2024" loading="lazy"></li>
+      <li><img src="/media/img/logos/tripadvisor-travellers-choice-2024.png" alt="Tripadvisor Travellers' Choice 2024" loading="lazy"></li>
+      <li><img src="/media/img/logos/pato.png" alt="PATO member" loading="lazy"></li>
+      <li><img src="/media/img/logos/secp.png" alt="SECP registered" loading="lazy"></li>
+    </ul>
+    <ul aria-label="Payment methods">
+      <li style="background:transparent;padding:0"><small>We accept</small></li>
+      <li><img src="/media/img/logos/visa.png" alt="Visa" loading="lazy"></li>
+      <li><img src="/media/img/logos/mastercard.png" alt="Mastercard" loading="lazy"></li>
+      <li><img src="/media/img/logos/paypal.png" alt="PayPal" loading="lazy"></li>
+      <li><img src="/media/img/logos/bank-transfer.png" alt="Bank transfer" loading="lazy"></li>
+    </ul>
+  </div>
+  <div class="wrap foot-base"><span>© 2026 Exploria Tours Pakistan</span><span><a href="https://www.exploria.pk/terms-and-conditions/">Terms &amp; conditions</a> · <a href="https://www.exploria.pk/privacy-policy/">Privacy policy</a></span></div>
 </footer>
 
 <a class="wa" id="wa" href="https://wa.me/923495966540" aria-label="Chat with a trip planner on WhatsApp">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
-  <span class="lbl">Talk to a planner</span>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
 </a>
-
 
 <script src="/js/data.js"></script>
 <script src="/js/common.js"></script>
-<script src="/js/home.js"></script>
+<script src="/js/landing.js"></script>
 </body>
 </html>
